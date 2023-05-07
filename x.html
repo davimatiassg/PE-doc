@@ -38,7 +38,7 @@
     font-style: normal;
 }
 
---table
+<!-->====================Table====================</!-->
 
 .phb table {                            
     font-family: 'AlexanderRegular';
@@ -54,7 +54,43 @@
 .phb table tbody tr:nth-child(odd) {
     background-color: #b1f6dd
 }
+<!-->====================blockquote====================</!-->
 
+.phb blockquote {
+    font-family: 'AlexanderRegular';
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    margin-top: 9px;
+    padding: 5px 10px;
+    background-color: #e0e5c1;
+    border-style: solid;
+    border-width: 11px;
+    border-image: url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/blockLabel.png') 11;
+    border-image-outset: 9px 0;
+    box-shadow: 1px 4px 14px #888
+}
+.phb blockquote em {
+    font-family: ScalySans;
+    font-style: italic
+}
+.phb blockquote strong {
+    font-family: ScalySans;
+    font-weight: 800;
+    letter-spacing: -0.02em
+}
+.phb blockquote p,
+.phb blockquote ul {
+    font-size: .352cm;
+    line-height: 1.1em
+}
+.phb pre+blockquote,
+.phb h2+blockquote,
+.phb h3+blockquote,
+.phb h4+blockquote,
+.phb h5+blockquote {
+    margin-top: 13px}
+.phb blockquote h5 {
+    margin-top: 0}
 
 .phb:nth-child(n+4):after {
     content: "";
