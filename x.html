@@ -6,39 +6,53 @@
     color:#250600;
     column-count:1;
     font-size: .5cm;
-    font-family: Sans-serif;
+    font-family: Arial;
     text-align: justify;
     text-justify: inter-word;
     font-weight: normal;
     font-style: normal;
     background:white;
+    
     
 }
 
 .phb p{
-    color:#250600;
-    column-count:1;
-    font-size: .5cm;
-    font-family: Sans-serif;
-    text-align: justify;
-    text-justify: inter-word;
-    font-weight: normal;
-    font-style: normal;
-    background:white;
+    line-height:        1.5em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent:40px;
     
 }
 
+.citacao{
+    
+    font-size: .4cm;
+    margin-left: 4cm;
+    margin-top:.5cm;
+    margin-bottom: 1cm;
+    text-align: justify;
+    padding: 0;
+    list-style-type: none;
+}
+
+
 
 .phb:H1{
+
+
     column-span:        all;
     font-family: 'AlexanderRegular';
     color: #020d12;
-    font-size:          .9cm;
+    font-size: .9cm;
     font-style: normal;
     
 }
 
 .phb H2{
+    padding-top: 1cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
+
     color:#000000;
     font-size: .7cm;
     font-family: 'AlexanderRegular';
@@ -74,16 +88,15 @@
     text-align: center;
     margin-bottom: 25px;
     margin-top: 25px;
-    padding: 5px 10px;
     background-color: white;
     border-style: solid;
-    border-width: 20px;
+    border-width: 10px;
     border-image:  url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/blockLabel.png') 11;
     border-image-outset: 12px 5px;
     box-shadow: 1px 0px 7px #333
 }
 .phb blockquote em {
-    font-family: ScalySans;
+    font-family
     font-style: italic
 }
 .phb blockquote strong {
@@ -93,8 +106,8 @@
 }
 .phb blockquote p,
 .phb blockquote ul {
-    font-size: .8cm;
-    line-height: 1.1em
+    font-size: .6cm;
+    line-height: 1em;
     font-family: 'AlexanderRegular';
     text-align: center;
 }
@@ -103,7 +116,7 @@
 .phb h3+blockquote,
 .phb h4+blockquote,
 .phb h5+blockquote {
-    margin-top: 15px}
+    margin-top: 10px}
 .phb blockquote h5 {
     margin-top: 23px}
 
@@ -120,8 +133,8 @@
 .phb#p1:after{display:none;}
 .phb#p2:after{display:none;}
 .phb#p3:after{display:none;}
-.phb#p4:after{display:none;}
-.phb#p5:after{display:none;}
+
+
 
 </style>
 
@@ -137,7 +150,7 @@
 
 <H2 style="font-family: 'AlexanderRegular'; color: #f7e9ca;"> Maria José Soares Genuino</H2>
 
-<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/cover.jpg?token=GHSAT0AAAAAAB72JCZWVGROJXEV4VTUPLOEZCX732A' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/cover.jpg' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
 </div>
 
 \pagebreak
@@ -145,20 +158,37 @@
 
  
 
+ 
+<style>
+/** Change the p2 to whatever page number is the last page in your document **/
+.phb#p2:after { display:none; }
+.phb#p2 
+{
+   column-count: 2;
+}
+</style>
+ 
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/backcover.png' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
+
+\columnbreak
 
 
-CONTRACAPA 
-> DESATEMOS NÓS NA SALA DE AULA SOBRE AS RELAÇÕES DE GÊNERO NO FUNK.”
+ 
+<h2 style="font-size: 30px; text-align: center;"> Proposição de práticas pedagógicas </h3>
 
-> FIGURA/DESENHO
 
-> MARIA JOSÉ SOARES GENUINO
 
+<h2 style="font-size: 40px; text-align: center;"> Desatemos nós na sala de aula sobre as relações de gênero </h2>
+
+
+<h2 style="font-size: 30px; text-align: center;"> Maria José Soares Genuino </h2>
+ 
+</div>
 
 \pagebreak
 
 
-<div style="text-align: center; font-size: .4cm"> 
+<div style="text-align: center; font-size: .4cm;"> 
 
 PROPOSIÇÃO DE PRÁTICAS PEDAGÓGICAS:
 
@@ -217,19 +247,9 @@ Diana Laís Soares Genuino
 
 <br>
 
-**Atendimento**
-
-Davi Matias Soares Genuino
-
-<br>
-
 **Ilustrações**
 
-Freepik
-
 Davi Matias Soares Genuino
-
-Carolina Figueiredo
 
 <br>
 
@@ -265,7 +285,7 @@ column-gap: 1px;
 <br>
 
 1.  INTRODUÇÃO ÀS DISCUSSÕES SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
-2.  VAMOS DESCOBRIR O QUE É GÊNERO E ESTEREÓTIPO DE GÊNERO?
+2.VAMOS DESCOBRIR O QUE É GÊNERO E ESTEREÓTIPO DE GÊNERO?
 
 3.  A PRÁTICA SOCIAL DA LEITURA E O FUNK
 
@@ -284,42 +304,38 @@ column-gap: 1px;
 
 \pagebreak
 
-\pagebreak
+<div class="descriptive" style="text-align:center; font-size: .5cm;">
 
-<div style="text-align:center; font-size: .5cm;">
+**100% FEMINISTA (MC CAROL; KAROL CONKÁ, 2016)**
 
-100% FEMINISTA
- (MC CAROL; KAROL CONKÁ, 2016)
-
-Mulher oprimida, sem voz, obediente
-[...]
-Quando eu crescer, eu vou ser diferente
-[...]
-Represento as mulheres, 100% feminista
-Represento Aqualtune, represento Carolina
-Represento Dandara e Xica da Silva
-Sou mulher, sou negra, meu cabelo é duro
-Forte, autoritária e as vezes frágil, eu assumo
-Minha fragilidade não diminui minha força
-[...]
-Sou mulher independente não aceito opressão
-Abaixa sua voz, abaixa sua mão
-Mais respeito
-Sou mulher destemida minha marra vem do gueto
-Se tavam querendo peso então toma esse dueto
-Desde pequenas aprendemos que silencio não soluciona
-Que a revolta vem à tona pois a justiça não funciona
-Me ensinaram que éramos insuficiente
-Discordei, pra ser ouvida o grito tem que ser potente
-[...]
-Represento as mulheres, 100% feminista
-Represento Nina, Elza, Dona Celestina
-Represento Zeferina, Frida, Dona Brasilina
-Tentam nos confundir, distorcem tudo que eu sei
-Século XXI e ainda querem nos limitar com novas leis
-A falta de informação enfraquece a mente
-Tô numa crescente porque eu faço diferente
-[...]
+Mulher oprimida, sem voz, obediente<br>
+[...]<br>
+Quando eu crescer, eu vou ser diferente<br>
+[...]<br>
+Represento as mulheres, 100% feminista<br>
+Represento Aqualtune, represento Carolina<br>
+Represento Dandara e Xica da Silva<br>
+Sou mulher, sou negra, meu cabelo é duro<br>
+Forte, autoritária e as vezes frágil, eu assumo<br>
+Minha fragilidade não diminui minha força<br>
+[...]<br>
+Sou mulher independente não aceito opressão<br>
+Abaixa sua voz, abaixa sua mão<br>
+Mais respeito<br>
+Sou mulher destemida minha marra vem do gueto<br>
+Se tavam querendo peso então toma esse dueto<br>
+Desde pequenas aprendemos que silencio não soluciona<br>
+Que a revolta vem à tona pois a justiça não funciona<br>
+Me ensinaram que éramos insuficiente<br>
+Discordei, pra ser ouvida o grito tem que ser potente<br>
+[...]<br>
+Represento as mulheres, 100% feminista<br>
+Represento Nina, Elza, Dona Celestina<br>
+Represento Zeferina, Frida, Dona Brasilina<br>
+Tentam nos confundir, distorcem tudo que eu sei<br>
+Século XXI e ainda querem nos limitar com novas leis<br>
+A falta de informação enfraquece a mente<br>
+Tô numa crescente porque eu faço diferente<br>
 
 </div>
 
@@ -327,18 +343,20 @@ Tô numa crescente porque eu faço diferente
 
 \pagebreak
 
-APRESENTAÇÃO
+<H2>APRESENTAÇÃO</H2>
+
+Prezada, professora! Prezado, professor!
 
 
-Prezada, professora! 
-Prezado, professor!
 
-“Proposições de práticas pedagógicas: desatemos nós na sala de aula sobre as relações de gênero no funk.” É um produto educacional do Mestrado Profissional em Letras/PROFLETRAS, da Universidade Federal da Paraíba – UFPB, resultado de uma pesquisa intitulada, Teçamos Leituras e Desatemos Nós: reflexões sobre as relações de gênero nas letras de canções de funk. Sob a orientação do Professor Dr. Joseval dos Reis Miranda. 
+“Proposições de práticas pedagógicas: desatemos nós na sala de aula sobre as relações de gênero no funk.” É um produto educacional do Mestrado Profissional em Letras/PROFLETRAS, da Universidade Federal da Paraíba – UFPB, resultado de uma pesquisa intitulada, Teçamos Leituras e Desatemos Nós: reflexões sobre as relações de gênero nas letras de canções de funk. Sob a orientação do Professor Dr. Joseval dos Reis Miranda.
+
 O objetivo principal deste material é subsidiar ações docentes voltadas à leitura de letras de canções do Funk como possibilidade para a discussão das questões de gênero nas aulas de Língua Portuguesa. O conteúdo apresentado é a sistematização didático-pedagógica das rodas de conversas e oficinas, embasadas no referencial teórico que possibilitaram as discussões e as reflexões durante a realização da pesquisa.
-Concluímos, portanto que na interface entre teoria e prática, este produto educacional é resultado das experiências e vivências das atividades realizadas no chão da escola no que diz respeito as relações de gênero. Na ocasião, esperamos que ele contribua com a problematização da cultura patriarcal, da divisão sexual do trabalho, do binarismo e das relações das desigualdades de gênero, de modo a instigar educadoras educadores a desenvolverem a criticidade dos/das discentes e a continuarem tecendo leituras sobre as relações de gênero.
-É preciso aderir essa ideia.   
-Gratidão! Gratidão! Gratidão! Obrigada, meu Deus!
 
+Concluímos, portanto que na interface entre teoria e prática, este produto educacional é resultado das experiências e vivências das atividades realizadas no chão da escola no que diz respeito as relações de gênero. Na ocasião, esperamos que ele contribua com a problematização da cultura patriarcal, da divisão sexual do trabalho, do binarismo e das relações das desigualdades de gênero, de modo a instigar educadoras educadores a desenvolverem a criticidade dos/das discentes e a continuarem tecendo leituras sobre as relações de gênero.
+É preciso aderir essa ideia.
+
+<br>Gratidão! Gratidão! Gratidão! Obrigada, meu Deus!
 
 Maria José soares Genuino
 
@@ -347,49 +365,47 @@ Maria José soares Genuino
 
 
 
+## INTRODUÇÃO ÀS DISCUSSÕES SOBRE AS DESIGUALDADES NAS RELAÇOES  DE GÊNERO
+
+
+<br>
+
+Professora, professor, você tem dúvidas, fica assustado quando pensa em refletir com seus alunos e alunas sobre as relações de gênero? Venha conosco, você não está sozinho/a. Existe uma linha muito tênue entre o que nós conhecemos a respeito de gênero na realidade e o enfrentamento a ser discutido na e pela escola. Temos muito o que aprender juntos! A cultura patriarcal, a dominação masculina inerente às linguagens e à língua, disseminada cotidianamente no imaginário coletivo pelas projeções das mídias e instituições sociais, se manifesta nas atitudes e procedimentos dos sujeitos que internalizam a ideia de supremacia masculina, como força matriz para a naturalização dos rótulos de gênero. 
+
+Nesse contexto, é importante problematizar à desigualdade nas relações de gênero, a concepção tradicional do ensino da língua portuguesa no contexto escolar, de modo que ampliemos a nossa visão e possibilitemos que os/as discentes reflitam e desenvolvam a criticidade. Trazemos nesse produto educacional, como sugestão, a articulação do trabalho da leitura como prática social, o funk, um gênero musical muito presente na vivência de nossos alunos e alunas. Com esse fim, desejamos que as leituras, as inferências a respeito dos diversos temas apresentados no funk, possam, por meio das discussões e reflexões, contribuir com novas formas de aprendermos de pensarmos, sermos e de agirmos no mundo. E pelo uso social da língua, construirmos um mundo melhor, com menos preconceito, mais amor e respeito às diferenças e à diversidade. 
+
+
+<br>
 
 
 
-INTRODUÇÃO ÀS DISCUSSÕES SOBRE AS DESIGUALDADES NAS RELAÇOES  DE GÊNERO
 
 
-
-Professora, professor, você tem dúvidas, fica assustado quando pensa em refletir com seus alunos e alunas sobre as relações de gênero? Venha conosco, você não está sozinho/a. Existe uma linha muito tênue entre o que nós conhecemos a respeito de gênero na realidade e o enfrentamento a ser discutido na e pela escola. Temos muito o que aprender juntos! A cultura patriarcal, a dominação masculina inerente às linguagens e à língua, disseminada cotidianamente no imaginário coletivo pelas projeções das mídias e instituições sociais, se manifesta nas atitudes e procedimentos dos sujeitos que internalizam a ideia de supremacia masculina, como força matriz para a naturalização dos rótulos de gênero. Nesse contexto, é importante problematizar à desigualdade nas relações de gênero, a concepção tradicional do ensino da língua portuguesa no contexto escolar, de modo que ampliemos a nossa visão e possibilitemos que os/as discentes reflitam e desenvolvam a criticidade. Trazemos nesse produto educacional, como sugestão, a articulação do trabalho da leitura como prática social, o funk, um gênero musical muito presente na vivência de nossos alunos e alunas. Com esse fim, desejamos que as leituras, as inferências a respeito dos diversos temas apresentados no funk, possam, por meio das discussões e reflexões, contribuir com novas formas de aprendermos de pensarmos, sermos e de agirmos no mundo. E pelo uso social da língua, construirmos um mundo melhor, com menos preconceito, mais amor e respeito às diferenças e à diversidade. 
-
-
-
-
+> VAMOS DESCOBRIR O QUE É GÊNERO?
 
 \pagebreak
-
-
-
-
-
-
-
-
-
-VAMOS DESCOBRIR O QUE É GÊNERO?
 
 
 Consideramos que para explicitar as desigualdades nas relações de gênero, antes de tudo, é preciso que nós, professores e professoras compreendamos o conceito de gênero, pois  a configuração  dos papéis de homem e mulher perpassam por uma convenção social, arbitrária. Por isso, a fim de que, por meio do arcabouço teórico dos estudos de gênero, da ciência, possamos contribuir com a desconstrução dessas estruturas sociais nocivas, entendemos a concepção de gênero, enquanto elemento que distingue o sexo biológico dos papéis determinantes para homens e mulheres. Isto é, gênero como elemento constitutivo das relações sociais, inerente à estrutura de poder, desencadeador da hierarquia entre o gênero masculino e feminino.
 
 
-REPARE BEM!
+
+> REPARE BEM!
 
 
 
 Carvalho, Andrade e Junqueira (2009) conceituam gênero como:
-Na cultura androcêntrica e na sociedade patriarcal, é uma estrutura de dominação simbólica, materializada na organização social e nos corpos, resultante de um processo de construção sociocultural com base nas diferenças sexuais percebidas. Implica relação (masculino X feminino), dicotomia, assimetria, desigualdade, polarização e hierarquia. Determina identidades, qualidades e valores desigualmente atribuidos a homens e mulheres, a práticas sociais e a objetos culturais (por exemplo, as cores rosa e azul). (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.18).
-    Com base na citação anterior, as desigualdades nas relações de gênero (entendidas como processo cultural e fruto das relações de poder), os estigmas/estereótipos (rótulos) de gênero, são construídos e se dão em função de uma lógica binária e héteronormativa privilegiada. Comportamentos de meninas e de meninos já são esperados, mesmo antes de nascer. Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos dos direitos humanos, Damares Alves, no governo de Jair Messias Bolsonaro: “menino veste azul e menina veste rosa.” O que consideramos um feito político, que inerente à língua, absolutização do patriarcado e da dominação masculina, oprimindo, consequentemente, os sujeitos que diferem da norma construída e convencionada como padrão. 
+
+<p class="citacao"> Na cultura androcêntrica e na sociedade patriarcal, é uma estrutura de dominação simbólica, materializada na organização social e nos corpos, resultante de um processo de construção sociocultural com base nas diferenças sexuais percebidas. Implica relação (masculino X feminino), dicotomia, assimetria, desigualdade, polarização e hierarquia. Determina identidades, qualidades e valores desigualmente atribuidos a homens e mulheres, a práticas sociais e a objetos culturais (por exemplo, as cores rosa e azul). (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.18).
     
-
-
-OLHA O QUE  OS ALUNOS E ALUNAS DA PESQUISA DISSERAM SOBRE ESTEREÓTIPOS:
-
-
+Com base na citação anterior, as desigualdades nas relações de gênero (entendidas como processo cultural e fruto das relações de poder), os estigmas/estereótipos (rótulos) de gênero, são construídos e se dão em função de uma lógica binária e héteronormativa privilegiada. Comportamentos de meninas e de meninos já são esperados, mesmo antes de nascer. Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos dos direitos humanos, Damares Alves, no governo de Jair Messias Bolsonaro: “menino veste azul e menina veste rosa.” O que consideramos um feito político, que inerente à língua, absolutização do patriarcado e da dominação masculina, oprimindo, consequentemente, os sujeitos que diferem da norma construída e convencionada como padrão. 
+    
 \pagebreak
+
+> OLHA O QUE  OS ALUNOS E ALUNAS DA PESQUISA DISSERAM SOBRE ESTEREÓTIPOS:
+
+
+
 
 <div class="descriptive" style="font-style: italic">
 
@@ -406,13 +422,12 @@ OLHA O QUE  OS ALUNOS E ALUNAS DA PESQUISA DISSERAM SOBRE ESTEREÓTIPOS:
 “[...]Não existe apenas uma cor para meninos e meninas. Meninas e meninos merecem direitos iguais. Os deveres domésticos não podem ser apenas para as mulheres.” (Madalena).<br>
 </div>
 
-> AI, AI, AI! ESTEREÓTIPOS DE GÊNERO! PRECISAMOS MUDAR ISSO!
-
 \pagebreak
 
-Souza e Carvalho (2003) CITA EXEMPLOS DE ESTEREÓTIPOS:
+> AI, AI, AI! ESTEREÓTIPOS DE GÊNERO! PRECISAMOS MUDAR ISSO!
 
-<div class="descriptive" style="font-size: .5cm;">
+Souza e Carvalho (2003) citam exemplos de estereótipos:
+
 
 | HOMEM | MULHER |
 |:---------:|:---------:|
@@ -429,10 +444,6 @@ Souza e Carvalho (2003) CITA EXEMPLOS DE ESTEREÓTIPOS:
 | OBJETIVO | EMOTIVA |
 
 
-
-
-</div>
-
 ESTEREÓTIPOS MASCULINOS E FEMININOS – (SOUZA; CARVALHO, 2003,p. 12).   
 
 <br> 
@@ -443,9 +454,9 @@ ESTEREÓTIPOS MASCULINOS E FEMININOS – (SOUZA; CARVALHO, 2003,p. 12).
 
 Intensificamos a  discussão sobre o processo de ‘fabricação dos sujeitos”com base em Louro (2014): 
 
-    O processo de "fabricação dos sujeitos é continuado e geralmente muito sutil, quase imperceptivel. Antes de tentar percebê-lo pela leitura das leis ou dos decretos que instalam e regulam as instituições ou percebê-lo nos solenes discursos das autoridades (embora todas essas instâncias também façam sentido), nosso olhar deve se voltar especialmente para as práticas cotidianas em que se envolvem todos os sujeitos. São, pois, as práticas rotineiras e comuns, os gestos as palavras banalizados que precisam se tornar alvos de atenção renovada, de questionamento e, em especial, de desconfiança. A tarefa mais urgente talvez seja exatamente essa: desconfiar do que é tomado como "natural". (LOURO, 2014, p. 67).
-
 \pagebreak
+
+<p class="citacao"> O processo de "fabricação dos sujeitos é continuado e geralmente muito sutil, quase imperceptivel. Antes de tentar percebê-lo pela leitura das leis ou dos decretos que instalam e regulam as instituições ou percebê-lo nos solenes discursos das autoridades (embora todas essas instâncias também façam sentido), nosso olhar deve se voltar especialmente para as práticas cotidianas em que se envolvem todos os sujeitos. São, pois, as práticas rotineiras e comuns, os gestos as palavras banalizados que precisam se tornar alvos de atenção renovada, de questionamento e, em especial, de desconfiança. A tarefa mais urgente talvez seja exatamente essa: desconfiar do que é tomado como "natural". (LOURO, 2014, p. 67).
 
 Com isso, queremos enfatizar que pensar às relações de gênero em um sentido amplo exige não somente pensar em um Estado forte, capaz de efetivar políticas públicas voltadas à diversidade e ao respeito aos direitos humanos, mas sobretudo, um realinhamento do modo de pensar e de agir de uma legião de pessoas dispostas a tecer uma história distoate das regras estabelecidas de continuação de privilégios do gênero masculino, em detrimento do rebaixamento do feminino. 
 
@@ -454,9 +465,12 @@ Com isso, queremos enfatizar que pensar às relações de gênero em um sentido 
 <br> 
 
 Junqueira (2022) explicita que os estudos de gênero, rompe com o senso comum de aniquilamento  da família tradicional e da ordem:
-Ao lado disso, é oportuno reiterar que, no vasto e consolidado campo dos estudos de gênero e afins, há teorias (no plural) que contemplam diferentes disciplinas, matrizes teóricas e políticas, nas quais gênero é um disputado conceito (e não uma teoria, muito menos uma ideologia) com múltiplas acepções e implicações críticas e políticas. Tão ou mais impróprio do que falar em uma teoria do gênero ou de uma ideologia do gênero é imaginar que as análises e as transformações preconizadas pelos estudos de género e pelos feminismos (também eles, plurais) implicariam privar crianças do direito à família, transformar escolas em "campos de doutrinação do gender", aniquilar a ordem simbólica, extinguir "a familia" e a humanidade, entre outras "catástrofes" anunciadas pelo ativismo antigênero. (JUNQUEIRA, 2022, p. 226).
 
-    Ao refutar os discursos moralistas opostos aos estudos de gênero, Junqueira (2022), concomitantemente faz uma alerta importante, principalmente para todos nós, professores e professoras formadores/as de opinião: o machismo, o sexismo, a misoginia e tantos outros absurdos apresentados no dia a dia é que são verdadeiras manifestações da ideologia de gênero, já que essa só existe no pensamento do senso comum e/ou dos reacionários conservadores que pleiteiam disseminar calúnias, com o propósito de camuflar as verdadeiras intenções de manutenção do poder de um gênero sobre o outro. 
+\pagebreak
+
+<p class="citacao">  Ao lado disso, é oportuno reiterar que, no vasto e consolidado campo dos estudos de gênero e afins, há teorias (no plural) que contemplam diferentes disciplinas, matrizes teóricas e políticas, nas quais gênero é um disputado conceito (e não uma teoria, muito menos uma ideologia) com múltiplas acepções e implicações críticas e políticas. Tão ou mais impróprio do que falar em uma teoria do gênero ou de uma ideologia do gênero é imaginar que as análises e as transformações preconizadas pelos estudos de género e pelos feminismos (também eles, plurais) implicariam privar crianças do direito à família, transformar escolas em "campos de doutrinação do gender", aniquilar a ordem simbólica, extinguir "a familia" e a humanidade, entre outras "catástrofes" anunciadas pelo ativismo antigênero. (JUNQUEIRA, 2022, p. 226).
+
+Ao refutar os discursos moralistas opostos aos estudos de gênero, Junqueira (2022), concomitantemente faz uma alerta importante, principalmente para todos nós, professores e professoras formadores/as de opinião: o machismo, o sexismo, a misoginia e tantos outros absurdos apresentados no dia a dia é que são verdadeiras manifestações da ideologia de gênero, já que essa só existe no pensamento do senso comum e/ou dos reacionários conservadores que pleiteiam disseminar calúnias, com o propósito de camuflar as verdadeiras intenções de manutenção do poder de um gênero sobre o outro. 
 
 <br> 
 
@@ -467,14 +481,14 @@ Ao lado disso, é oportuno reiterar que, no vasto e consolidado campo dos estudo
 Sobre a desigualdade de gênero Carvalho, Andrade e Junqueira (2009) esclarece:
 Nesse sentido, iniquidade ou desigualdade de gênero não é simplesmente discriminação de sexo ou exclusão de mulheres de posições de privilégio de poder; de modo mais amplo, refere-se à assimetria de gênero, ou seja, à valorização dos atributos de um gênero em detrimento do outro; na cultura androcêntrica, corresponde à desvalorização das expressões femininas. (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.14).
 
-    O feminismo veio desconstruir, ou melhor, problematizar essa assimetria, citada anteriormente, e dizer para nós que os estudos de gênero são de suma importância, uma vez que deslegitimiza a naturalização das desigualdades, da masculinidade hegemônica, do patriarcado, colocando um norte para o avanço da conquista de direitos e à solidariedade entre homens e mulheres. Um outro aspecto fundamental que precisamos nos ater, em relação às questões de gênero, é o fato das mulheres ficarem muito tempo, reféns dos afazeres domésticos, não estudarem e consequentemente, não se desenvolverem. Essa divisão sexual do trabalho priva as mulheres de serem o que elas quiserem.
+<p class="citacao"> O feminismo veio desconstruir, ou melhor, problematizar essa assimetria, citada anteriormente, e dizer para nós que os estudos de gênero são de suma importância, uma vez que deslegitimiza a naturalização das desigualdades, da masculinidade hegemônica, do patriarcado, colocando um norte para o avanço da conquista de direitos e à solidariedade entre homens e mulheres. Um outro aspecto fundamental que precisamos nos ater, em relação às questões de gênero, é o fato das mulheres ficarem muito tempo, reféns dos afazeres domésticos, não estudarem e consequentemente, não se desenvolverem. Essa divisão sexual do trabalho priva as mulheres de serem o que elas quiserem.
 
 
 > REFLEXÃO!
 
 A respeito da divisão sexual do trabalho, Arruda e Nascimento (2016) destacam:
 
-    A responsabilidade atribuída às mulheres em relação ao trabalho doméstico e ao cuidado da família gera desigualdades de oportunidades no acesso aos recursos econômicos, culturais, sociais e políticos. Isso é consequência de uma ordem de gênero (que inclui não somente o trabalho, como todas as outras dimensões da vida social) e de uma divisão sexual do trabalho. As duas instâncias, ao mesmo tempo em que conferem à mulher a função básica e primordial do cuidado com o mundo privado e a esfera doméstica, atribuem a essa esfera um valor social inferior ao do mundo público e desconhecem por completo seu valor econômico. (ARRUDA; NASCIMENTO, 2016, p. 6).
+<p class="citacao"> A responsabilidade atribuída às mulheres em relação ao trabalho doméstico e ao cuidado da família gera desigualdades de oportunidades no acesso aos recursos econômicos, culturais, sociais e políticos. Isso é consequência de uma ordem de gênero (que inclui não somente o trabalho, como todas as outras dimensões da vida social) e de uma divisão sexual do trabalho. As duas instâncias, ao mesmo tempo em que conferem à mulher a função básica e primordial do cuidado com o mundo privado e a esfera doméstica, atribuem a essa esfera um valor social inferior ao do mundo público e desconhecem por completo seu valor econômico. (ARRUDA; NASCIMENTO, 2016, p. 6).
 
 \pagebreak
 
@@ -483,20 +497,26 @@ A partir de todos esses indicadores, conforme Arruda e Nascimento (2016) entende
 
 Nesses termos, citamos, a priori, Bourdieu (2020) que compartilha em seu livro, "A  dominação masculina",  algumas  ideias a respeito da sociedade. Sobretudo no que diz respeito ao estabelecimento de comportamentos, capacidades e limitações como características remetentes ao gênero, masculino ou feminino. Com isso, queremos enfatizar  uma  outra espécie de narrativa, a que não alude o estado de princesa salva pelo príncipe encantado, mas instiga uma cultura de mulheres guerreiras,  capazes de em suas singularidades, construirem o cultivo de soma, ao invés de divisão.
 
+
+
+Em Aguiar (2011), o conceito de patriarcado tem sido usado na literatura feminista internacional, como significação às relações de poder entre homens e mulheres. "As mulheres são subordinadas aos homens no sistema patriarcal.” (AGUIAR, 2011, p. 322). Nesse contexto, observamos que existem alguns imperativos no jogo arbitrário de forças do sistema sexo-gênero (impostas pelo patriarcalismo), a violência simbólica como força matriz  para a naturalização de estigmas de gênero, da dominação masculina, do sexismo, da misoginia  e das estratégias de reprodução dos bens simbólicos. 
+
 \pagebreak
 
-Em Aguiar (2011), o conceito de patriarcado tem sido usado na literatura feminista internacional, como significação às relações de poder entre homens e mulheres. "As mulheres são subordinadas aos homens no sistema patriarcal.” (AGUIAR, 2011, p. 322). Nesse contexto, observamos que existem alguns imperativos no jogo arbitrário de forças do sistema sexo-gênero (impostas pelo patriarcalismo), a violência simbólica como força matriz  para a naturalização de estigmas de gênero, da dominação masculina, do sexismo, da misoginia  e das estratégias de reprodução dos bens simbólicos . 
-
 Ao almejarmos trabalhar na sala de aula, sobre as relações de gênero, é fundamental, desvelar que o conceito de gênero é estabelecido socialmente, sem ligação exclusiva com o conceito de sexo. De maneira que fique bem compreendido o que são estes dois fatores, pois enquanto o sexo está diretamente ligado à configuração corpórea, biológica e genital, a ideia de gênero está  situada em um campo semântico que foge da caracterização puramente física. Gênero é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
+
 Sob o arcabouço teórico de Bourdieu (2020), entendo que a cultura patriarcal é um  fenômeno restritivo e ideológico não criado subitamente, ou minimamente embasado em uma     questão biológica, mas ideologicamente construído, por meio de um processo político, pensado, como efeito de organização dos papéis de cada sexo pelo sistema sexo-gênero, de geração a geração. 
 
 > Mais uma vez, fique ligado!
 
 Sobre as relações de poder estarem ligadas às relações de gênero, citamos Segundo Figueredo et al., (2021):
-    As relações de gênero estão estritamente ligadas as relações sociais de poder entre homens e mulheres, construídas por meio das diferenças percebidas entre os sexos. Esse tipo de relação desigual é construído antes mesmo da entrada do indivíduo no ambiente escolar e é reforçado por meio de discursos e práticas que privilegiam um sexo sobre outro, contribuindo assim para a construção da identidade sexual de meninas e meninos. (FIGUEIREDO et al., 2021, p. 18).
+    
+<p class="citacao"> As relações de gênero estão estritamente ligadas as relações sociais de poder entre homens e mulheres, construídas por meio das diferenças percebidas entre os sexos. Esse tipo de relação desigual é construído antes mesmo da entrada do indivíduo no ambiente escolar e é reforçado por meio de discursos e práticas que privilegiam um sexo sobre outro, contribuindo assim para a construção da identidade sexual de meninas e meninos. (FIGUEIREDO et al., 2021, p. 18).
 
 \pagebreak
 
 Como diz Figueredo, et al., (2021) quando nascemos, já somos determinados pelo contexto social, político, econômico, cultural, religioso, não há como se safar. Já nascemos em uma forma. Somos determinados/as. E o sexo masculino já tem esse lugar privilegiado. Como dizia minha mamãe (in memorian), “em homem não pega nada, minha filha!” Nessa fala, ela estava querendo me ptoteger e ao mesmo tempo alertar que o lugar destinado a nós mulheres é um lugar de submissão de falta de liberdade.
 
-Crescemos sentindo na pele essa violação de direitos e cárcere, no qual somos subordinadas, todas nós mulheres a agirmos com desconfiança, umas com as outras e a não praticarmos a sororidade (o cuidado com cada uma de nós mulheres). Há uma narrativa histórica e milenar de que “Eva foi quem seduziu Adão.” Vale apena pensar: será que a língua, os textos sagrados, escritos por homens não deixaram transparecer a cultura machista que neles estava arraigada? Não pretendemos aqui questionar os preceitos de fé, mas refletir sobre as ações políticas, intencionais e ideológicas que permeiam as construções sociais de outrora. O hoje é produção do ontem. Dessa forma, a perpetuação da supremacia masculina na vida prática, fomentada pelos artefatos culturais, pela mídia, família, escola, igreja etc., institucionaliza os costumes, a cultura, que em uma violência velada, naturaliza e sobrepõem os homens em relação às mulheres. E se isso não for problematizado, continuaremos em um mundo feito e organizado por homens e para os homens. Não é isso que é justo, não é?
+Crescemos sentindo na pele essa violação de direitos e cárcere, no qual somos subordinadas, todas nós mulheres a agirmos com desconfiança, umas com as outras e a não praticarmos a sororidade (o cuidado com cada uma de nós mulheres). Há uma narrativa histórica e milenar de que “Eva foi quem seduziu Adão.” Vale apena pensar: será que a língua, os textos sagrados, escritos por homens não deixaram transparecer a cultura machista que neles estava arraigada? Não pretendemos aqui questionar os preceitos de fé, mas refletir sobre as ações políticas, intencionais e ideológicas que permeiam as construções sociais de outrora. 
+
+O hoje é produção do ontem. Dessa forma, a perpetuação da supremacia masculina na vida prática, fomentada pelos artefatos culturais, pela mídia, família, escola, igreja etc., institucionaliza os costumes, a cultura, que em uma violência velada, naturaliza e sobrepõem os homens em relação às mulheres. E se isso não for problematizado, continuaremos em um mundo feito e organizado por homens e para os homens. Não é isso que é justo, não é?
