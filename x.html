@@ -1,5 +1,5 @@
 <head>
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/alexander-textfonts" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/lucymar-sans" type="text/css"/>
 
 <style>
 .phb{
@@ -12,36 +12,80 @@
     font-weight: normal;
     font-style: normal;
     background:white;
+    text-indent: 0%;
+}
+
+.phb .descriptive{
     
-    
+    column-rule: 2px solid #c9ad6a;
+    border-style: solid;
+     border-image:url('/assets/img/sidebars.png') 12 round;
+    border-color:#c9ad6a;
+}
+
+.phb .descriptive p{
+    padding-left: 20px;
+    padding-right: 20px;
+    column-rule: 2px solid #c9ad6a;
 }
 
 .phb p{
-    line-height:        1.5em;
+    line-height: 1.3em;
+    padding-bottom: .3em;
     padding-left: 1cm;
     padding-right: 1cm;
-    text-indent:40px;
+    text-indent: 30px;
+}
+
+.phb p + p{
+
+    line-height: 1.3em;
+    padding-bottom: .3em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent: 30px;
     
 }
 
-.citacao{
-    
+.phb .quote{
+
+    text-indent: 0px;
+    line-height: 1em;
     font-size: .4cm;
     margin-left: 4cm;
     margin-top:.5cm;
     margin-bottom: 1cm;
     text-align: justify;
-    padding: 0;
-    list-style-type: none;
+    
 }
 
+.blankLabel{
+    
+    display:block-inline;
+    margin-bottom:1em;
+    margin-left:-10%;
+    margin-right:-10%;
+    background-color: rgba(255, 255, 215, 0.9);
+    
+    padding-left:10%;
+    padding-right:10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: #01002F;
+    font-size: 1.2cm;
+    font-family: 'LucymarSansRegular';
+    font-weight: bold;
+    
+    
+    box-shadow:0 0 10px black
+}
 
-
-.phb:H1{
+.phb H1{
 
 
     column-span:        all;
-    font-family: 'AlexanderRegular';
+    font-family: 'LucymarSansRegular';
     color: #020d12;
     font-size: .9cm;
     font-style: normal;
@@ -55,19 +99,19 @@
 
     color:#000000;
     font-size: .7cm;
-    font-family: 'AlexanderRegular';
+    font-family: 'LucymarSansRegular';
     font-style: normal;
 }
 
 .phb H3{
     color:#000000;
     font-size: .7cm;
-    font-family: 'AlexanderRegular';
+    font-family: 'LucymarSansRegular';
     font-style: normal;
 }
 
 .phb table {                            
-    font-family: 'AlexanderRegular';
+    font-family: 'LucymarSansRegular';
     width: 100%;
     margin-left: 0px;
     margin-bottom: 1em;]
@@ -81,9 +125,31 @@
     background-color: #b1f6dd
 }
 
+.phb .footnote{
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
+
+.phb:nth-child(even) .footnote {
+
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
 
 .phb blockquote {
     
+    column-span: all;
+    text-indent: 0px;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 25px;
@@ -106,9 +172,10 @@
 }
 .phb blockquote p,
 .phb blockquote ul {
+    text-indent:0px;
     font-size: .6cm;
     line-height: 1em;
-    font-family: 'AlexanderRegular';
+    font-family: 'LucymarSansRegular';
     text-align: center;
 }
 .phb pre+blockquote,
@@ -120,6 +187,8 @@
 .phb blockquote h5 {
     margin-top: 23px}
 
+
+.phb:after{display:none;}
 .phb:nth-child(n+4):after {
     content: "";
     position: absolute;
@@ -130,35 +199,22 @@
     background-image: url('/assets/img/footer.png');
     background-size: cover
 }
-.phb#p1:after{display:none;}
-.phb#p2:after{display:none;}
-.phb#p3:after{display:none;}
-
-
 
 </style>
 
-
-
-
-<div style="text-align:center; color:white;">
+<div style="text-align:center;">
     
-<H3 style="font-family: 'AlexanderRegular'; color: #f7e9ca; font-size: 3 cm"> Proposição de práticas pedagógicas</H3>
+<H3 style="font-family: 'LucymarSansRegular'; color: #f7e9ca; font-size: 3 cm"> Proposição de práticas pedagógicas</H3>
 
-<H1 style="font-family: 'AlexanderRegular'; color: #f7e9ca;">DESATATEMOS NÓS NA SALA DE AULA SOBRE AS RELAÇÕES DE GÊNERO NO FUNK</H2>
+<H1 style="font-size: 1.1cm; font-family: 'LucymarSansRegular'; color: #f7e9ca;">DESATATEMOS NÓS NA SALA DE AULA SOBRE AS RELAÇÕES DE GÊNERO NO FUNK</H2> 
 
-
-<H2 style="font-family: 'AlexanderRegular'; color: #f7e9ca;"> Maria José Soares Genuino</H2>
+<H2 style="font-family: 'LucymarSansRegular'; color: #f7e9ca; padding-top: 0cm;"> Maria José Soares Genuino</H2>
 
 <img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/cover.jpg' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
 </div>
 
 \pagebreak
 
-
- 
-
- 
 <style>
 /** Change the p2 to whatever page number is the last page in your document **/
 .phb#p2:after { display:none; }
@@ -171,55 +227,52 @@
 <img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/backcover.png' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
 
 \columnbreak
-
-
  
 <h2 style="font-size: 30px; text-align: center;"> Proposição de práticas pedagógicas </h3>
 
+<h2 style="font-size: 35px; text-align: center;"> Desatemos nós na sala de aula sobre as relações de gênero </h1>
 
-
-<h2 style="font-size: 40px; text-align: center;"> Desatemos nós na sala de aula sobre as relações de gênero </h2>
-
-
-<h2 style="font-size: 30px; text-align: center;"> Maria José Soares Genuino </h2>
+<h2 style="font-size: 30px; text-align: center; padding-top: 1cm;"> Maria José Soares Genuino </h2>
  
 </div>
 
 \pagebreak
 
-
-<div style="text-align: center; font-size: .4cm;"> 
-
-PROPOSIÇÃO DE PRÁTICAS PEDAGÓGICAS:
-
-**TEÇAMOS LEITURAS E DESATEMOS NÓS: REFLEXÕES SOBRE AS RELAÇÕES DE GÊNERO NAS LETRAS DE CANÇÕES DE FUNK**
-<br>
-Material Didático desenvolvido através do Programa de Mestrado Profissional em Letras - PROFLETRAS
-</div>
+<div style="text-align: center; font-size: .35cm;"> 
 
 <br>
 
-<div style="text-align: center; font-size: .4cm">
+<b> TEÇAMOS LEITURAS E DESATEMOS NÓS: REFLEXÕES SOBRE AS RELAÇÕES DE GÊNERO NAS LETRAS DE CANÇÕES DE FUNK </b>
+
+Material Didático desenvolvido por meio do Programa de Mestrado Profissional em Letras - PROFLETRAS
+
+<br> 
 
 **Universidade Federal da Paraíba – UFPB**
 
 Valdiney Veloso Gouveia (Reitor)
 
-Centro de Ciências Aplicadas e Educação – CCAE
-
-Josilene Fernandes Gouveia (Diretora)
-
-Mestrado Profissional em Letras – PROFLETRAS
-
-Carla Alecsandra de Melo Bonifácio (coordenadora)
-
-João Wandemberg Gonçalves Maciel ( Vice/coordenador)
-
 <br>
+
+**Centro de Ciências Aplicadas e Educação – CCAE**
+
+Prof. Dr. Joseilme Fernandes Gouveia (Diretor)
+
+Profa. Dra. Fernanda Marques de Almeida Holanda
+
+<br> 
+
+**Mestrado Profissional em Letras – PROFLETRAS**
+
+Profa. Dra. Carla Alecsandra de Melo Bonifácio (coordenadora)
+
+Prof. Dr. João Wandemberg Gonçalves Maciel (Vice/coordenador)
+
+<br> 
 
 **Orientador**
 
-Joseval dos Reis Miranda
+Prof. Dr. Joseval dos Reis Miranda
 
 <br>
 
@@ -227,7 +280,7 @@ Joseval dos Reis Miranda
 
 Profa. Dra. Jeane Félix da Silva
 
-Profa. Dra. Profa. Dra. Fernanda Barboza de Lima
+Profa. Dra. Fernanda Barboza de Lima
 
 Profa. Dra. Laurênia Souto Sales
 
@@ -249,7 +302,7 @@ Diana Laís Soares Genuino
 
 **Ilustrações**
 
-Davi Matias Soares Genuino
+Midjourney
 
 <br>
 
@@ -273,18 +326,15 @@ Mamanguape – PB, maio de 2023
 text-align: left; 
 font-size: .4cm; 
 column-count:1; 
-column-rule: solid;
-column-rule-width: 1px; 
 column-width: 1px;
 column-gap: 1px;
 ">
-
 
 <H2>SUMÁRIO</H1>
 
 <br>
 
-1.  INTRODUÇÃO ÀS DISCUSSÕES SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
+1.  SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
 2.VAMOS DESCOBRIR O QUE É GÊNERO E ESTEREÓTIPO DE GÊNERO?
 
 3.  A PRÁTICA SOCIAL DA LEITURA E O FUNK
@@ -299,10 +349,11 @@ column-gap: 1px;
 10. APÊNDICES
 11. ANEXOS
 
-
 </div> 
 
 \pagebreak
+
+<!--Page 4/!-->
 
 <div class="descriptive" style="text-align:center; font-size: .5cm;">
 
@@ -339,79 +390,152 @@ Tô numa crescente porque eu faço diferente<br>
 
 </div>
 
-<div class="pageNumber"> 5 </div>
-
 \pagebreak
 
 <H2>APRESENTAÇÃO</H2>
 
-Prezada, professora! Prezado, professor!
+<br>Prezada, professora! Prezado, professor! 
 
+<br> 
 
-
-“Proposições de práticas pedagógicas: desatemos nós na sala de aula sobre as relações de gênero no funk.” É um produto educacional do Mestrado Profissional em Letras/PROFLETRAS, da Universidade Federal da Paraíba – UFPB, resultado de uma pesquisa intitulada, Teçamos Leituras e Desatemos Nós: reflexões sobre as relações de gênero nas letras de canções de funk. Sob a orientação do Professor Dr. Joseval dos Reis Miranda.
+“Proposições de práticas pedagógicas: desatemos nós na sala de aula sobre as relações de gênero no funk.” É um produto educacional do Mestrado Profissional em Letras/PROFLETRAS, da Universidade Federal da Paraíba – UFPB, resultado de uma pesquisa intitulada, Teçamos Leituras e Desatemos Nós: reflexões sobre as relações de gênero nas letras de canções de funk. Sob a orientação do Professor Dr. Joseval dos Reis Miranda. <br> 
 
 O objetivo principal deste material é subsidiar ações docentes voltadas à leitura de letras de canções do Funk como possibilidade para a discussão das questões de gênero nas aulas de Língua Portuguesa. O conteúdo apresentado é a sistematização didático-pedagógica das rodas de conversas e oficinas, embasadas no referencial teórico que possibilitaram as discussões e as reflexões durante a realização da pesquisa.
 
 Concluímos, portanto que na interface entre teoria e prática, este produto educacional é resultado das experiências e vivências das atividades realizadas no chão da escola no que diz respeito as relações de gênero. Na ocasião, esperamos que ele contribua com a problematização da cultura patriarcal, da divisão sexual do trabalho, do binarismo e das relações das desigualdades de gênero, de modo a instigar educadoras educadores a desenvolverem a criticidade dos/das discentes e a continuarem tecendo leituras sobre as relações de gênero.
-É preciso aderir essa ideia.
 
-<br>Gratidão! Gratidão! Gratidão! Obrigada, meu Deus!
+É preciso aderir essa ideia. Desejo-vos uma ótima leitura! <br> <br>
 
-Maria José soares Genuino
+Gratidão! Gratidão! Gratidão! Obrigada, meu Deus!
 
+<br> <p style="text-align:right">Maria José soares Genuino
 
 \pagebreak
 
+</style>
 
-
-## INTRODUÇÃO ÀS DISCUSSÕES SOBRE AS DESIGUALDADES NAS RELAÇOES  DE GÊNERO
-
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/SOBRE%20AS%20DESIGUALDADES%20NAS%20RELAÇÕES%20DE%20GÊNERO.png' style='position:absolute;top:0px;left:-110px;width:1060px;' />
 
 <br>
 
-Professora, professor, você tem dúvidas, fica assustado quando pensa em refletir com seus alunos e alunas sobre as relações de gênero? Venha conosco, você não está sozinho/a. Existe uma linha muito tênue entre o que nós conhecemos a respeito de gênero na realidade e o enfrentamento a ser discutido na e pela escola. Temos muito o que aprender juntos! A cultura patriarcal, a dominação masculina inerente às linguagens e à língua, disseminada cotidianamente no imaginário coletivo pelas projeções das mídias e instituições sociais, se manifesta nas atitudes e procedimentos dos sujeitos que internalizam a ideia de supremacia masculina, como força matriz para a naturalização dos rótulos de gênero. 
+<div class="blankLabel" 
+style="
+font-size:6cm;
+position: absolute; 
+right: 80%;
+left: 0%;
+top: 10%;
+padding-top: 0px;
+padding-left: 20%;
+padding-bottom: 0px;
+text-align:left">
+1
 
-Nesse contexto, é importante problematizar à desigualdade nas relações de gênero, a concepção tradicional do ensino da língua portuguesa no contexto escolar, de modo que ampliemos a nossa visão e possibilitemos que os/as discentes reflitam e desenvolvam a criticidade. Trazemos nesse produto educacional, como sugestão, a articulação do trabalho da leitura como prática social, o funk, um gênero musical muito presente na vivência de nossos alunos e alunas. Com esse fim, desejamos que as leituras, as inferências a respeito dos diversos temas apresentados no funk, possam, por meio das discussões e reflexões, contribuir com novas formas de aprendermos de pensarmos, sermos e de agirmos no mundo. E pelo uso social da língua, construirmos um mundo melhor, com menos preconceito, mais amor e respeito às diferenças e à diversidade. 
+</div>
 
+<div class="blankLabel" 
+style="
+position: absolute; 
+left: 30%;
+top: 70%;
+padding-left: 0%;
+text-align:right">
+
+SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO 
+
+</div>
+
+\pagebreak
+
+## SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
 
 <br>
 
+Professora, professor, você tem dúvidas, fica assustado quando pensa em refletir com seus alunos e alunas sobre as relações de gênero? Venha conosco, você não está sozinho/a. Existe uma linha muito tênue entre o que nós conhecemos a respeito de gênero na realidade e o enfrentamento a ser discutido na e pela escola. Temos muito o que aprender juntos! Diante disso, não podemos cruzar os braçõs e reproduzir esse sistema. 
 
+O nosso papel, enquanto formadores/as de opinião é também questionar, resistir a todos e quaisquer tipo de opressão. É preciso quebrar paradigmas, modelos conservadores, que só retroalimentam à guerra e o poder de um gênero sobre ooutro. Com isso, queremos chamar à atenção para a cultura patriarcal, a dominação masculina, inerente às linguagens e à língua, pois   disseminada cotidianamente no imaginário coletivo, pelas projeções das mídias e instituições sociais, se manifesta nas atitudes e procedimentos dos sujeitos. Provocando, contudo, a internalização da ideia de supremacia masculina, força matriz para a naturalização dos rótulos de gênero. 
 
+É importante problematizar a desigualdade nas relações de gênero, a concepção tradicional do ensino da língua portuguesa no contexto escolar, de modo que ampliemos a nossa visão e possibilitemos que os/as discentes reflitam e desenvolvam a criticidade e o entendimento de que a assimetria entre homens e mulheres não é boa para a humanidade, uma vez que distoa do sentido de civilizatório e do respeito à pessoa humana. Por isso, trazemos nesse produto educacional, como sugestão, a articulação do trabalho da leitura como prática social, o funk, um gênero musical muito presente na vivência de nossos alunos e alunas.
 
-
-> VAMOS DESCOBRIR O QUE É GÊNERO?
+Com esse fim, desejamos que as leituras, as inferências a respeito dos diversos temas apresentados nos funks, trabalhados na sala de aula possam, por meio das discussões e reflexões, contribuir com o processo de  desconstrução do patriarcalismo, da dominação masculina e possibilitemos novas formas de aprendermos, de pensarmos, sermos e de agirmos no mundo. 
 
 \pagebreak
 
+Dessa maneira, pelo uso social da língua, como sujeitos de direitos, usufruirmos de um mundo melhor, com menos preconceito, mais amor e respeito às diferenças e à diversidade, convergindo, portanto, para o companheirismo e a solidariedade entre os gêneros.
 
-Consideramos que para explicitar as desigualdades nas relações de gênero, antes de tudo, é preciso que nós, professores e professoras compreendamos o conceito de gênero, pois  a configuração  dos papéis de homem e mulher perpassam por uma convenção social, arbitrária. Por isso, a fim de que, por meio do arcabouço teórico dos estudos de gênero, da ciência, possamos contribuir com a desconstrução dessas estruturas sociais nocivas, entendemos a concepção de gênero, enquanto elemento que distingue o sexo biológico dos papéis determinantes para homens e mulheres. Isto é, gênero como elemento constitutivo das relações sociais, inerente à estrutura de poder, desencadeador da hierarquia entre o gênero masculino e feminino.
+<H2> 1.1 GÊNERO E ESTEREÓTIPO DE GÊNERO </H2>
+
+<div style="column-count:2;  column-gap: 0px; column-rule-width: 0px; padding-top: 25px;">
+
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-50px;left:-180px;width:650px;' />
+
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-50px;left:635px;width:650px;' />
 
 
+Consideramos que para explicitar as desigualdades nas relações de gênero, antes de tudo, é preciso que nós, professores e professoras compreendamos o conceito de gênero, pois  a configuração  dos papéis de homem e mulher perpassam por uma convenção social, arbitrária. 
 
-> REPARE BEM!
+\columnbreak
 
+Por isso, a fim de que, por meio do arcabouço teórico dos estudos de gênero, da ciência, possamos contribuir com a desconstrução dessas estruturas sociais nocivas, entendemos a concepção de gênero, enquanto elemento que distingue o sexo biológico dos papéis determinantes para homens e mulheres.
 
+Isto é, gênero como elemento constitutivo das relações sociais, inerente à estrutura de poder, desencadeador da hierarquia entre o gênero masculino e feminino, Souza e Carvalho (2003):
 
-Carvalho, Andrade e Junqueira (2009) conceituam gênero como:
+</div>
 
-<p class="citacao"> Na cultura androcêntrica e na sociedade patriarcal, é uma estrutura de dominação simbólica, materializada na organização social e nos corpos, resultante de um processo de construção sociocultural com base nas diferenças sexuais percebidas. Implica relação (masculino X feminino), dicotomia, assimetria, desigualdade, polarização e hierarquia. Determina identidades, qualidades e valores desigualmente atribuidos a homens e mulheres, a práticas sociais e a objetos culturais (por exemplo, as cores rosa e azul). (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.18).
-    
-Com base na citação anterior, as desigualdades nas relações de gênero (entendidas como processo cultural e fruto das relações de poder), os estigmas/estereótipos (rótulos) de gênero, são construídos e se dão em função de uma lógica binária e héteronormativa privilegiada. Comportamentos de meninas e de meninos já são esperados, mesmo antes de nascer. Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos dos direitos humanos, Damares Alves, no governo de Jair Messias Bolsonaro: “menino veste azul e menina veste rosa.” O que consideramos um feito político, que inerente à língua, absolutização do patriarcado e da dominação masculina, oprimindo, consequentemente, os sujeitos que diferem da norma construída e convencionada como padrão. 
-    
 \pagebreak
 
-> OLHA O QUE  OS ALUNOS E ALUNAS DA PESQUISA DISSERAM SOBRE ESTEREÓTIPOS:
+> REPARE BEM! 
 
+<p class="quote"> Como as pessoas enxergam o mundo através da lente da cultura, a associação entre o sexo dos individuos e as concepções de masculino e feminino que as sociedades constroem parece algo natural. Isso dificulta a percepção de que existe uma pluralidade de formas de masculinidade e de feminilidade distintas das concepções hegemónicas. Observe os quadros abaixo. Eles apresentam algumas características que são relacionadas às mulheres e aos homens: [...] (CARVALHO; ANDRADE; MENEZES, 2003, p. 13)
 
+<div style="column-count: 2;">
 
+<div class="descriptive">
+
+<H2 style="text-align:center; margin-top:0px; margin-bottom:0px; padding-bottom:11px; padding-top:1px"> NATUREZA </H2>
+
+| HOMEM | MULHER |
+|:---------:|:---------:|
+| Tem pênis e testículos | Tem vagina, útero e ovários Menstrua |
+| Produz espermatozóides | Produz óvulos |
+| Ejacula | Fica grávida, gesta crianças |
+|   | Pare (Dá à luz) |
+|   | Amamenta |
+\columnbreak
+
+<H2 style="text-align:center; padding:10px; margin:0px;"> CULTURA </H2>
+
+| HOMEM | MULHER |
+|:---------:|:---------:|
+| Masculinidade | Feminilidade |
+| Desorganização | Organização |
+| Força | Fragilidade |
+| Rudeza | Delicadeza |
+| Insensibilidade | Sensibilidade |
+| Racionalidade | Intuição |
+| Coragem | Medo |
+| Seriedade | Futilidade |
+</div>
+</div>
+
+<p class="quote" style="margin-left:0px; text-align: center;"> Fonte: Carvalho, Andrade e Menezes (2003)</p>
+
+> ATENÇÃO!
+
+As desigualdades nas relações de gênero (entendidas como processo cultural e fruto das relações de poder), os estigmas/estereótipos (rótulos) de gênero, são construídos e se dão em função de uma lógica binária e héteronormativa privilegiada. Comportamentos de meninas e de meninos já são esperados, mesmo antes de nascer. 
+
+\pagebreak
+
+Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos, Damares Alves, no governo de Jair Messias Bolsonaro: “menino veste azul e menina veste rosa.” O que consideramos um feito político, que inerente à língua, legitima a absolutização do patriarcado e da dominação masculina, oprimindo, consequentemente, os sujeitos que diferem da norma construída e convencionada como padrão. 
+
+> AI, AI, AI! ESTEREÓTIPOS DE GÊNERO! PRECISAMOS MUDAR ISSO!
+
+<div style="column-count:2;  column-gap: 20px; column-rule-width: 0px; padding-top: 25px;">
 
 <div class="descriptive" style="font-style: italic">
 
 <br>
-
-“[...]Abrir a mente, né [...] pra saber que tem que se colocar no lugar do outro para “[...] não temos o direito de desrespeitar ninguém, somos todos iguais.”  (Luna).
+“[...]Abrir a mente, né [...] pra saber que tem que se colocar no lugar do outro [...] não temos o direito de desrespeitar ninguém, somos todos iguais.”  (Luna).
 <br><br>
 “[...] Tem que colocar homem pra lavar a louça e varrer a casa.”  (Vitinho).
 <br><br>
@@ -422,12 +546,13 @@ Com base na citação anterior, as desigualdades nas relações de gênero (ente
 “[...]Não existe apenas uma cor para meninos e meninas. Meninas e meninos merecem direitos iguais. Os deveres domésticos não podem ser apenas para as mulheres.” (Madalena).<br>
 </div>
 
+</div>
+
 \pagebreak
 
-> AI, AI, AI! ESTEREÓTIPOS DE GÊNERO! PRECISAMOS MUDAR ISSO!
+A seguir, alguns exempos de Estereótipos: masculinos e femininos,  citados por Souza e Carvalho (2003): 
 
-Souza e Carvalho (2003) citam exemplos de estereótipos:
-
+<div class="descriptive">
 
 | HOMEM | MULHER |
 |:---------:|:---------:|
@@ -443,80 +568,437 @@ Souza e Carvalho (2003) citam exemplos de estereótipos:
 | RACIONAL | INTUITIVA |
 | OBJETIVO | EMOTIVA |
 
+</div>
 
-ESTEREÓTIPOS MASCULINOS E FEMININOS – (SOUZA; CARVALHO, 2003,p. 12).   
+<p class="quote" style="margin-left:0px; text-align: center;"> Fonte: Souza e Carvalho (2003)</p>
 
-<br> 
+Pensar às relações de gênero em um sentido amplo, cultural, exige não somente pensar em um Estado forte, capaz de efetivar políticas públicas voltadas à diversidade e ao respeito aos direitos humanos, mas sobretudo, em um realinhamento do modo de pensar e de agir de uma legião de pessoas dispostas a tecer uma história distoate das regras estabelecidas de continuação de privilégios do gênero masculino, em detrimento do rebaixamento do feminino. 
 
-> ATENÇÃO!
-
-<br> 
-
-Intensificamos a  discussão sobre o processo de ‘fabricação dos sujeitos”com base em Louro (2014): 
+Ao refutar os discursos moralistas opostos aos estudos de gênero, Junqueira (2022), concomitantemente faz uma alerta importante, principalmente para todos/as nós, professores e professoras formadores/as de opinião: o machismo, o sexismo, a misoginia e tantos outros absurdos apresentados no dia a dia é que são verdadeiras manifestações da ideologia de gênero, já que essa só existe no pensamento do senso comum e/ou dos reacionários conservadores que pleiteiam disseminar calúnias, com o propósito de camuflar as verdadeiras intenções de manutenção do poder de um gênero sobre o outro.
 
 \pagebreak
 
-<p class="citacao"> O processo de "fabricação dos sujeitos é continuado e geralmente muito sutil, quase imperceptivel. Antes de tentar percebê-lo pela leitura das leis ou dos decretos que instalam e regulam as instituições ou percebê-lo nos solenes discursos das autoridades (embora todas essas instâncias também façam sentido), nosso olhar deve se voltar especialmente para as práticas cotidianas em que se envolvem todos os sujeitos. São, pois, as práticas rotineiras e comuns, os gestos as palavras banalizados que precisam se tornar alvos de atenção renovada, de questionamento e, em especial, de desconfiança. A tarefa mais urgente talvez seja exatamente essa: desconfiar do que é tomado como "natural". (LOURO, 2014, p. 67).
-
-Com isso, queremos enfatizar que pensar às relações de gênero em um sentido amplo exige não somente pensar em um Estado forte, capaz de efetivar políticas públicas voltadas à diversidade e ao respeito aos direitos humanos, mas sobretudo, um realinhamento do modo de pensar e de agir de uma legião de pessoas dispostas a tecer uma história distoate das regras estabelecidas de continuação de privilégios do gênero masculino, em detrimento do rebaixamento do feminino. 
-
-> OLHA AÍ!
-
-<br> 
-
-Junqueira (2022) explicita que os estudos de gênero, rompe com o senso comum de aniquilamento  da família tradicional e da ordem:
-
-\pagebreak
-
-<p class="citacao">  Ao lado disso, é oportuno reiterar que, no vasto e consolidado campo dos estudos de gênero e afins, há teorias (no plural) que contemplam diferentes disciplinas, matrizes teóricas e políticas, nas quais gênero é um disputado conceito (e não uma teoria, muito menos uma ideologia) com múltiplas acepções e implicações críticas e políticas. Tão ou mais impróprio do que falar em uma teoria do gênero ou de uma ideologia do gênero é imaginar que as análises e as transformações preconizadas pelos estudos de género e pelos feminismos (também eles, plurais) implicariam privar crianças do direito à família, transformar escolas em "campos de doutrinação do gender", aniquilar a ordem simbólica, extinguir "a familia" e a humanidade, entre outras "catástrofes" anunciadas pelo ativismo antigênero. (JUNQUEIRA, 2022, p. 226).
-
-Ao refutar os discursos moralistas opostos aos estudos de gênero, Junqueira (2022), concomitantemente faz uma alerta importante, principalmente para todos nós, professores e professoras formadores/as de opinião: o machismo, o sexismo, a misoginia e tantos outros absurdos apresentados no dia a dia é que são verdadeiras manifestações da ideologia de gênero, já que essa só existe no pensamento do senso comum e/ou dos reacionários conservadores que pleiteiam disseminar calúnias, com o propósito de camuflar as verdadeiras intenções de manutenção do poder de um gênero sobre o outro. 
-
-<br> 
-
-> Estamos no caminho certo!
-
-\pagebreak
+> ESTAMOS NO CAMINHO CERTO!
 
 Sobre a desigualdade de gênero Carvalho, Andrade e Junqueira (2009) esclarece:
-Nesse sentido, iniquidade ou desigualdade de gênero não é simplesmente discriminação de sexo ou exclusão de mulheres de posições de privilégio de poder; de modo mais amplo, refere-se à assimetria de gênero, ou seja, à valorização dos atributos de um gênero em detrimento do outro; na cultura androcêntrica, corresponde à desvalorização das expressões femininas. (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.14).
 
-<p class="citacao"> O feminismo veio desconstruir, ou melhor, problematizar essa assimetria, citada anteriormente, e dizer para nós que os estudos de gênero são de suma importância, uma vez que deslegitimiza a naturalização das desigualdades, da masculinidade hegemônica, do patriarcado, colocando um norte para o avanço da conquista de direitos e à solidariedade entre homens e mulheres. Um outro aspecto fundamental que precisamos nos ater, em relação às questões de gênero, é o fato das mulheres ficarem muito tempo, reféns dos afazeres domésticos, não estudarem e consequentemente, não se desenvolverem. Essa divisão sexual do trabalho priva as mulheres de serem o que elas quiserem.
+<p class="quote"> Nesse sentido, iniquidade ou desigualdade de gênero não é simplesmente discriminação de sexo ou exclusão de mulheres de posições de privilégio de poder; de modo mais amplo, refere-se à assimetria de gênero, ou seja, à valorização dos atributos de um gênero em detrimento do outro; na cultura androcêntrica, corresponde à desvalorização das expressões femininas. (CARVALHO; ANDRADE; JUNQUEIRA, 2009, p.14).
 
+O feminismo veio desconstruir, ou melhor, problematizar essa assimetria, citada anteriormente, e dizer para nós que os estudos de gênero são de suma importância, uma vez que deslegitimiza a naturalização das desigualdades, da masculinidade hegemônica, do patriarcado, colocando um norte para o avanço da conquista de direitos e à solidariedade entre homens e mulheres. 
 
-> REFLEXÃO!
+Um outro aspecto fundamental que precisamos nos ater, em relação às questões de gênero, é o fato das mulheres ficarem muito tempo, reféns dos afazeres domésticos, não estudarem e consequentemente, não se desenvolverem. Essa divisão sexual do trabalho priva as mulheres de serem o que elas quiserem.
 
 A respeito da divisão sexual do trabalho, Arruda e Nascimento (2016) destacam:
 
-<p class="citacao"> A responsabilidade atribuída às mulheres em relação ao trabalho doméstico e ao cuidado da família gera desigualdades de oportunidades no acesso aos recursos econômicos, culturais, sociais e políticos. Isso é consequência de uma ordem de gênero (que inclui não somente o trabalho, como todas as outras dimensões da vida social) e de uma divisão sexual do trabalho. As duas instâncias, ao mesmo tempo em que conferem à mulher a função básica e primordial do cuidado com o mundo privado e a esfera doméstica, atribuem a essa esfera um valor social inferior ao do mundo público e desconhecem por completo seu valor econômico. (ARRUDA; NASCIMENTO, 2016, p. 6).
+<p class="quote"> A responsabilidade atribuída às mulheres em relação ao trabalho doméstico e ao cuidado da família gera desigualdades de oportunidades no acesso aos recursos econômicos, culturais, sociais e políticos. Isso é consequência de uma ordem de gênero (que inclui não somente o trabalho, como todas as outras dimensões da vida social) e de uma divisão sexual do trabalho. As duas instâncias, ao mesmo tempo em que conferem à mulher a função básica e primordial do cuidado com o mundo privado e a esfera doméstica, atribuem a essa esfera um valor social inferior ao do mundo público e desconhecem por completo seu valor econômico. (ARRUDA; NASCIMENTO, 2016, p. 6).
 
 \pagebreak
 
+Sob a perspectiva de Arruda e Nascimento (2016), consideramos importante pensar a questão estrutural da desigualdade nas relações de gênero imbricada à cultura patriarcal. Em Aguiar (2011), o conceito de patriarcado tem sido usado na literatura feminista internacional, como significado das relações de poder entre homens e mulheres. "As mulheres são subordinadas aos homens no sistema patriarcal.” (AGUIAR, 2011, p. 322).
 
-A partir de todos esses indicadores, conforme Arruda e Nascimento (2016) entendemos ser pertinente problematizar determinados padrões preestabelecidos, no sentido de enxergar o diferente, não como ameaçador e/ou desigual. Não é justo que os indivíduos que contradizem os padrões de culturas preestabelecidas e hegemônicas sofram represálias e sejam ameaçados e inferiorizados. Sob essa perspectiva, consideramos importante pensar a questão estrutural da desigualdade nas relações de gênero imbricada à cultura patriarcal.
+Nesse contexto, observamos que existem alguns imperativos no jogo arbitrário de forças do sistema sexo-gênero (impostas pelo patriarcalismo), a violência simbólica como força matriz  para a naturalização de estigmas de gênero, da dominação masculina, do sexismo, da misoginia  e das estratégias de reprodução dos bens simbólicos¹.
 
-Nesses termos, citamos, a priori, Bourdieu (2020) que compartilha em seu livro, "A  dominação masculina",  algumas  ideias a respeito da sociedade. Sobretudo no que diz respeito ao estabelecimento de comportamentos, capacidades e limitações como características remetentes ao gênero, masculino ou feminino. Com isso, queremos enfatizar  uma  outra espécie de narrativa, a que não alude o estado de princesa salva pelo príncipe encantado, mas instiga uma cultura de mulheres guerreiras,  capazes de em suas singularidades, construirem o cultivo de soma, ao invés de divisão.
+Ao almejarmos trabalhar na sala de aula, precisamos ler sobre as relações de gênero, pois é fundamental, desvelar que o conceito de gênero é estabelecido socialmente, sem ligação exclusiva com o conceito de sexo. De maneira que fique bem compreendido o que são estes dois fatores, pois enquanto o sexo está diretamente ligado à configuração corpórea, biológica e genital, a ideia de gênero está  situada em um campo semântico que foge da caracterização puramente física. Gênero é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
 
+Sob esse arcabouço teórico de Bourdieu (2020), entendemos que a cultura patriarcal é um  fenômeno restritivo e ideológico não criado subitamente, ou minimamente embasado em uma questão biológica, mas ideologicamente construído, por meio de um processo político, pensado, como efeito de organização dos papéis de cada sexo pelo sistema sexo-gênero, de geração a geração. 
 
-
-Em Aguiar (2011), o conceito de patriarcado tem sido usado na literatura feminista internacional, como significação às relações de poder entre homens e mulheres. "As mulheres são subordinadas aos homens no sistema patriarcal.” (AGUIAR, 2011, p. 322). Nesse contexto, observamos que existem alguns imperativos no jogo arbitrário de forças do sistema sexo-gênero (impostas pelo patriarcalismo), a violência simbólica como força matriz  para a naturalização de estigmas de gênero, da dominação masculina, do sexismo, da misoginia  e das estratégias de reprodução dos bens simbólicos. 
+<div class='footnote'> ¹ Elementos concretos e abstratos que respondem à posse de algum sujeito e são dotados de um valor social, valor este que lhes fora imbuído por questões culturais de simbologia e compõem o capital simbólico de seus detentores (BOURDIEU, 2020). </div>
 
 \pagebreak
 
-Ao almejarmos trabalhar na sala de aula, sobre as relações de gênero, é fundamental, desvelar que o conceito de gênero é estabelecido socialmente, sem ligação exclusiva com o conceito de sexo. De maneira que fique bem compreendido o que são estes dois fatores, pois enquanto o sexo está diretamente ligado à configuração corpórea, biológica e genital, a ideia de gênero está  situada em um campo semântico que foge da caracterização puramente física. Gênero é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
+> PARA APROFUNDAR AS REFLEXÕES SOBRE GÊNERO!
 
-Sob o arcabouço teórico de Bourdieu (2020), entendo que a cultura patriarcal é um  fenômeno restritivo e ideológico não criado subitamente, ou minimamente embasado em uma     questão biológica, mas ideologicamente construído, por meio de um processo político, pensado, como efeito de organização dos papéis de cada sexo pelo sistema sexo-gênero, de geração a geração. 
+<div class="descriptive" style="column-count: 2; column-gap: 30px; font-size: 0.8em">
 
-> Mais uma vez, fique ligado!
+* Manual para o uso no sexista da linguagem. Disponível em: https://mulherespaz.org.br/site/wp-content/uploads/manual-para-o-uso-nao-sexista-da-linguagem.pdf Acesso em: 06 de maio de 2023.
+* O livro: A Dominação Masculina, de Pierre Bourdieu, fala da estrutura de dominação masculina, naturalizada historicamente, por isso, sujeito a mudanças.
+* A invenção da Ideologia de Gênero, de Rogério Diniz Junqueira, é um livro que desfaz as distorções da suposta “ideologia” de gênero”.
+* Feminino e Masculino, livro de Rose Marie Muraro e Leonardo Bof, mostra que a humanidade só será salva da destruição da espécie, pelo processo de civilização que coloca os seres humanos como seres em cooperação e solidariedade.
+* Diferentes, Não Desiguais, As autoras e autor desse livro falam da importância da desconstrução dos estereótipos de gênero, também na escola.
+
+\columnbreak
+
+* No livro: “ Gênero, Sexualidade e Educação, Guacira Lopes Louro fala do processo cotidiano de fabricação de fabricação dos sujeitos.
+
+
+<img style="column-span: all; margin-left: -15%; margin-top: -15%; width:400px;" src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/livros.png'/>
+
+</div>
+
+> MAIS UMA VEZ, FIQUE LIGADO!
 
 Sobre as relações de poder estarem ligadas às relações de gênero, citamos Segundo Figueredo et al., (2021):
-    
-<p class="citacao"> As relações de gênero estão estritamente ligadas as relações sociais de poder entre homens e mulheres, construídas por meio das diferenças percebidas entre os sexos. Esse tipo de relação desigual é construído antes mesmo da entrada do indivíduo no ambiente escolar e é reforçado por meio de discursos e práticas que privilegiam um sexo sobre outro, contribuindo assim para a construção da identidade sexual de meninas e meninos. (FIGUEIREDO et al., 2021, p. 18).
+
+<p class="quote"> As relações de gênero estão estritamente ligadas as relações sociais de poder entre homens e mulheres, construídas por meio das diferenças percebidas entre os sexos. Esse tipo de relação desigual é construído antes mesmo da entrada do indivíduo no ambiente escolar e é reforçado por meio de discursos e práticas que privilegiam um sexo sobre outro, contribuindo assim para a construção da identidade sexual de meninas e meninos. (FIGUEIREDO et al., 2021, p. 18).
 
 \pagebreak
 
-Como diz Figueredo, et al., (2021) quando nascemos, já somos determinados pelo contexto social, político, econômico, cultural, religioso, não há como se safar. Já nascemos em uma forma. Somos determinados/as. E o sexo masculino já tem esse lugar privilegiado. Como dizia minha mamãe (in memorian), “em homem não pega nada, minha filha!” Nessa fala, ela estava querendo me ptoteger e ao mesmo tempo alertar que o lugar destinado a nós mulheres é um lugar de submissão de falta de liberdade.
+Como diz Figueredo, et al., (2021) quando nascemos, já somos determinados pelo contexto social, político, econômico, cultural, religioso, não há como se safar. Já nascemos em uma forma. Somos determinados/as. E o sexo masculino já tem esse lugar privilegiado. Como já ouvimos nos discursos maternos: <i>(in memorian), “em homem não pega nada [...]!” </i> Nessa fala, entendemos que elas estavam querendo nos proteger e ao mesmo tempo alertar que o lugar destinado para nós mulheres seria um lugar de submissão e  de falta de liberdade. 
 
-Crescemos sentindo na pele essa violação de direitos e cárcere, no qual somos subordinadas, todas nós mulheres a agirmos com desconfiança, umas com as outras e a não praticarmos a sororidade (o cuidado com cada uma de nós mulheres). Há uma narrativa histórica e milenar de que “Eva foi quem seduziu Adão.” Vale apena pensar: será que a língua, os textos sagrados, escritos por homens não deixaram transparecer a cultura machista que neles estava arraigada? Não pretendemos aqui questionar os preceitos de fé, mas refletir sobre as ações políticas, intencionais e ideológicas que permeiam as construções sociais de outrora. 
+Crescemos sentindo na pele essa violação de direitos, esse cárcere, no qual somos subordinadas todas nós mulheres. Sempre incubidas a agirmos com desconfiança, umas com as outras e a não praticarmos a sororidade (o cuidado com cada uma de nós mulheres). Há uma narrativa histórica e milenar de que “Eva foi quem seduziu Adão.” Vale apena pensar: será que a língua, os textos sagrados, escritos por homens, não deixaram transparecer a cultura machista que neles estava arraigada? Não pretendemos aqui questionar os preceitos de fé, mas refletir sobre as ações políticas, intencionais e ideológicas que permeiam as construções sociais de outrora. 
 
-O hoje é produção do ontem. Dessa forma, a perpetuação da supremacia masculina na vida prática, fomentada pelos artefatos culturais, pela mídia, família, escola, igreja etc., institucionaliza os costumes, a cultura, que em uma violência velada, naturaliza e sobrepõem os homens em relação às mulheres. E se isso não for problematizado, continuaremos em um mundo feito e organizado por homens e para os homens. Não é isso que é justo, não é?
+O hoje é produção do ontem. Dessa forma, a perpetuação da supremacia masculina na vida prática, é institucionaliza pelos costumes, pela cultura, que em uma violência velada, naturaliza e fomentada pelos artefatos culturais, pela mídia, família, escola, igreja etc., sobrepõe os homens em relação às mulheres. Isso não for problematizado, continuaremos em um mundo feito e organizado por homens e para os homens. Não é isso que é justo, não é?
+
+\pagebreak
+
+<H2 style="color: white; background: rgba(5, 0, 35, .8); margin-down:0px; padding-bottom:40px; padding-left: 110px; margin-left: -70px; padding-right: 110px; margin-right: -70px;"> 1.2 VAMOS MUDAR O MUNDO COM OS LIVROS E O FUNK? <br> </H2>
+
+
+<div style="background: rgba(5, 0, 35, .8); color: white; margin-left:35%;">
+
+<br>
+
+É fundamental um trabalho de leitura que incite a ruptura da artificialidade do ler, e dê lugar ao uso efetivo da língua, às vivências dos sujeitos, de sorte a desenvolver a criticidade dos alunos/as.
+
+Nesse ínterim, Barbosa (2019) assevera que o ensino de leitura nas aulas de língua portuguesa, cujo principal objetivo deveria ser desenvolver o imaginário, a socialização e o domínio da língua, é grandemente prejudicado por uma metodologia de ensino que não incentiva a reflexão sobre o funcionamento dos fenômenos sociais encontrados no texto.
+
+Nesse ínterim,  a língua deve ser estudada, não de modo latente às questões sociais, como por exemplo, de gênero, mas imbricada à criticidade e à manifestação de ofensivas; como forma de poder haver um alargamento do pensamento sobre o que é realmente importante, à promoção dos direitos humanos. 
+
+<br>
+
+</div>
+
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20MUDAR%20O%20MUNDO%20COM%20OS%20LIVROS%20E%20O%20FUNK.png?raw=true' style='position:absolute;top:0px;left:-240px;width:1156px;' />
+
+\pagebreak
+
+<br><br>
+
+Sob essa ótica, as aulas de língua portuguesa não devem ser  indiferentes em relação às questões das desigualdades de gênero, todavia, nem apenas um simulacro, mas, acima de tudo, uma oportunidade para problematizar à realidade e com otimismo, promover mudanças, porque é preciso causar rupturas nos modelos que perpetuam a hierarquização entre os gêneros. 
+
+Desse modo, compreender que discutir as relações de gênero nas aulas de língua portuguesa é procurar sensibilizar a comunidade escolar a perceber que a desigualdade de gênero e o desrespeito às diferenças empobrece a espécie humana, pois é preciso se colocar no lugar do outro e respeitar os direitos individuais de cada um/a, ser o que são.
+
+Nesse *contínuum*, enfatizamos a nossa simpatia pelo verbo tecer, como algo que não está acabado, nem tapouco se apresenta linearmente. Ao contrário, “costura” fluidamente, perpassa por todos os lados, penetra, entrelaça e trama. É no tecer que se desenrola as narrativas, com desfechos os mais variados e surpreendentes. Nesse sentido, em acordo com Rojo (2010), fazemos jus ao título desse trabalho, entendendo que a palavra no ciclo de comunicação, no dia a dia, não se apresenta em estado de dicionário, inerte e desconexo das questões sociais, pois só nos comunicamos quando entendemos e somos entendidos/as, em uma constante relação com outros sujeitos. 
+
+Dado isso, postulamos à importância da construção de narrativas individuais e coletivas que cada um/a constrói, se desconstrói e se reconstrói de forma concreta na tessitura da vida. Mediante essa interação, deixamos as nossas marcas, e/ou melhor, o nosso retrato, bom ou mau. Imbricada a esse contexto, está a leitura como prática social, que  supera o limite da decodificação, uma vez que pssibilita a construção de sentidos, Cafiero (2010). 
+
+Implica em trancender a leitura mecânica, pois é inerente à interação social e a dinamicidade da vida. Sob esse aspecto, ler é uma das formas de nos percebermos como pessoa, compreendermos o mundo e as pessoas à nossa volta. Nesse sentido, a leitura como prática social nos oportuniza uma vida com mais qualidade, condições de determinar e modificar à realidade.
+
+\pagebreak
+
+<br>
+
+<div style="column-count: 2;">
+
+> DICA DE LEITURA PARA FOMENTAR AS DISCUSSÕES SOBRE AS RELAÇÕES DE GÊNERO NA SALA DE AULA: 
+
+Ler é um ato político de resistência, uma atividade pela qual, sem ela, tudo ficaria insuportável, uma vez que o nosso olhar ficaria embaçado, turvo, sem criatividade para continuar dialogando e nos reinventando. 
+
+Nesse ínterim, percebemos que a leitura quando trabalhada no chão da escola, como prática social pode ser à vértice para aguçar à criticidade dos/as discentes, pois no momento que os sujeitos se envolvem com uma leitura que faz parte do dia a dia deles/as, fica mais fácil de se “vender sonhos” e esse menino/a “comprar a ideia” do saber sistematizado.
+
+\columnbreak
+
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/mais%20livros.png' style="position:absolute; left:280px; top: 0px;width:560px"/>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<p class="quote" style="margin-left: -10px; padding-left:0px;"> Disponível em: Imagens disponíveis em: https://drive.google.com/file/d/1i7j-j8UOLtN2RNBSkAVkPrBATlCvl4wg/view?usp=drive_web. Acesso em: 06 de maio de 2023. <p style="margin-left: -50px;"> Com base em Cafiero (2010), sob a perspectiva de leitura como prática social, as aulas de leitura podem ser vistas como um espaço vivo, dinâmico, de discussões e inferências. 
+
+</div>
+
+Conceber a leitura desse modo muda radicalmente a forma de pensar e de organizar o ensino.  Se os sentidos não estão prontos no texto, é preciso contribuir para que os/as alunos/as criem boas estratégias para estabelecer relações necessárias à compreensão e à interpretação. Não adianta mandar o aluno/a ler, dizendo-lhe: *“Leia porque a informação está aí”. [...]*.  É importante que, nas aulas de leitura, o aluno faça perguntas, levante hipóteses, confronte interpretações, conte sobre o que leu e não apenas faça questionários de perguntas e respostas de localização de informação. (CAFIERO, 2010, p. 86).
+
+\pagebreak
+
+<br><br>
+
+O trabalho com o funk na sala de aula, pode ser uma das formas de atingir diretamente nossa aluna e nosso aluno, pois entendemos que o incentivo à leitura como prática social é, em uma interface do dia a dia desses sujeitos, compreender algo que possa fazer sentido às suas vivências, valores, culturas, isto é, ajudando-os/as a interpretarem o mundo de uma forma crítica, compreendendo o que ler, tanto no registro oral como escrito, fazendo-os perceber no texto, o contexto (o texto atravessado pelo sociocultural, político, econômico, pela historicidade). 
+
+Em um mundo cada vez mais bombardeado por informações e muitas vezes informações falsas, um trabalho nas aulas de língua portuguesa pautado na perspectiva da leitura como prática social que priorize o discernimento e a criticidade do que estamos lendo, e do que nosso, aluno/a ler, pode ser um compromisso desafiador, porém muito nobre, no sentido de permitir que haja um diálogo entre a palavra e o que ela significa pra nós. 
+
+O trabalho com o funk na sala de aula, pode ser uma das formas de atingir diretamente nossa aluna e nosso aluno, pois entendemos que o incentivo à leitura como prática social é, em uma interface do dia a dia desses sujeitos, compreender algo que possa fazer sentido às suas vivências, valores, culturas, isto é, ajudando-os/as a interpretarem o mundo de uma forma crítica, compreendendo o que ler, tanto no registro oral como escrito, fazendo-os perceber no texto, o contexto (o texto atravessado pelo sociocultural, político, econômico, pela historicidade).  
+
+Em um mundo cada vez mais bombardeado por informações e muitas vezes informações falsas, um trabalho nas aulas de língua portuguesa pautado na perspectiva da leitura como prática social que priorize o discernimento e a criticidade do que estamos lendo, e do que nosso, aluno/a ler, pode ser um compromisso desafiador, porém muito nobre, no sentido de permitir que haja um diálogo entre a palavra e o que ela significa pra nós. 
+
+\pagebreak
+
+>ATENÇÃO!
+
+Nas discussões sobre gênero, na escola, o que as professoras(es) podem fazer, caso se sintam ameaçadas(os), ao falar sobre gênero na escola?? 
+
+<div style="margin-left:50px;">
+
+* Disponibilizamos para os interessados o link do Manual de Defesa Contra a Censura nas Escolas.  Disponível em:  www.manualcontraacensura.org.br  Acesso em: 08 de maio de 2023. 
+
+* Disponível em: https://deolhonosplanos.org.br/escola-de-qualidade-inclusiva-e-acolhedora/ Acesso em: 08 de maio de 2023.
+
+</div>
+
+Todos somos escultores da palavra, quando nos situamos nesse constante devir, de nos tornarmos pessoas melhores. E por meio da palavra, desgrudar-nos do indivíduo petrificado, nos construirmos como sujeitos sensíveis à diversidade, à complexidade da vida e à transformação.  Nesses termos, construimos memórias e nos ressignificamos. Usufruimos  de novas possibilidades, e pela leitura como prática social nos fazermos existir, pensar e agir em interação com os/as outro/as e o meio em que vivemos.
+
+> FICA A DICA
+
+De fato, antes de qualquer outra coisa precisamos destacar que "Ler não se reduz à decodificação dos sinais gráficos, dispostos no papel, mas bem além disso implica em compreender o mundo e em recriá-lo a partir da consciência formada, doravante o novo aprendizado." (MOITA; ANDRADE, 2006, p. 3). Sob à égide sociointeracionista a leitura transcende a expressão de palavras, vazias de sentido. E esses se constroem em consonância ao repertório cultural, histórico, social, de vivências individuais, mas acima de tudo, coletivas. 
+
+\pagebreak
+
+> DE VOLTA À LEITURA
+
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/ainda%20mais%20livros.png' style="column-span:all; position:absolute; left:55px; top: 95px; width:360px; z-index:1;"/>
+
+<div class="descriptive" style="column-count: 2;  font-size: 0.8em">
+
+\columnbreak
+
+<br>
+<div style="margin-left: -20px; margin-right: 20px;">
+
+* Com base em pesquisadores como Paulo Freire, Libâneo, Saviani e outros,  o livro:” As Questões Fundamentais da didática” fomenta práticas pedagógicas frente à realidade, um enfoque político-social construtivista.
+* A  Importância do Ato de Ler,  livro de Paulo Freire fala de uma palestra sobre a importância do ato de ler e sobre um artigo que expõe a experiência de Paulo Freire na alfabetização de adultos, em São Tomé e Príncipe.
+
+<br>
+</div>
+</div>
+
+Desse modo, por meio da leitura como prática social, imbricada ao gênero textual letra de canção de Funk, almejamos combater a inércia, a passividade dos/das estudantes, incitando-os/as a serem determinantes do meio e da realidade em que vivem. Contrariamente aos engessamentos apresentados pelas teorias tradicionais do ensino da língua,   investir em uma prática pedagógica, arraigada à leitura como um processo que envolve um contínuum devir entre leitor - texto - autor, parece, a priori, tornar possível gerar discussões, fomentar habilidades e competências múltiplas arraigadas aos diversos usos sociais da língua, e consequentemente, à promoção do respeito e da ética nas relações de gênero.
+
+Em acordo com Evangelista e Jerônimo (2014), elucidamos que a leitura como prática social está para cada indivíduo, nos diversos espaços de convivência, entre eles, na escola. Cotidianamente, nos deparamos com uma diversidade de textos dos mais variados gêneros, aonde quer que esteja: na rua, em casa, no  trabalho, inclusive, com o gênero textual, canção de funk.
+
+\pagebreak
+
+<div class="descriptive" >
+
+<H2 style="padding-top: 0px;">O QUE O FUNK PODE FAZER!</H2>
+
+* Disponível em: https://jovempan.com.br/entretenimento/musica/mc-hariel-diz-que-sua-musica-fez-dono-de-favela-parar-de-vender-crack-marcou-minha-vida.html  Acesso em: 02 de fevereiro de 2023 <br>  <br> 
+* Disponível em: https://novaescola.org.br/conteudo/8123/quando-o-funk-da-aula-de-educacao  Acesso em: 08 de maio de 2023.
+
+</div>
+
+O ensino da leitura deve estar voltado à realidade e transcender os muros  da escola, de sorte que seja possível estimular a compreensão da micro e macroestrutura, da conjuntura econômica, política e social, incitando de modo peculiar os/as discentes a fazerem as interpretações dos diversos contextos, que lhes são apresentados e a exercerem a construção da  cidadania, do respeito a todos os homens e mulheres, às minorias e diferenças; postulando, no entanto, o enfoque na erradicação das desigualdades de gênero. 
+
+Para essa construção, Antunes (2003) afirma que em termos práticos, trabalhar a concepção de leitura como prática social, nesse caso, o funk, pressupõe ampliar os objetivos e resignificá-los em consonância com a conjuntura social.
+
+<div class="descriptive" style="text-align:justify; ">
+
+<H2 style="padding-top: 0px;">CURIOSIDADES/ FUNK!</H2>
+
+* Quais são os subgêneros do funk? Disponível em: HTTPS://BATALHAFUNK.COM/SUBGENEROS-DO-FUNK/  Acesso em: 04 de fevereiro de 2022; <br>  <br> 
+* Funk: conheça os subgêneros Disponível em: https://www.magazineluiza.com.br/portaldalu/funk-conheca-os-subgeneros/73419/ Acesso em: 03 de maio de 2023. <br>  <br> 
+* O funk carioca. Disponível em: https://brasilescola.uol.com.br/artes/funk.htm Acesso em: 08 de maio de 2023. <br>  <br> 
+* Disponível em: https://tangerina.uol.com.br/musica/subgeneros-rap-grime-drill/   Disponível em: 03 de fevereiro de 2022.
+
+</div>
+
+\pagebreak
+
+Sob o prisma,  de que o funk pode ajudar aos/às alunos/as a desenvolver a leitura, relembramos que essa não se restringe à decodificação, nem à língua, somente no aspecto  formal, mas está atrelada à enunciação e à língua em uso, ela não é algo pronto,  pontual, fragmentado, individual e superficial, todavia, um processo permeado pela  intencionalidade comunicativa, em um dado contexto, inerente à historicidade do sujeito e às ideologias. Ou seja, desse modo, o texto, entendemos a leitura  sob o ponto de vista ressalto Vale (1995):
+
+<p class="quote"> Paulo Freire nos coloca que o papel principal da conscientização é "decifrar" o mundo, "ler" a realidade, ir além das aparências e do que está atrás das máscaras e das ilusões, de forma dialeticamente crítica. Consequentemente, é fundamental que a escola faça com que o aluno se conscientize a respeito dos nossos verdadeiros problemas. Ele precisa saber que, em nossa sociedade capitalista, a grande maioria da população cria a riqueza e uma pequena minoria se beneficia dela; que existe a opressão de uma classe sobre a outra; que o trabalhador é explorado e seu trabalho é desvalorizado. Precisa saber como as pessoas são manipuladas, por que existem favelas, por que existem ricos e pobres, quais as causas da evasão e da repetência escolar, por que a escola não é igual para todos, e assim por diante. (VALE, 1995, p. 18).
+
+Em relação ao papel da escola, o trabalho com o Gênero textual letra de canção de Funk  abre espaço para as reflexões postas por Vale (1995), pois, se bem explorado, o Funk pode contribuir com o realinhamento e a ressignificação de modelos preestabelecidos, preconceituosos, excludentes e reprodutores da desigualdade de gênero. Diante disso,   pretendemos chamar a atenção para o Funk da década de 1990 e 2000, Funk Proibidão (esse ainda mais sexualizado), conforme expresso na citação de Vassolér (1018):
+
+<p class="quote"> O funk proibidão dos anos 2000 difere do proibidão da década de 1990, porque muda o paradigma da temática, que, antes versava sobre a criminalidade, e agora, se ocupa da sexualidade. O proibidão dos anos 2000 está inserido em uma lógica de sexualidade consumista propagada pela globalização e mercantilização da pornografia, que afetou, de modo geral, a indústria cultural. Sobre a popularização e mercantilização do sexo, Giddens (1992) menciona que ela está fixada sobre um contexto moderno de expansão do mercado do erotismo e da pornografia. Nesse sentido, o funk do novo milênio pode ser considerado como mais um produto da globalização. Entretanto, novas orientações estéticas surgem em São Paulo e Santos. Trata-se de uma vertente do funk criado como alternativa à temática abordada pelo ritmo carioca, que citava essencialmente conteúdos relacionados à criminalidade e à sexualidade. (VASSOLÉR, 2018, p.49).
+
+\pagebreak
+
+<br><br>
+
+Com base em Vassolér (2018), o Funk “Proibidão”, pelo fato de parecer mais realinhado  com o tema e objetivos que propomos (embora de acordo com à necessidade e as pretensões dos/das discentes seja possível estudar também outros subgêneros do funk, o bregafunk, o funk melody, por exemplo) ajudar a contextualizar as relações e desigualdades e os estereótipos de gênero através das discussões sobre as letras dos Funk preferidas e proferidas pelos/pelas  discentes e fomentar o desenvolvimento do senso crítico deles/delas, e a desconstrução das desigualdades.
+
+Com esse fim, nos fundamentamos em Silva e Vale (2018):
+
+<p class="quote"> Os gêneros podem ser considerados instrumentos facilitadores da comunicação e da aprendizagem. Nessa esteira, o funk é um heterodiscurso dialogizado (BAKHTIN, 2015) e, por isso, passou e ainda passa pelo que se chama de preconceito linguístico e social. Isso se dá porque seu conteúdo envolve uma gama de temas que faz parte do cotidiano das classes ditas mais baixas na escala social: traz não só a sua riqueza de valores e de esperanças, mas também uma carga bastante marcante de mazelas que são expressas em suas letras, como a violência, o valor material dos bens de consumo que se traduzem em poder, a desvalorização da figura feminina e a erotização exacerbada, por muitas vezes. Esses fatores geram uma visão negativa acerca do gênero, mas compreendê-lo se faz necessário à medida que seu alcance se estendeu para boa parte do território nacional, para quase todas as classes e idades, sobretudo os adolescentes. (SILVA; ALVES, 2018, p. 15).
+
+No geral, percebemos que a letra de canção que versa sobre a incitação à sexualidade, muitas vezes, pode ser apresentada como imoral e polêmica, porém, uma vez que envolvida por danças e gestos considerados “indecentes”, essa também está incluída em uma linguagem literomusical, inerente à linguagem verbal e musical. Sob essa perspectiva, e conforme Souza e Andrighetti (2015), o Funk pode instigar a construção  de sentidos novos. Esse fato nos trouxe o entendimento de que, o Funk explorado na sala de aula, lido e criticamente entendido nas subjacências, poderá incentivar discussões que gerem rupturas com a cultura patriarcal, e ressignificar saberes e modos dos sujeitos serem e agirem no mundo. De forma a fazerem prevalecer a equidade, e o respeito ao que concerne às relações de gênero.
+
+\pagebreak
+
+<br><br>
+
+<div class="descriptive" style="text-align:justify; ">
+
+<H2 style="padding-top: 0px;"> RELAÇÕES DE GÊNERO NO FUNK</H2>
+<br>
+
+*   Disponível em: https://www.youtube.com/watch?v=rETGqKQ-emE Acesso em: 20 de agosto de 2022. <br>
+*   Disponível em: https://www.youtube.com/watch?v=CRN_NSa7fYc Acesso em: 08 de maio de 20223. <br>
+*   Disponível em: https://www.youtube.com/watch?v=tT-CHuXPSuU Acesso em: 08 de maio de 2023. 
+
+</div>
+
+Em Carvalho (2021), o patriarcalismo divide e hierarquiza o mundo e as pessoas em um polo masculino (superior) e outro feminino (inferior), nesse ínterim, compreendemos que as relações de gênero também são aprendidas. Os sujeitos incorporam/subjetivam o gênero. Desse modo, a música Funk pode ser um importante instrumento para trabalhar a desnaturalização da desigualdade nas relações de gênero, uma vez que por ser explorada pelas  mídias, poderemos utilizá-la para fazer a interface com as vivências e experiências do/as alunos/as, nas aulas de português. Por meio do funk, alunas e alunos poderão reconhecer que a lingua usada na escola não está tão distante  da vida e da lingua deles/as. O trabalho com o funk pode permitir fazer a interface entre o saber assistemático e o sistematizado. 
+
+\pagebreak
+
+<br>
+
+<H2 style="color: white; background: rgba(120, 30, 10, .9); margin-down:0px; padding-bottom:40px;  padding-right: 110px; margin-right: -70px;"> 1.3 UM NOVO MUNDO PODE SER POSSÍVEL: PROFESSORES/AS, JUNTOS/AS À BNCC,  FAÇAMOS A NOSSA PARTE! <br> </H2>
+
+<br>
+
+<div style="background: rgba(120, 20, 10, .9); color: white; padding-left: 110px; margin-left: -110px; margin-right:25%">
+
+<br>
+
+Teoricamente, não vemos problema em pensar o professor de língua portuguesa como aquele que deve buscar direcionar o ensino da língua  para um estado de engajamento do/a discente e para a construção contínua de leitores/as capazes de não apenas decodificar, mas verdadeiramente, compreender os textos e cada um dos contextos sociais em que foram criados e intencionados. 
+
+<br>
+
+</div>
+
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/UM%20NOVO%20MUNDO%20PODE%20SER%20POSS%C3%8DVEL%20PROFESSORES,%20JUNTOS%20%C3%80%20BNCC%20FA%C3%87AMOS%20A%20NOSSA%20PARTE.png?raw=true' style='position:absolute;top:0px;left:-20px;width:1180px;' />
+</div>
+
+\pagebreak
+
+<br><br>
+
+Cabe entender o enorme desafio  apresentado, pois ainda existem sérias dificuldades em relação a isso, que precisam ser problematizadas e erradicadas (uma vez que o  ensino ainda reproduz analfabetos/as funcionais leitores/as que apenas decodificam, mas não constroem sentido, não compreendem o que lê), pois essas são manifestadas na relação entre os conteúdos selecionados para o ensino e o/a professor/a de língua portuguesa (muitas vezes com práticas pedagógicas obsoletas e tecnicistas) e refletidas na interação docente, discente e no ensino-aprendizagem.
+
+É preciso rever o planejamento das aulas de língua portuguesa para que as aulas de leitura não sejam sufocadas pelo ensino de nomenclaturas e conceitos que em nada ajuda a pensar, Cafiero (2010):
+
+<p class="quote"> Para um planejamento macro, que valorize as aulas de leitura, deve-se questionar: como está sendo construída a importância da Língua Portuguesa para os alunos ao longo de todo o ensino fundamental? Em todos os anos (séries) trabalha-se com o ensino sistemático de leitura? Os alunos conseguem perceber que há continuidade? As capacidades de leitura são mesmo priorizadas ou são sacrificadas em nome de conteúdos que supostamente seriam mais importantes? É comum perceber uma grande dificuldade do professor de Língua Portuguesa em selecionar o que vai ensinar. Muitas vezes, é pressionado a lidar com conceitos tradicionais, normativos, em detrimento de um ensino/aprendizagem que contemple o uso. O que acaba acontecendo é que o planejamento contempla uma lista extensa de conteúdos gramaticais. Assim, a leitura (e também a escrita, a escuta e a fala) acaba ficando de fora do planejamento e das aulas. (CAFIERO, 2010, p. 89).
+
+Sobre o papel de educador/a no ensino de língua portuguesa, conforme, Cafiero (2010), vemos que existe uma série de desafios em torno da tarefa de promover o desenvolvimento das habilidades dos sujeitos, referentes à linguagem. Trata-se de um processo que envolve múltiplas variáveis, inclusive, perpassa por crenças e valores, isto é, pressupõe uma cultura, competências a serem desenvolvidas e exercitadas, teorias que precisam ser ressignificadas pelos/as docentes e discentes, e práticas da linguagem para serem internalizadas e naturalizadas. Tudo isso, somado  a um equilíbrio com a promoção de um ritmo de aula profícuo, com propósito bem definido e claro para os alunos e alunas.
+
+\pagebreak
+
+<br><br>
+
+Com isso em mente, Antunes (2003) atesta:
+
+<p class="quote"> Em termos muito gerais, as aulas de português seriam aulas de: <br> <b>⋅</b> falar, ouvir, ler e escrever textos em língua portuguesa, dentro de uma distribuição e complexidade gradativas, atentando o professor para o desenvolvimento já conseguido pelos alunos   no domínio de cada habilidade. (ANTUNES, 2003, p. 111). </p>
+
+De acordo com Antunes (2003),  entendemos ser salutar,  e não seria incongruente nos novos espaços de discussões sobre o ensino da língua, enfocar a importância da leitura, essa por excelência, deve ser uma das ferramentas prioritárias do professor de língua portuguesa, pelo fato de possibilitar um trabalho que incite os/as discentes enxergarem as forças antagônicas que incidem em coagir os sujeitos no mundo, na história  (fatores políticos, econômicos, culturais, religiosos), ao passo que também, pode proporcionar  a eles/elas o desenvolvimento de maior arguição e consequentemente, maior defesa às intempéries que as circunstâncias da vida, naturalmente, podem insistir em apresentar. Mais que  isso, a leitura deve ser um instrumento de prazer, admiração e entusiasmo, desenvolvidos naturalmente (ANTUNES, 2003).
+
+Uma deixa para o trabalho efetivo do professor, o planejamento de ensino em consonância com os gêneros textuais, Cafiero (2010):
+
+<p class="quote"> Uma sugestão que pode ajudar na elaboração de um planejamento que integre todos os segmentos em torno de concepções e objetivos comuns pode ser a organização por gêneros textuais. O texto materializado nos diversos gêneros que circulam socialmente (como em cartas, cartazes, notícias, artigos, resumos, bilhetes, entre outros) funciona como elemento organizador do trabalho2. Constrói-se uma planilha (ver QUADRO I) com a indicação de que gêneros serão sistematizados em cada ano/série. O ideal é que o quadro contemple todas as séries do ensino fundamental. Quando a escola tiver ensino infantil e médio, a planilha deve incorporar todos os segmentos para evidenciar a visão de conjunto. Coloca-se um “X” nos gêneros que serão sistematizados em cada ano/série e eles serão uma referência para o professor. O fato de indicar aqueles que serão enfatizados não significa que os mesmos gêneros não possam ser estudados novamente em séries subsequentes. A noção é de espiral: a cada novo contato com um determinado gênero, novas possibilidades de leitura vão sendo explorada. (CAFIERO, 2010, p. 90).
+
+\pagebreak
+
+<br><br>
+
+Com base no planejamento apresentado por Cafiero (2010), entendemos que o trabalho do professor de língua portuguesa pode se resignificar, à medida que por meio de estratégias pensadas, os gêneros textuais estudados na sala de aula sejam práticas extensivas (práticas tradicionais) da vida cotidiana, a serem dissecados por alunos e alunas estimulados pela curiosidade e por novos desafios. Nesse intento, sob a concepção de leitura como prática social, almejamos que novos saberes, conhecimentos seja compartilhados e multiplicados.
+
+Quando nos propomos trabalhar as relações de desigualdade de gênero no funk, muitas indagações emergiram, fazendo-nos entender que precisariámos fazer uma interface entre os diversos textos e contextos da vida diária, Rojo (2010). Nesses termos, ao perceber que em meio aos corredores da escola, nos intervalos, alunos/as são embalados pela música Funk, perguntamo-nos: por que não aproveitar o gosto musical deles/as para trabalhar o gênero canção, atrelado a perspectiva de aguçar  a criticidade sobre as relações de gênero, uma vez que o gênero textual canção de Funk pode ser instrumento para o desenvolvimento da competência leitora, do uso das linguagens e da leitura como prática social?  
+
+Rojo (2010):
+
+<p class="quote"> Suponha que você está dando aulas no nono ano do ensino fundamental, numa escola da periferia da cidade de São Paulo. Os alunos pertencem a uma comunidade que valoriza o rap e o funk; muitos são ou querem ser rappers ou MCs e admiram o rapper Rappin’ Hood. Sempre é interessante conectar-se com a cultura local dos alunos e compreendê-la para relacioná-la à cultura valorizada e aos bens culturais a que esses têm pouco acesso. Que tal relacionar os eventos de letramento de que esses jovens participam em suas comunidades, por exemplo, de hip hop, e a cultura valorizada? (ROJO, 2010. p.  31).
+
+Sob o que explicita Rojo (2010), sobre relacionar a cultura dos alnos/as ao ensino sitemático, entendemos que o Funk pode contribuir com o realinhamento e a ressignificação de modelos preestabelecidos, preconceituosos, excludentes e reprodutores da desigualdade de gênero.
+
+\pagebreak
+
+<br><br>
+
+Esse fato nos trouxe o entendimento de que, o Funk explorado na sala de aula, lido e criticamente entendido nas subjacências, poderá fomentar discussões que gerem rupturas com a cultura patriarcal, e ressignificar saberes e modos dos sujeitos serem e agirem no mundo, de forma a fazerem prevalecer a equidade, e o respeito ao que concerne às relações de gênero.
+
+Portela e Santana (2019) nos lembram que não podemos ignorar os conhecimentos prévios dos alunos. Com base nessa paráfrase, podemos inferir que mesmo o gênero musical Funk sendo, aparentemente estigmatizado (apenas por ser Funk, imaginamos que seja misógino, que enfatiza a promiscuidade, e por isso podemos atribuir menor valor cultural). Ao trazer para a sala de aula esse gênero musical, devemos fomentar a leitura, instigando os/as discentes a enxergarem nas subjacências dessas letras de canções o diálogo entre o/a leitor/a, os conhecimentos anteriores, de mundo; o contexto e a construção dos sentidos do texto. Isto é, construir possibilidades de os/as  discentes inferirem e interpretarem com base em suas próprias identidades, e assim, gerar reflexões sobre como mulheres e homens são representados no Funk.
+
+Esperamos que diante dessas reflexões, as vozes de comando do patriarcalismo possam ser questionadas, através da leitura crítica dessas canções, fazendo-nos entender que as próprias  mulheres, vítimas sem precedentes da polarização, hierarquização e dos estigmas de gênero, e  em meio a expressividade de palavrões e gírias no contexto do Funk, podem ser donas de seus próprios destinos. Isto é, pelo Funk, não somente há o lugar de fala masculina, mas sobretudo, uma busca do empoderamento feminino, haja vista que muitas mulheres cantam² e extravasam as legítimas requisições de expansão e liberdade feminina, por meio do Funk.
+
+<div class='footnote' style="left: 9%; margin-right: 0px; padding-right: 21%; width: 100%"> 
+
+<p class="quote" style="padding: 0px; margin: 0px;">² MC 2JHOW; MC BIANCA. Mulher Independente. Cidade: Rio de Janeiro, Gravadora: Soull Music, 2020 (2:54 minutos). Disponível em: https://music.youtube.com/watch?v=K_LdZDUtAzw.  Acesso em 12 ago. 2022. <br> MC CAROL; KAROL CONKA. 100% Feminista. Cidade: Rio de Janeiro, Gravadora: Heavy Baile Sounds, 2016 (3:19 minutos). Disponível em: https://music.youtube.com/watch?v=W05v0B59K5s.  Acesso em: 12 ago. 2022. <br> Bonde das Maravilhas. Academia Das Maravilhas. Cidade: Rio de Janeiro, Gravadora: Pop Funk Produções, 2016 (2:14 minutos). Disponível em: https://www.youtube.com/watch?v=v1oMYKKJBv0.  Acesso em 12 ago. 2022.
+</div>
+
+\pagebreak
+
+<br><br>
+A música Funk, cujo teor da sexualidade exacerbada não retrata somente a virilidade e o poder masculino, condecorado pelas instituições sociais, mas rompe com o cunho  moralista e o jugo feminino. Nessas canções emergem uma nova forma de pensar, agir e de ser mulher. Mulher essa que não é o retrato esperado pelas construções elitistas e conservadoras, mas que faz suscitar, àquela que pode sentir, falar e agir de forma destemida e empoderada sobre suas dores e seus desejos, causando um “jeito transgressor” nas representações e no imaginário social.
+
+A Base Nacional Comum Curricular – BNCC, (BRASIL, 2018), documento que rege a Estrutura Curricular de conteúdos, atualmente trabalhados nas escolas públicas brasileiras, referenda a leitura como um  procedimento dinâmico, implicando-o em “Compreender a língua  como fenômeno cultural, histórico, social, variável, heterogêneo e sensível aos contextos de uso, reconhecendo-a como meio de construção de identidades de seus usuários e da comunidade a que pertencem”. (BRASIL, 2018, p. 87). Além disso:
+
+<p class="quote"> Leitura no contexto da BNCC é tomada em um sentido mais amplo, dizendo respeito não somente ao texto escrito, mas também a imagens estáticas (foto, pintura, desenho, esquema, gráfico, diagrama) ou em movimento (filmes, vídeos etc.) e ao som (música), que acompanha e cossignifica em muitos gêneros digitais. O tratamento das práticas leitoras compreende dimensões inter-relacionadas às práticas de uso e reflexão, tais como as apresentadas a seguir. Reconstrução e reflexão sobre as condições de produção e recepção dos textos pertencentes a diferentes gêneros e que circulam nas diferentes mídias e esferas/campos de atividade humana. (BRASIL, 2018, p.72).
+
+Diante de um país continental e com uma diversidade cultural tão ampla, como no Brasil, e de uma profunda desigualdade social, a Base Nacional Comum Curricular-BNCC (2018) aponta caminhos necessários para que o ensino aprendizagem possa contemplar as diferentes peculiaridades regionais, de modo a fazer sentido aos estudantes.
+
+Além disso, ela expande o sentido da leitura para cinco eixos: leitura, produção escrita, oralidade e de análise linguística e semiótica (BRASIL, 2018). 
+
+\pagebreak
+
+<br> <br>
+
+O documento também elabora uma série de detalhamentos que devem ser seguidos, dentre esses, posso destacar a preocupação com a valorização dos/as leitores/as, a fim de que a leitura esteja imbricada às suas  vivências e práticas sociais. A BNCC postula aulas de leitura transcendentes às aulas artificiais de leitura e do estudo da gramática, de frases soltas, desconexas da realidade do uso da língua.
+
+<p class="quote"> Cabe ressaltar, reiterando o movimento metodológico de documentos curriculares anteriores, que estudos de natureza teórica e metalinguística – sobre a língua, sobre a literatura, sobre a norma padrão e outras variedades da língua – não devem nesse nível de ensino ser tomados como um fim em si mesmo, devendo estar envolvidos em práticas de reflexão que permitam aos estudantes ampliarem suas capacidades de uso da língua/linguagens (em leitura e em produção) em práticas situadas de linguagem. (BRASIL, 2018, p. 71).
+
+Nesse sentido, imbricado à BNCC, a leitura como prática social fomenta os espaços democráticos da expressão do pensamento, das linguagens, da língua e por conseguinte postula a construção do respeito às diferenças, problematizando, portanto, às desigualdades nas relações de gênero. 
+
+Confome Brasil (2018): <p class="quote"> Por fim, cabe aos sistemas e redes de ensino, assim como às escolas, em suas respectivas esferas de autonomia e competência, incorporar aos currículos e às propostas pedagógicas a abordagem de temas contemporâneos que afetam a vida humana em escala local, regional e global, preferencialmente de forma transversal e integradora. Entre esses temas, destacam-se: direitos da criança e do adolescente (Lei nº 8.069/199016), educação para o trânsito (Lei nº 9.503/199717), educação ambiental (Lei nº 9.795/1999, Parecer CNE/CP nº 14/2012 e Resolução CNE/CP nº 2/201218), educação alimentar e nutricional (Lei nº 11.947/200919), processo de envelhecimento, respeito e valorização do idoso (Lei nº 10.741/200320), educação em direitos humanos (Decreto nº 7.037/2009, Parecer CNE/CP nº 8/2012 e Resolução CNE/CP nº 1/201221), educação das relações étnico-raciais e ensino de história e cultura CNE/CP nº 3/2004 e Resolução CNE/CP nº 1/200422), bem como saúde, vida familiar e social, educação para o consumo, educação financeira e fiscal, trabalho, ciência e tecnologia e diversidade cultural (Parecer CNE/CEB nº 11/2010 e Resolução CNE/CEB nº 7/201023).  Na BNCC, essas temáticas são contempladas em habilidades dos componentes curriculares, cabendo aos sistemas de ensino e escolas, de acordo com suas especificidades, tratá-las de forma contextualizada afro-brasileira, africana e indígena (Leis nº 10.639/2003 e 11.645/2008, Parecer. (BRASIL, 2018, p.19 - 20).
+
+\pagebreak 
+
+<br><br>
+
+<div class="descriptive">
+
+<h2 style="padding-top: 10px"> VOCÊ SABIA QUÊ?</h2>
+
+Das dez competências gerais da Base Comum Curricular/ BNCC (BRASIL, 2018), das dez competências gerais da Educação Básica e das dez competências específicas de Língua Portuguesa para o Ensino Fundamental,  a Competência Geral 1 (um) e 9 (nove), da Educação Básica e  as Competências Específicas de língua portuguesa para o ensino fundamental, 6 (seis) e 7 (sete) abrem espaço para a discussão das relações de gênero. Conforme, veremos a seguir:  <br><br> *Competência 1.* Valorizar e utilizar os conhecimentos historicamente construídos sobre o mundo físico, social, cultural e digital para entender e explicar a realidade, continuar aprendendo e colaborar para a construção de uma sociedade justa, democrática e inclusiva;  [...] <br> *Competência 9.* Exercitar a empatia, o diálogo, a resolução de conflitos e a cooperação, fazendo-se respeitar e promovendo o respeito ao outro e aos direitos humanos, com acolhimento e valorização da diversidade de indivíduos e de grupos sociais, seus saberes, identidades, culturas e potencialidades, sem preconceitos de qualquer natureza [...] (BRASIL, 2018, p. 9-10).
+
+As Competências Específicas de língua portuguesa para o ensino fundamental que possibilita o embasamento das questões de gênero, são: <br><br> *Competência 6.* Analisar informações, argumentos e opiniões manifestados em interações sociais e nos meios de comunicação, posicionando-se ética e criticamente em relação a conteúdos discriminatórios que ferem direitos humanos e ambientais; <br> *Competência 7.* Reconhecer o texto como lugar de manifestação e negociação de sentidos, valores e ideologias [...] <br> (BRASIL, 2018, p. 87).
+
+</div>
+
+\pagebreak
+
+<div class="descriptive">
+
+<H2 style="padding-top: 30px; padding-bottom: 30px;"> CURIOSIDADES SOBRE A BNCC! </H2>
+
+<div style="column-count: 2; column-rule: 2px solid #c9ad6a; column-gap: 10px; margin-left: 0px;">
+
+<H3> O QUE NÃO MUDOU NA BNCC: </H3>
+
+Embora traga avanços expressivos para o componente, a BNCC ainda mantém muitos dos pressupostos já adotados nos PCNs:
+
+A centralidade do texto para a definição de conteúdos, habilidades e objetivos, partindo do gênero discursivo a que ele pertence;
+
+A adoção de uma perspectiva enunciativo-discursiva da linguagem, em que os textos aparecem sempre relacionados aos seus contextos de produção; 
+
+O objetivo de desenvolver habilidades necessárias à participação em práticas de linguagem (escuta, fala, leitura e escrita) e a preferência pela metodologia de aprendizagem ditada pelo uso da linguagem, em que a reflexão se segue ao uso e serve para incrementá-lo.
+
+<H3>EIXO LEITURA: COMO FICOU NA BNCC</H3>
+
+Há uma atenção especial à questão da escuta ativa, como um comportamento necessário à interpretação do texto oral, especialmente nos anos iniciais do Ensino Fundamental.
+
+As habilidades de leitura constantemente aparecem integradas aos campos de atuação, uma vez que a língua é estudada sempre em relação ao seu uso social. O contexto de produção continua fundamental para o trabalho com a leitura.
+
+A cultura digital entra em cena com os textos multimodais, em que as produções escritas e a audiovisual interagem. Ao fim do Ensino Fundamental, os alunos precisam estar capacitados a ler, compreender e criticar essas produções
+[...]
+
+</div>
+
+</div>
+
+\pagebreak
+
+<div class="descriptive" style="column-count: 2; column-rule: 2px solid #c9ad6a; column-gap: 10px; margin-left: 0px;">
+
+### RESPEITAR E APRECIAR AS DIFERENÇAS
+
+<br>
+
+[...] Nos PCNs, as questões relacionadas à diversidade estavam contempladas nos temas transversais. Já na Base, a orientação para o trabalho com textos que expressem essa diversidade aparece de forma mais estruturada. Para materializar a teoria em ações práticas, em sala, uma orientação é selecionar textos, nos diversos anos do Ensino Fundamental, que deem conta de abarcar essa diversidade, escolhendo entre autores clássicos e contemporâneos, regionais, nacionais e estrangeiros, incluindo os de origem africana, indígena etc.<br>
+
+### “OS TEXTOS DEVEM FAZER SENTIDO EM UM CONTEXTO REGIDO POR UM CAMPO DE ATUAÇÃO – ROXANE ROJO
+
+<br> A Base propõe um diálogo muito mais amplo com a cultura pop. O que deve surgir dessa interação? A ideia é trazer o que os alunos estão familiarizados a consumir fora da escola, com o objetivo de prepará-los para uma leitura mais crítica desses conteúdos, como vídeos etc. 
+
+Não é só para valorizar, para dizer que estamos atualizados, mas até para colocar os gêneros mais tradicionais, como os jornalísticos e a literatura, em relação com esses gêneros que os jovens conhecem bem, e que são mais recentes. 
+
+O aluno pode, por exemplo, fazer uma playlist e, depois, escrever uma resenha baseada naqueles artistas que ele escolheu e de quem ele realmente gosta. Ou seja, a ideia não é só trabalhar os gêneros novos, mas ampliar as possibilidades, até mesmo para dar a oportunidade ao aluno de comparar e perceber as diferenças entre eles. [...] <br><br>
+
+### PROGRESSÃO DOS CONTEÚDOS
+
+<br> A Base cita aproximadamente 170 habilidades que precisam ser trabalhadas nos alunos durante todo o Ensino Fundamental, porém, muitas delas são comuns a vários anos. Por isso, pode haver uma certa dificuldade em estabelecer uma progressão na forma como os conteúdos devem ser trabalhados. 
+
+</div>
+
+\pagebreak
+
+<div class="descriptive">
+
+Uma sugestão é organizar as aulas a partir da escolha dos gêneros que serão tratados em cada ciclo, em interlocução com os campos de atuação. Os gêneros seriam, portanto, um primeiro elemento norteador, partindo dos mais simples para os mais complexos, conforme a capacidade de entendimento e análise do aluno. (NOVA ESCOLA. BNCC NA PRÁTICA, p. 11 – 20).
+
+</div>
+
+> RELAÇÕES DE GÊNERO NO CURRÍCULO DO RN!
+
+ O Plano Estadual de Educação do Rio Grande do Norte - PEE-RN (RIO GRANDE DO NORTE, 2016), atesta a promoção de “todas as formas de igualdade e equidade. A saber, conforme a citação abaixo:
+ 
+ <p class="quote"> DIMENSÃO 8: EDUCAÇÃO: MOVIMENTOS SOCIAIS, INCLUSÃO E DIREITOS HUMANOS <br> META 1 <br> Garantir e assegurar até 2025 a implementação de 90% das políticas públicas inclusivas e afirmativas, integradas aos Programas e Ações do Sistema Educacional do Estado do RN, em sintonia com as políticas nacionais, com vistas a contribuir para o enfrentamento das desigualdades sociais, contemplando as especificidades econômicas, culturais, éticas, históricas e sociais, na perspectiva de promoção de todas as formas de igualdade e equidade. <br> Estratégias <br> 1 – Assegurar e garantir, em regime de colaboração, recursos necessários para a implementação de ações de inclusão, objetivando a superação das desigualdades que atingem mulheres, indígenas, negros, quilombolas, povos tradicionais, povos do campo e pessoas com deficiência. <br> 2 – Garantir e assegurar, em regime de colaboração, políticas públicas para efetivar as ações afirmativas em todos os níveis, etapas e modalidades da educação, com vistas à promoção da igualdade étnico-racial, da pessoa com deficiência, dos direitos humanos e do respeito em todas as dimensões humanas.<br> (RIO GRANDE DO NORTE, 2016, p. 32). 
