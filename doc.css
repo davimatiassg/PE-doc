@@ -1,0 +1,220 @@
+.phb{
+    color:#250600;
+    column-count:1;
+    font-size: .5cm;
+    font-family: Arial;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: normal;
+    font-style: normal;
+    background:white;
+    text-indent: 0%;
+}
+
+.phb .descriptive{
+    
+    column-rule: 2px solid #c9ad6a;
+    border-style: solid;
+     border-image:url('/assets/img/sidebars.png') 12 round;
+    border-color:#c9ad6a;
+}
+
+.phb .descriptive p{
+    padding-left: 20px;
+    padding-right: 20px;
+    column-rule: 2px solid #c9ad6a;
+}
+
+.phb p{
+    line-height: 1.3em;
+    padding-bottom: .3em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent: 30px;
+}
+
+.phb p + p{
+
+    line-height: 1.3em;
+    padding-bottom: .3em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent: 30px;
+    
+}
+
+.phb .quote{
+
+    text-indent: 0px;
+    line-height: 1em;
+    font-size: .4cm;
+    margin-left: 4cm;
+    margin-top:.5cm;
+    margin-bottom: 1cm;
+    text-align: justify;
+    
+}
+
+.blankLabel{
+    
+    display:block-inline;
+    margin-bottom:1em;
+    margin-left:-10%;
+    margin-right:-10%;
+    background-color: rgba(255, 255, 215, 0.9);
+    
+    padding-left:10%;
+    padding-right:10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: #01002F;
+    font-size: 1.2cm;
+    font-family: 'LucymarSansRegular';
+    font-weight: bold;
+    
+    
+    box-shadow:0 0 10px black
+}
+
+.phb H1{
+
+
+    column-span:        all;
+    font-family: 'LucymarSansRegular';
+    color: #020d12;
+    font-size: .9cm;
+    font-style: normal;
+    
+}
+
+.phb H2{
+    padding-top: 1cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
+
+    color:#000000;
+    font-size: .7cm;
+    font-family: 'LucymarSansRegular';
+    font-style: normal;
+}
+
+.phb .descriptive H2{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.phb H3{
+    color:#000000;
+    font-size: .7cm;
+    font-family: 'LucymarSansRegular';
+    font-style: normal;
+}
+
+.phb table {                            
+    font-family: 'LucymarSansRegular';
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 1em;]
+    color: black;
+    font-size: 12pt;
+    font-style: normal;
+    background-color: white;
+    
+}
+.phb table tbody tr:nth-child(odd) {
+    background-color: #b1f6dd
+}
+
+.phb .footnote{
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
+
+.phb:nth-child(even) .footnote {
+
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
+
+.phb blockquote {
+    
+    column-span: all;
+    text-indent: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-image:  url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/blockLabel.png') 11;
+    border-image-outset: 12px 5px;
+    box-shadow: 1px 0px 7px #333
+}
+.phb blockquote em {
+    font-family
+    font-style: italic
+}
+.phb blockquote strong {
+    font-family: ScalySans;
+    font-weight: 800;
+    letter-spacing: 1em
+}
+.phb blockquote p,
+.phb blockquote ul {
+    text-indent:0px;
+    font-size: .6cm;
+    line-height: 1em;
+    font-family: 'LucymarSansRegular';
+    text-align: center;
+}
+.phb pre+blockquote,
+.phb h2+blockquote,
+.phb h3+blockquote,
+.phb h4+blockquote,
+.phb h5+blockquote {
+    margin-top: 10px}
+.phb blockquote h5 {
+    margin-top: 23px}
+
+.phb .classTable{
+margin-top:25px;
+margin-bottom:50px;
+border-collapse:separate;
+background-color:white;
+border:initial;
+border-style:solid;
+border-image-outset:25px 17px;
+border-image-repeat:round;
+border-image-slice:150 200 150 200;
+border-image-source:url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/classtableborder.png');
+border-image-width:47px
+}
+.phb .classTable h5{
+margin-bottom:5px
+}
+
+.phb:after{display:none;}
+.phb:nth-child(n+4):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    background-image: url('/assets/img/footer.png');
+    background-size: cover
+}
