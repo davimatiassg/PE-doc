@@ -1,6 +1,236 @@
 <head>
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/lucymar-sans" type="text/css"/>
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/lucymar-sans" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face//lucymar-sans" type="text/css"/>
+
+<style>
+.phb{
+    color:#250600;
+    column-count:1;
+    font-size: .5cm;
+    font-family: Arial;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: normal;
+    font-style: normal;
+    background:white;
+    text-indent: 0%;
+}
+
+.phb .descriptive{
+    
+    column-rule: 2px solid #c9ad6a;
+    border-style: solid;
+     border-image:url('/assets/img/sidebars.png') 12 round;
+    border-color:#c9ad6a;
+}
+
+.phb .descriptive p{
+    padding-left: 20px;
+    padding-right: 20px;
+    column-rule: 2px solid #c9ad6a;
+}
+
+.phb p{
+    line-height: 1.3em;
+    padding-bottom: .3em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent: 30px;
+}
+
+.phb p + p{
+
+    line-height: 1.3em;
+    padding-bottom: .3em;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-indent: 30px;
+    
+}
+
+.phb .quote{
+
+    text-indent: 0px;
+    line-height: 1em;
+    font-size: .4cm;
+    margin-left: 4cm;
+    margin-top:.5cm;
+    margin-bottom: 1cm;
+    text-align: justify;
+    
+}
+
+.blankLabel{
+    
+    display:block-inline;
+    margin-bottom:1em;
+    margin-left:-10%;
+    margin-right:-10%;
+    background-color: rgba(255, 255, 215, 0.9);
+    
+    padding-left:10%;
+    padding-right:10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: #01002F;
+    font-size: 1.2cm;
+    font-family: 'LucymarSansRegular';
+    font-weight: bold;
+    
+    
+    box-shadow:0 0 10px black
+}
+
+.phb H1{
+
+
+    column-span:        all;
+    font-family: 'LucymarSansRegular';
+    color: #020d12;
+    font-size: .9cm;
+    font-style: normal;
+    
+}
+
+.phb H2{
+    padding-top: 1cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
+
+    color:#000000;
+    font-size: .7cm;
+    font-family: 'LucymarSansRegular';
+    font-style: normal;
+}
+
+.phb .descriptive H2{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.phb H3{
+    color:#000000;
+    font-size: .7cm;
+    font-family: 'LucymarSansRegular';
+    font-style: normal;
+}
+
+.phb table {                            
+    font-family: 'LucymarSansRegular';
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 1em;]
+    color: black;
+    font-size: 12pt;
+    font-style: normal;
+    background-color: white;
+    
+}
+.phb table tbody tr:nth-child(odd) {
+    background-color: #b1f6dd
+}
+
+.phb .footnote{
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
+
+.phb:nth-child(even) .footnote {
+
+    text-align: left;
+    position: absolute;
+    padding-left:30px;
+    padding-right: 160px;
+    width: 100%; 
+    color: black; 
+    line-height: 15px;
+}
+
+.phb blockquote {
+    
+    column-span: all;
+    text-indent: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-image:  url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/blockLabel.png') 11;
+    border-image-outset: 12px 5px;
+    box-shadow: 1px 0px 7px #333
+}
+.phb blockquote em {
+    font-family
+    font-style: italic
+}
+.phb blockquote strong {
+    font-family: ScalySans;
+    font-weight: 800;
+    letter-spacing: 1em
+}
+.phb blockquote p,
+.phb blockquote ul {
+    text-indent:0px;
+    font-size: .6cm;
+    line-height: 1em;
+    font-family: 'LucymarSansRegular';
+    text-align: center;
+}
+.phb pre+blockquote,
+.phb h2+blockquote,
+.phb h3+blockquote,
+.phb h4+blockquote,
+.phb h5+blockquote {
+    margin-top: 10px}
+.phb blockquote h5 {
+    margin-top: 23px}
+
+.phb .classTable{
+margin-top:25px;
+margin-bottom:50px;
+border-collapse:separate;
+background-color:white;
+border:initial;
+border-style:solid;
+border-image-outset:25px 17px;
+border-image-repeat:round;
+border-image-slice:150 200 150 200;
+border-image-source:url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/classtableborder.png');
+border-image-width:47px
+}
+.phb .classTable h5{
+margin-bottom:5px
+}
+
+.phb .classTable tbody td{
+
+    border-style: solid;
+    border-color: white;
+}
+
+.phb:after{display:none;}
+.phb:nth-child(n+4):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    background-image: url('/assets/img/footer.png');
+    background-size: cover
+}
+
+</style>
+
 
 <div style="text-align:center;">
     
@@ -1141,10 +1371,7 @@ Propor concomitantemente, à turma (aos que dispunham de celular e internet) faz
 - Como a mulher deve se comportar na frente dos outros/as? <br>
 - Existem ações que fazem um homem ser “menos homem”? <br>
 - Existem ações que fazem uma mulher ser “menos mulher”?
-
 </blockquote>
-
-Após dado tempo, para as discussões das questões, os/as discentes deverão escolher um/uma componente do grupão da roda de conversa para apresentar as resposta para a turma. 
 
 </div>
 
@@ -1153,6 +1380,8 @@ Após dado tempo, para as discussões das questões, os/as discentes deverão es
 <br><br>
 
 <div class="descriptive">
+
+Após dado tempo, para as discussões das questões, os/as discentes deverão escolher um/uma componente do grupão da roda de conversa para apresentar as resposta para a turma. 
 
 A partir disso, fomentar uma discussão entre os grupos e propor que identifique e reflitam sobre os estereótipos – explicar o que é estereótipo - apresentados na fala e escrita dos discentes, por meio da verificação da concepção dos/das alunos/as sobre os benefícios e malefícios que os/as discentes declararem em ser homem ou mulher e as respostas que trouxerem durante a atividade em grupo.
 
@@ -1168,8 +1397,6 @@ Roteiro das questões do Vídeo: o que é (e o que não é) - Roda de Conversa 0
 2. Socialmente você vai ocupando um lugar, conforme a cultura em que está inserido/a? 
 3. Em uma cultura o homem pode ser educado a ser mais emotivo, sensível e em outra ele pode ser educado a ser guerreiro, com espadas? O mesmo pode acontecer com as mulheres, sim ou não?
 4. Vocês concordam que é necessário estarmos preocupados com uma cultura diferente, aonde homens e mulheres sejam educados para se respeitarem e se ajudarem mutuamente, sim ou não? 
-5. Estudar gênero, é querer incentivar uma sociedade mais humana e justa?  Por quê? 
-6. É urgente e necessário pensar na sociedade que queremos construir, com mais igualdade nas relações de gênero?
 
 </div>
 
@@ -1180,6 +1407,15 @@ Roteiro das questões do Vídeo: o que é (e o que não é) - Roda de Conversa 0
 <br><br>
 
 <div class="descriptive"> 
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;"> 
+
+5. Estudar gênero, é querer incentivar uma sociedade mais humana e justa?  Por quê? 
+6. É urgente e necessário pensar na sociedade que queremos construir, com mais igualdade nas relações de gênero?
+
+
+</div>
+
 
 Em seguida os discentes anotar no caderno o conceito de gênero e estereótipos de gênero retirado do texto: “Gênero: você entende o que significa?” Por Moraes e Medeiros (2021). Os papéis com os conceitos de gênero e as respostas das perguntas deverão ser colados em uma folha de papel madeira, exposta ao lado do quadro branco para leitura a posteriori. 
 
@@ -1231,6 +1467,8 @@ j.  Como o homem é representado no funk?
 ### AVALIAÇÃO – RODA DE CONVERSA 01 – CONCEITO DE GÊNERO/RELAÇÕES DE GÊNEROS E OS PAPÉIS ATRIBUÍDOS A CADA GÊNERO PELOS/AS DISCENTES. 
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -1349,6 +1587,8 @@ A principal vertente dessa discussão deve ser a identificação de estereótipo
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
+Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
+
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |Identificação de estereótipos a respeito da figura feminina e masculina nas letras de funk.| | | | | | |
@@ -1462,4 +1702,449 @@ Distribuir a atividade diagnóstica final. Nesse instante, ler oralmente e discu
 Finalização da oficina - Peça para todas e todos se levantarem, darem as mãos formando uma roda e fecharem os olhos. Coloque uma música suave e cada um/a irá imaginar como seria o mundo se não houvesse discriminação. No final, pergunte quem gostaria de contar o que imaginou. É importante lembrar que somos todos/as diferentes um dos outros. Contudo, essas diferenças não podem ser transformadas em desigualdades!
 
 **Avaliação:** Responder as questões, refletir e discutir o tema.
+
+</div>
+
+<div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+### **ROTEIRO DAS QUESTÕES DA RODA DE CONVERSA 3** <br> AVALIAÇÃO DIAGNÓSTICA FINAL - AVALIANDO O QUE APRENDEMOS SOBRE AS RELAÇÕES DE GÊNERO NA LETRA DE CANÇÃO DE FUNK
+
+Prezado (a) aluno (a), <br> Para fazer uma breve avaliação sobre todas as discussões e reflexões realizadas, sugerimoas o desenvolvimento do processo da aplicação da pesquisa sobre as relações de gênero na letra de canção de funk, durante as atividades vivenciadas em sala de aula. <br> **Objetivo:** Perceber possíveis mudanças de pensamento, comportamento e formas de expressões linguísticas que os/as alunos/as adquiriram sobre as relações de gênero. 
+<br> 1 – Com base no texto estudado sobre a divisão sexual do trabalho e nas discussões sobre as letras de canção de funk, responda as questões abaixo:
+<br> **a.** O que é gênero?
+<br> **b.** De que forma a divisão do trabalho pode gerar estereótipos de gênero?
+
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+<br> **c.** A análise das letras de funk pode fazer pensar sobre a desigualdade nas relações de gênero? Por quê?
+<br> **d.** A linguagem provinda do gênero funk tem função social? Qual?
+<br> **e.** Os comportamentos de mulheres e homens representados no funk repetem os estereótipos de gênero apresentados no dia a dia? Explique.
+<br> **f.** Na sua visão, ler, compreender e interpretar a letra de canção do funk pode ajudar a compreender os modelos preconceituosos atribuídos a homens e mulheres? Justifique.
+<br> **g.** Como o estudo da letra de funk pode possibilitar o desenvolvimento da criticidade sobre as relações de gênero? Explique.
+<br> **h.** Dançar e ouvir o funk sem refletir sobre o que dizem as letras pode incentivar a reprodução de estereótipos e preconceitos em relação aos papéis sociais do que é ser mulher e homem?
+<br> **i.** Após ter estudado sobre as relações de gênero na letra de canção do funk, você acha que pode melhorar a forma de pensar e agir em busca da igualdade de direitos de mulheres e homens? Justifique.
+<br> **j.** Uma das maiores conquistas na direção da igualdade entre mulheres e homens tem sido o aumento da participação das mulheres no mercado de trabalho. Cite três sugestões de ações que poderão contribuir para a desconstrução da desigualdade de gênero.
+
+*RESPOSTA PESSOAL*
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+Em seguida, desenvolver a Dinâmica: jogo da aparência, cujo objetivo é demonstrar como estereótipos e interpretações subjetivas interferem na comunicação. Essa dinâmica teve uma duração de 50 minutos e os materiais usados, foram: balões, pedaços de papel, lápis ou canetas e a impressão de um dos funks trabalhados. Para o desenvolvimento, o/a professor/a deve entregar um balão vazio e um pedaço pequeno de papel em branco para cada um dos participantes. 
+
+Cada discente deverá escrever no papel 3 (três) características pessoais, de maneira que, a partir dessas características ela/ele possa ser identificada pelos outros participantes. Em seguida, pedir para os participantes dobrarem o papel e colocá-lo dentro do balão (ESCOLA DE ENFERMAGEM DA PAZ, 2013). Cada aluno/a deverá encher o seu balão. Quando todos os balões estiveram cheios, jogar todos para cima, ao mesmo tempo, ao som do funk “Sou Favela”, de MC Bruninho e Vitinho Ferrari (2018)
+
+Quando a música parar, cada discente deverá pegar o balão que estiver à sua frente e estourá-lo. No final, cada participante ler o papel que encontrou dentro do balão, ao passo que deverão tentar identificar o/a discente que apresentarem as características descritas. Em decorrência disso, surgir os seguintes pontos para discussão:<br>
+**a)** Como adquirimos os estereótipos?<br>
+**b)** Por que, muitas vezes, as aparências enganam?<br>
+**c)** Os estereótipos influenciam no comportamento e nos sentimentos das pessoas?
+
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+## ROTEIRO DA RODA DE CONVERSA 3 - AVALIANDO O QUE APRENDEMOS SOBRE AS RELAÇÕES DE GÊNERO NA LETRA DE CANÇÃO DE FUNK 
+<br>**Objetivo:** Avaliar através de uma atividade diagnóstica final, e por meio de dinâmicas, o desenvolvimento da aplicação da pesquisa sobre as relações de gênero na letra de canção de funk.
+
+**a)**  Recapitular as discussões referentes às Rodas de Conversas 01, 02 e o que for construido nas oficinas.
+
+**b)**  Distribuição da atividade diagnóstica final. Os/as discentes deverão responder as questões discursivas abertas, por escrito e individualmente. Em círculo, cada aluno deverá ler as respostas oralmente.
+
+**c)**  Desenvolvimento da Dinâmica: jogo da aparência, Disponível em:  http://www.diaadiaeducacao.pr.gov.br/portals/cadernospde/pdebusca/producoes<br>_pde/2016/2016_pdp_edfis_ufpr_lucianamarinscardoso.pdf. Acesso em: 27 de setembro de 2022. O objetivo é demonstrar como os estereótipos e interpretações subjetivas interferem na comunicação.
+
+**d)**  Discussão: Como adquirimos os estereótipos? Por que, muitas vezes, as aparências enganam? Os estereótipos influenciam no comportamento e nos sentimentos das pessoas?
+
+**e)**  Desenvolvimento da Dinâmica: Trabalhando Conceitos. Disponível em: http://www.escoladapaz.com.br/blog/dinamica-aborda-o-trabalho-em- Acesso em: 01 de outubro de 2022.
+
+Finalização das dinâmicas.
+
+**Avaliação:** Responder as questões, refletir e discutir o tema.
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+
+Prosseguir a terceira roda de conversa desenvolvendo uma outra dinâmica: “Trabalhando Conceitos.” O objetivo é esclarecer os conceitos que envolvem as relações de gênero e sexualidade. O material usado são tiras de papel em branco para cada aluno/a de cada grupo para anotarem as possíveis dúvidas em relação aos conceitos trabalhados durante a pesquisa. Esses papeis posteriormente, deverão ser recolhidos, lidos e discutidos no grande grupo.
+
+Organizar os alunos/as em duplas e entregar uma folha impressa com os conceitos trabalhados durante toda pesquisa (preconceito; discriminação; estereótipo e gênero) para tentar sanar as possíveis dúvidas. O grupo pode participar expondo suas opiniões.
+
+Nesse contexto, lembrar que as ideias preconceituosas e os gestos discriminatórios se manifestam, geralmente dissimulados por meio de piadas, supostas brincadeiras, etc. Para finalizar pedir para todas e todos se levantarem e imaginar como seria o mundo se não houvesse discriminação. 
+
+No final, perguntar aos/às discentes se gostariam de contar o que imaginou. Lembrar que somos todos/as diferentes um dos outros/as. Essas diferenças não deverão ser transformadas em desigualdades. A avaliação será por meio das questões, refletir e discutir o tema (ESCOLA DE ENFERMAGEM DA PAZ, 2013).
+
+**Avaliação Oral:** responder as questões, refletir e discutir o tema.
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="classTable">
+
+<H2 style="padding-top: 0px;"> OFICINAS PEDAGÓGICAS </H2>
+
+| **Nº** | **Atividade/tema** | **Objetivos** | **Procedimentos** | **Carga horária** |
+|:--:|:--:|:--:|:-----------------:|:-:|
+| 01 | Percepção das Influências dos Estereótipos de Gênero no Cotidiano | Instigar os/as estudantes para compreender como a desigualdade de gênero afeta a vida em sociedade, de modo que os/as discentes reflitam e percebam o perigo de reproduzir hábitos que estigmatizam a mulher e o homem. | **a)** Retomada dos conceitos anteriores para fixação do assunto discutido anteriormente, através a um vídeo esclarecedor sobre o conceito de gênero. <br> **b)** Construção de uma tabela em seus respectivos cadernos, separando uma página em dois campos, com cabeçalhos escritos: “masculino” e “feminino”. Pronúncia e escrita de palavras no espaço que acharem mais apropriada para homem ou mulher, de forma apressada, sem pensar muito. <br> **c)** Discussão sobre as seleções das palavras escritas nos cabeçalhos masculino e/ou feminino, anotados no caderno. <br> **d)** Contagem das palavras mais frequentemente associadas a cada um dos lados: “Masculino” e “Feminino”. Um/uma discente escreverá e marcará na lousa, o campo ao qual essa palavra foi associada. <br> **e)** Críticas e discussões sobre cada uma das palavras associadas ao masculino e/ou feminino. <br> **f)** Vídeo esclarecedor sobre a desigualdade de gênero.<br> **g)** Avaliação.| 4H/A |
+| 02 | Análise de Letras de Canções de Funk | Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. | **a)** Oralmente, discutir e recapitular as contribuições da oficina anterior. Sugestão de letras de canções de Funk pelos/as discentes. <br>**b)** assistir a um vídeo sobre como fazer paródia |4H/A|
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="classTable">
+
+| | | | | |
+|:--:|:--:|:--:|:-----------------:|:-:|
+| | | | | |
+| 02 | Análise de Letras de Canções de Funk | Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. | **c)** Formação de 02 grupos. <br>**d)** Cada grupo dos/das discentes participantes da oficina deveria escolher das letras de funks sugeridas e pré-selecionadas, por eles/as, em aulas anteriores, 2 (dois) funks preferidos: Cachorrinhas (Luísa Sonza). Bum Bum Tam Tam (MC Fioti). <br>**e)** Distribuição das letras das canções para serem lidas, ouvidas, cantadas e discutidas. <br>**f)** As letras dos funks serão lidas, discutidas de maneira semelhante ao que fora feito na roda de conversa nº 2, os estereótipos e as marcas de desigualdade de gênero, dispersas nas letras de Funk. <br>**g)** Breve discussão sobre a importância do conhecimento dos elementos fundamentais de composição das músicas de funks que serão trabalhadas: letra, sonoridade; levantamento de hipóteses: isto é: dizer o título da música, o que eles/as acham que será tratado na letra e a estrutura textual das músicas compostas de versos e estrofes. <br>**h)** Análise crítica sobre a necessidade de desconstrução das desigualdades de gênero. <br>**i)** Escrita na lousa alguns exemplos de estereótipos de gênero. <br>**j)** Desenvolvimento de uma paródia relacionada às letras de funk estudadas anteriormente, nos grupos. <br>**k)** Avaliação. |4H/A|
+| 03 | Síntese da análise e contraponto das aulas sobre as relações de gênero no funk. | Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. | **a)** Formação dos grupos, conforme a preferência e a afinidade dos/das discentes. <br>**b)** Recapitular a oficina anterior: escrevendo e pontuando no caderno o que pensam sobre a letra original do funk (lida, reproduzida e discutida nos grupos). <br>**c)** Cada grupo deverá produzir um texto argumentativo que deverá ser lido e socializado para todos/as e entregue à professora pesquisadora. |4H/A|
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="classTable">
+
+
+| | | | | |
+|:--:|:--:|:--:|:-----------------:|:-:|
+| 03 | Síntese da análise e contraponto das aulas sobre as relações de gênero no funk. | Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. | <br> **d)** Apresentação das paródias das músicas funk, produzidas na Oficina pedagógica nº 02. <br> **e)** Vídeo sobre “Como Surgiu o Funk”. <br> **f)** Contrapontos entre a síntese que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk).<br> **g)** Avaliação.|4H/A|
+| 04 | Síntese, contraponto e reflexão sobre uma nova maneira de perceber a desigualdade nas relações de gênero no funk. | Compartilhar as informações, incitar discussões e enfatizar a importância da mudança de atitude, em relação desigualdade de gênero, a partir do estudo realizado na letra de funk | <br> **a)** Recapitular a oficina anterior. <br> **b)** Formação de 04 grupos, com 06 ou 07 componentes cada. <br>**c)** Em pesquisa anterior, os alunos/as de cada grupo deverão trazer para esta oficina, fotografias de papéis sociais de homens e mulheres costumes, comportamentos, profissões e culturas diferentes para ser colado em folhas de papel A4, que serão afixadas uma ao lado da outra, e expostas em um papel madeira, formando um mural, com um título apelativo ao respeito à diversidade, aos direitos da pessoa humana e à igualdade de gênero. <br> **d)** Escrita no caderno pelos/as discentes sugestões para a construção de uma sociedade menos preconceituosa e com mais respeito à igualdade nas relações de gênero. <br> **e)** Socialização dos textos, oralmente. <br> **f)** Discussão, contrapontos e comentários sobre a socialização das produções dos alunos/as, referente às relações de gênero. <br> **g)** Avaliação escrita.| 4H/A |
+
+<p class="quote" style="margin:0px; padding: 0px; text-align: center;"> Fonte: A autora (2022). 
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+## **ROTEIRO DA OFICINA 01** <br> PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO
+
+<br>
+
+**Objetivo:** Instigar os/as estudantes para compreender como a desigualdade de gênero afeta a vida em sociedade, de modo que os/as discentes reflitam e percebam o perigo de reproduzir hábitos que estigmatizam a mulher e o homem.
+<br>**a)**  Retomada dos conceitos anteriores para fixação do assunto discutido anteriormente, por meio  de um vídeo esclarecedor sobre o conceito de gênero. Disponível em: https://youtu.be/x_WkMLkdl6M  Acesso em: 10 de agosto de 2022.
+<br>**b)**  Construção de uma tabela em seus respectivos cadernos, separando uma página em dois campos, com cabeçalhos escritos: “masculino” e “feminino”. Pronúncia e escrita de palavras no espaço que acharem mais apropriada para homem ou mulher, de forma apressada, sem pensar muito.
+<br>**c)**  Discussão sobre as seleções das palavras escritas nos cabeçalhos masculino e/ou feminino, anotados no caderno. 
+<br>**d)**  Contagem das palavras mais frequentemente associadas a cada um dos lados: “Masculino” e “Feminino”. Um/uma discente escreverá e marcará na lousa, o campo ao qual essa palavra foi associada.
+<br>**e)**  Críticas e discussão sobre cada uma das palavras associadas ao masculino e/ou feminino. 
+<br>**f)**  Vídeo esclarecedor sobre a desigualdade de gênero. Disponível em: https://youtu.be/ZCGLC-vziRc   Acesso em 10 de agosto de 2022. 
+<br>**g)**  Avaliação (escrita) da oficina.
+
+**Tempo:** 2 horas/aula.
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+## ROTEIRO DAS QUESTÕES DA OFICINA 01
+
+### PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO
+
+**Observe estas palavras:** dentista, cuidar, autoridade, cargo de chefia, empresas, força, briga, calmaria, calor, altura, dor, medo, vida, fogão, lei, mulher, estética, sensibilidade, matemática, tecnologia, trabalhar fora, quarto, frio, sala, frágil, fechado, forte, peso, frágil, poesia, rua.
+<br> 
+**1.** Quais das palavras, anteriormente citadas, vocês atribuem ao sexo feminino e/ou masculino? <br> 
+**2.** Por que dizemos que algumas palavras parecem ser de meninas ou meninos? <br> 
+**3.** vocês acham que às vezes nós podemos atribuir características, valores a uma pessoa, ou discriminá-la e depois descobrir que foi uma visão distorcida da realidade? <br> 
+**4.** Ainda hoje temos uma grande quantidade de mulheres que apanham, mulheres que são mortas pelos maridos, namorados. Vocês acham que isso foi uma construção da sociedade? <br> 
+**5.** A ideia de que a mulher é um objeto é fruto de uma construção errada dos modelos pré-fixados, aonde os pais/mães, muitas vezes, ensinam a filha a arrumar a cama, lavar louça, cuidar da casa e não ensina o filho a fazer o mesmo, sim ou não? Concordam ou discordam? Justifique.
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+## TEMÁTICA DA PRIMEIRA OFICINA PEDAGÓGICA
+
+### PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO
+
+O objetivo dessa oficina é instigar os/as estudantes a compreenderem como a desigualdade de gênero afeta a vida em sociedade, de modo que eles/as reflitam e percebam o perigo de reproduzir hábitos que estigmatizam a mulher e o homem. 
+
+Para o início da primeira oficina, retomar os conceitos anteriores, sobre gênero e estereótipos de gênero discutidos e esclarecidos pelos vídeos, já citados nas rodas de conversas. Posteriormente, desenvolver uma atividade escrita, de cunho individual. A priori, pedir que os/as discentes construam uma tabela em seus respectivos cadernos, separando uma página em dois campos, com cabeçalhos escritos: “masculino” e “feminino”. Nos minutos seguintes, requisitar que os/as discentes falem algumas palavras de forma apressada (sem pensar muito) que representem objetos, características, profissões e/ou comportamentos de homens e mulheres. 
+
+Após a pronúncia de cada palavra, os alunos/as deverão, imediatamente, escrevê-la no espaço da tabela, em  que na opinião deles/as são mais apropriadas para o masculino ou o feminino, e/ou para ambos. Sugiro ao professor/a que pronucie trinta e duas palavras: carro, importante, roupa, dentista, cuidar, autoridade, cargos de chefia, empresas, força, briga, calmaria, calor, altura, dor, medo, vida, fogão, ler, estética, sensibilidade, matemática, tecnologia, trabalhar fora, quarto, frio, sala, rágil, fechado, forte, peso, poesia e rua.
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+Após concluir essa etapa, discutir sobre as seleções das palavras a serem escritas no cabeçalho (masculino e feminino), no caderno do/da discente. Em seguida, os/as alunos/as tentarão contar quais foram as palavras mais frequentemente associadas a cada cabeçalho: “Masculino” e “Feminino.”Pedir para um/a discente, voluntário/a  escrever na lousa, a quantidade de palavras deferidas para cada campo ao qual essa palavra foi associada, as quais deverão ser recontadas pelo professor e apresentada para turma as porcentagens aferidas para cada gênero.
+
+Para cada uma das palavras apresentadas, articular toda a turma a realizar críticas e questionar o motivo daquela palavra ter sido tão associada ao que parece mais apropriado para o “masculino” ou “feminino”. O jogo acaba quando todos as palavras forem discutidas. Para um maior entendimento sobre as implicações sociais que decorrem da frequência dessas associações entre conceitos do cotidiano a gêneros específicos,  sugiro que os/as discentes assistam a um vídeo nomeado “Igualdade de Gênero” (ONU Mulheres Brasil, 2016). Para concluir a primeira oficina, realizar a avaliação (escrita) da oficina. 
+
+O Tempo dessa oficina é de 2 horas/aula.
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+## ROTEIRO DAS QUESTÕES DO VÍDEO: “IGUALDADE DE GÊNERO”
+
+### OFICINA 01 PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO 
+
+Roteiro das questões sobre o vídeo: “Igualdade de Gênero” Disponível em: https://youtu.be/ZCGLC-vziRc. Acesso em 10 de agosto de 2022 <br>
+**a)**  Você acha que as nossas escolhas devem ser determinadas pelo sexo biológico, como por exemplo, meninos não podem vestir rosa e menina não pode vestir azul? <br>
+**b)**  Você acha que as determinações sobre o que meninos e meninas devem fazer podem gerar desigualdades? Por quê? <br>
+**c)**  Você concorda que mulheres ganhem menos que os homens, mesmo que exerçam a mesma profissão e com a mesma quantidade de horas trabalhadas? <br>
+**d)**  As mulheres devem trabalhar fora ou devem apenas se preocuparem com os afazeres domésticos?  <br>
+**e)**  Você acha que existe prejuízos para as mulheres quando elas não trabalham no ambiente público, sim ou não? Por quê?
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+
+### AVALIAÇÃO – OFICINA 01 – PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO
+
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
+
+|ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|Reflexão sobre o perigo de reproduzir estereótipos, preconceito de gênero contra mulheres e homens.| | | | | | |
+|Compreensão de como a desigualdade de gênero afeta a vida em sociedade. | | | | | | |
+
+
+<blockquote style="column-span: none; height: 100%; text-align: center;"> Obrigada pelas respostas! (●’◡’●) </blockquote>
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br><div class="descriptive">
+
+## ROTEIRO DA OFICINA 2 - ANÁLISE DE LETRAS DE CANÇÕES DE FUNK 
+
+**Objetivo:** Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas.<br> 
+**a)**  Oralmente, discutir e recapitular as contribuições da oficina anterior. Sugestão de letras de canções de Funk pelos/as discentes.<br> 
+**b)**  Assistir a um vídeo sobre como fazer paródia. Disponível em: https://youtu.be/o1c1HYtntTQ  Acessado em 25 de agosto de 2022.<br>
+**c)**  Formação de 04 grupos de 06 ou 07 componentes, cada grupo discente participante da oficina receberá impressa sugestões de 04 letras de funk (Sou Favela (Com MC Bruninho e Vitinho Ferrari); Bum Bum Tam Tam (MC Fioti); Academia das Maravilhas (Bonde Das Maravilhas) e Cachorrinhas (Luísa Sonza). que serão reproduzidos, cantados e ouvidos.<br>
+**d)**  Seleção de apenas duas dessas letras para serem trabalhadas.<br>
+**e)**  Distribuição das letras das canções de funk.<br>
+**f)**  As letras dos funks serão lidas, discutidas de maneira semelhante ao que fora feito na roda de conversa nº 2, os estereótipos e as marcas de desigualdade de gênero, dispersas nas letras de Funk.<br>
+**g)**  Breve discussão sobre a importância do conhecimento dos elementos fundamentais de composição das músicas de funks que serão trabalhadas: a letra e a sonoridade; uma atividade de levantamento de hipóteses, isto é: dizer o título da música e deixar que eles/as digam o que será tratado na letra; a estrutura textual das músicas, compostas de versos e estrofes.<br>
+**h)**  Análise crítica sobre a necessidade de desconstrução dessas desigualdades. <br>
+**i)**  Escrita na lousa alguns exemplos de estereótipos de gênero, retirados do livro: Por uma Educação Escolar não Sexista. Souza e Carvalho (2013).<br>
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br><div class="descriptive">
+
+<br>**j)**  Desenvolvimento de uma paródia relacionada às letras de funk estudadas anteriormente, por cada grupo, com o propósito de trazer uma reflexão sobre a importância da igualdade nas relações de gênero.<br>
+**k)**  Avaliação escrita da oficina.<br>
+
+**Tempo:** 4 horas/aula
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+## ROTEIRO DAS QUESTÕES DA OFICINA 2 
+
+### ANÁLISE DE LETRAS DE CANÇÕES DE FUNK
+
+1. Qual é o título da música?
+<br>**a)**  Quem é o autor?
+<br>**b)**  A letra diz o quê?
+<br>**c)**  O que representa a palavra cachorra na música?
+<br>**d)**  Vocês percebem que o autor nem sempre está falando da vida dele? O que mais está sendo dito nessa letra?
+<br>**e)**  Por quê vocês acham que os homens são vira-latas?
+<br>**f)**  A gente pode tirar proveito de alguma coisa boa dessa canção?
+<br>**g)**  O que a letra, o que significa?
+<br>**h)**  Qual é a parte da letra que chama mais atenção?
+<br>**i)**   Vocês acham certo a mulher ser chamada de cachorra?
+<br>**j)**  Os meninos acham certo, as meninas serem chamadas de cachorras?
+<br>**k)**  Vocês, meninas, gostam de serem chamadas de cachorras?
+<br>**l)**  Essa música tem conotação sexual? Por exemplo? Existem também os polly dance masculinos. 
+<br>**m)**  Há prostituição masculina em nossa cidade?
+<br>**n)**  Quem é o autor de Bum Bum Tam Tam?
+<br>**o)**  Qual é a parte mais bonita nessa letra?
+<br>**p)**  No funk: “Bum Bum Tam Tam” há conotação sexual?
+
+</div>
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+<br>**q)**  Nessa letra, vocês veem tratamento desigual entre homens e mulheres?
+<br>**r)**  Vocês acham que a mulher está sendo mais desrespeitada, mais afrontada nas duas letras, mas uma é de homem e uma é de uma mulher, dessas duas, quais são as letras que prejudicam mais a mulher?
+
+</div>
+
+## TEMÁTICA DA SEGUNDA OFICINA PEDAGÓGICA: ANÁLISE DE LETRAS DE CANÇÕES FUNK.
+<br>
+
+O objetivo dessa oficina é incentivar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. Para a realização desta oficina, oralmente, recapitular a oficina anterior. 
+
+Logo após, pedir que os discentes escolham as letras de funks sugeridas por eles/as, em aulas anteriores, outros funks (o funk de preferência). Seguidamente, pedir que assistam ao vídeo sobre como fazer uma paródia (Como Fazer Paródia, 2017).
+
+### ROTEIRO DAS QUESTÕES DO FILME: “ COMO FAZER PARÓDIA” - OFICINA 02 <br>
+
+Roteiro das Questões do Filme: “Como Fazer Paródia” Disponível em: https://youtu.be/o1c1HYtntTQ  Acessado em 25 de agosto de 2022. 
+<br>**a)**  Você acha que pode tratar de coisas sérias brincando através de uma paródia?
+<br>**b)**  O que é uma paródia?
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+<br>**c)**  Qual o tema escolhido para fazer a paródia: desigualdade de gênero, violência contra a mulher, profissões masculinas e femininas, trabalho doméstico X trabalho público etc
+<br> **d)** Você acha que a desigualdade de gênero é um tema que pode ser trabalhado em uma paródia de funks?
+<br> **e)** Você sabia que para facilitar a escrita de uma paródia, você deve selecionar e decorar a letra da música original?
+<br> **f)** Como começar a escrever a paródia?
+
+Dividir a turma em 02 grandes grupos. A partir das letras preferidas pelos discentes e selecionadas pelo professor/a: Bum Bum Tam Tam (MC Fioti) e  Cachorrinhas (SONZA, 2022), nos anexos, distribuir as letras das canções de funk. Essas deverão ser lidas, ouvidas, cantadas e discutidas de maneira semelhante ao que fora feito na roda de conversa nº 2, sobre os estereótipos e as marcas de desigualdade de gênero, dispersas nas letras de Funk. 
+
+Logo após, provocar uma breve discussão sobre a importância do conhecimento dos elementos fundamentais da composição da letra de canção dos respectivos funks. A exemplo disso, desenvolver uma atividade de levantamento de hipóteses sobre a letra, a sonoridade, o título da música, o assunto que seria tratado na letra, a estrutura textual das músicas, compostas de versos, estrofes, os autores e/ou o eu lírico (a voz que fala no poema). 
+
+Oralmente fazer uma retrospectiva sobre a necessidade da desconstrução das desigualdades de gênero, conforme as inferências das letras dos funks estudados. Para isso, escrever na lousa alguns exemplos de estereótipos de gênero, retirados do livro: ” Por uma Educação Escolar não Sexista,“ de Souza e Carvalho (2013), nos anexos, dessas proposições pedagógicas. 
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+Em seguida, os discentes dos dois grandes grupos, deverão ser instigados pelo/a professor/a a desenvolverem uma paródia relacionada às letras dos funk, com o propósito de trazer uma reflexão sobre o conceito de gênero e estereótipos de gênero e a importância da discussão sobre as desigualdades nas relações de gênero. Logo em seguida, realizar a avaliação escrita da oficina. Essa oficina terá uma duração de 4 horas/aula (2 encontros de 2 horas/aula, cada), entre o início e a conclusão.
+
+### AVALIAÇÃO – OFICINA 02 – ANÁLISE DE LETRAS DE CANÇÕES FUNK
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
+
+|ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|Discussão e averiguação das desigualdades de gêneros nas letras de canções Funk.| | | | | | |
+
+<blockquote style="column-span: none; height: 100%; text-align: center;"> Obrigada pelas respostas! (●’◡’●) </blockquote>
+</div>
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+## TEMÁTICA DA TERCEIRA OFICINA PEDAGÓGICA: DESENVOLVIMENTO DO SENSO CRÍTICO SOBRE A DESIGUALDADE NAS RELAÇÕES DE GÊNERO ATRAVÉS DA LETRA DE FUNK.
+
+### Roteiro da Oficina 03 - síntese da análise e contraponto das aulas sobre as relações de gênero no funk <br>
+
+**Objetivo:** Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. <br>
+**a)**  Formação dos grupos, conforme a preferência e a afinidade dos/das discentes.<br>
+**b)**  Os/as alunos receberão a tarefa de relembrar o que fora falado nas aulas passadas, a respeito da desigualdade de gênero, escrevendo e pontuando no caderno o que pensam sobre a letra original do funk (lida, reproduzida e discutida nos grupos).<br>
+**c)**  Cada grupo deverá produzir um texto argumentativo que deverá ser lido e socializado para todos/as e entregue à professora pesquisadora. <br>
+**d)**  Apresentação das paródias das músicas funk, produzidas na Oficina pedagógica nº 02.<br>
+**e)**  Vídeo sobre “Como Surgiu o Funk”. Disponível em: https://youtu.be/0uZ4qMGdy9M. Acessado em 12 de agosto de 2022. <br>
+**f)**  Contrapontos entre a síntese que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk).<br>
+**g)**  Avaliação escrita.
+
+**Tempo:** 4 horas/aula
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive">
+
+O objetivo dessa oficina é verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk.
+
+A princípio, dividir os grupos, conforme a preferência e a afinidade dos/das discentes. Os/as alunos receberão a tarefa de relembrar o que fora falado nas aulas passadas, a respeito da desigualdade de gênero, escrevendo e pontuando no caderno o que pensaram sobre a letra original do funk (lida, reproduzida e discutida nos grupos). Cada grupo produzirá um texto coletivo que será lido e socializado para todos/as da turma, e entregue ao professo/a. 
+
+A partir disso, orientar que os grupos apresentem as paródias das músicas funk, produzidas na Oficina pedagógica nº 02. Cada apresentação durará uma média de 5min a 10min, de forma que o tempo de aula destinado para apresentação das paródias será em torno de no máximo, 30 minutos. Logo após, para fundamentar a oficina, assistir ao vídeo sobre “Como Surgiu o Funk” (Conhecimentos Gerais, 2016).
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+## **ROTEIRO DAS QUESTÕES DO VÍDEO: “ COMO SURGIU O FUNK”** <br> OFICINA 03
+
+1. Qual  é a origem do funk?
+2. Em qual década o funk veio ter identidade nacional?
+3. O funk pode ser considerado cultura?
+4. Vocês acham que há preconceito contra o funk? Por quê?
+5. Quais são os principais estilos  e subgêneros do funk?
+7. Vocês acham que o funk pode revelar a voz do povo e dos problemas sociais, às vezes, mascarados? Justifique.
+
+</div>
+
+</div>
+
+\pagebreak
+
+<br><br> <div class="descriptive"> <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+O período restante será reservado para os comentários sobre as relações de gênero, sempre procurando fazer uma interface entre o que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk), posteriormente, reproduzir e ouvir os funk’s: “100% Feminista” (MC CAROL; KAROL CONKÁ, 2016) e “Mulher Independente” (MC 2JHOW; MC BIANCA, 2020), no intuito de provocar reflexão e fomentar o entendimento de que o funk também é representação da diversidade. Concluir essa oficina com a avaliação escrita.
+
+**Tempo de duração:** 4 horas/aula.
+
+</div>
+
+### AVALIAÇÃO – OFICINA 03 – DESENVOLVIMENTO DO SENSO CRÍTICO SOBRE A DESIGUALDADE NAS RELAÇÕES DE GÊNERO ATRAVÉS DA LETRA DE FUNK.
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+Avalie a oficina marcando um x em positivo ou negativo.
+
+|ATIVIDADE|positivo|negativo|
+|:--:|:--:|:--:|
+|Desenvolvimento do senso crítico sobre a questão da desigualdade de gênero nas letras de funk.| | |
+
+<blockquote style="column-span: none; height: 100%; text-align: center;"> Obrigada pelas respostas! (●’◡’●) </blockquote>
+</div>
 </div>
