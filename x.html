@@ -3,6 +3,7 @@
 
 <style>
 .phb{
+    padding-bottom:0.5cm
     color:#250600;
     column-count:1;
     font-size: .5cm;
@@ -29,22 +30,15 @@
     column-rule: 2px solid #c9ad6a;
 }
 
-.phb p{
-    line-height: 1.3em;
-    padding-bottom: .3em;
+.phb p, p + p{
+
+    line-height: 1.5em;
+    padding-bottom: .2em;
     padding-left: 1cm;
     padding-right: 1cm;
     text-indent: 30px;
-}
-
-.phb p + p{
-
-    line-height: 1.3em;
-    padding-bottom: .3em;
-    padding-left: 1cm;
-    padding-right: 1cm;
-    text-indent: 30px;
-    
+    font-size: 90%;
+    font-family: Sans-Serif;
 }
 
 .phb .quote{
@@ -74,7 +68,7 @@
     text-align: center;
     color: #01002F;
     font-size: 1.2cm;
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     font-weight: bold;
     
     
@@ -85,7 +79,7 @@
 
 
     column-span:        all;
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     color: #020d12;
     font-size: .9cm;
     font-style: normal;
@@ -99,7 +93,7 @@
 
     color:#000000;
     font-size: .7cm;
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     font-style: normal;
 }
 
@@ -113,45 +107,102 @@
 .phb H3{
     color:#000000;
     font-size: .7cm;
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     font-style: normal;
 }
 
+.phb H4{
+    color:#000000;
+    font-family: Sans-Serif;
+    font-style: normal;
+    box-shadow: 0px 0px;
+    text-shadow: 0px
+}
+
 .phb table {                            
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     width: 100%;
     margin-left: 0px;
     margin-bottom: 1em;]
     color: black;
     font-size: 12pt;
     font-style: normal;
+    text-align: justify;
     background-color: white;
     
 }
+
+
 .phb table tbody tr:nth-child(odd) {
     background-color: #b1f6dd
 }
+.phb table tbody tr:nth-child(even) {
+    background-color: #ffaaaa
+}
 
-.phb .footnote{
+.phb .toc a { 
+color: inherit !important; 
+line-height: 30px;
+};
+
+.toc li span:nth-child(2){ 
+    width: auto; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    display: block;
+} 
+.toc li span:nth-child(2):after{ 
+    font-family : Sans-serif; 
+    font-size : 0.5cm; 
+    font-weight : normal; 
+    color : black; 
+}
+.toc li span:first-child{ 
+    float: right; 
+    font-family : Sans-serif; 
+    font-size : 0.5cm; 
+    font-weight : normal; 
+    color : black; 
+    margin-left : 1px; 
+    
+}
+
+.toc li h3 span:nth-child(2):after{ 
+    content: " "; 
+}
+
+.toc li h3 { 
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important; 
+    border-bottom: none;
+}
+
+.toc li h3 span:first-child{ 
+line-height: 1.8em !important;
+
+} 
+.toc ul ul { 
+    margin-left: 10px !important; 
+}
+.toc ul li { 
+    margin-bottom: initial !important; 
+    border-bottom: 3px solid #c9ad6a;
+}
+
+.phb .footnote {
+
     text-align: left;
     position: absolute;
     padding-left:30px;
     padding-right: 160px;
+    margin-bottom: 25px;
     width: 100%; 
     color: black; 
     line-height: 15px;
 }
 
-.phb:nth-child(even) .footnote {
 
-    text-align: left;
-    position: absolute;
-    padding-left:30px;
-    padding-right: 160px;
-    width: 100%; 
-    color: black; 
-    line-height: 15px;
-}
 
 .phb blockquote {
     
@@ -182,7 +233,7 @@
     text-indent:0px;
     font-size: .6cm;
     line-height: 1em;
-    font-family: 'LucymarSansRegular';
+    font-family: Sans-Serif;
     text-align: center;
 }
 .phb pre+blockquote,
@@ -211,34 +262,95 @@ border-image-width:47px
 margin-bottom:5px
 }
 
-.phb .classTable tbody td{
+.phb .classTable td{
 
+    text-align: justify;
     border-style: solid;
     border-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.phb:after{display:none;}
+.phb#p1:after {display: none}
+.phb#p2:after {display: none}
+.phb#p7:after {display: none}
+
+.phb#p17:after {display: none}
+.phb#p27:after {display: none}
+.phb#p43:after {display: none}
+.phb#p93:after {display: none}
+.phb#96:after {display: none}
+
+.phb#p2 {counter-reset: phb-page-numbers 0;}
+
 .phb:nth-child(n+4):after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 55px;
-    width: 100%;
-    background-image: url('/assets/img/footer.png');
+    bottom: 0px;
+    left: -22px;
+    right: -50px;
+    height: 70px;
+    width: 120%;
+    transform: scaleX(1);
+    z-index:-1;
+    background-image: url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/Footer.png');
     background-size: cover
 }
+.phb:nth-child(odd):after {
+    transform: scaleX(-1);
+    left: -140px;
+}
+
+.phb:nth-child(n+4):before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 65px;
+    width: 110%;
+    transform: scaleX(1);
+    z-index:-1;
+    background-image: url('https://raw.githubusercontent.com/davimatiassg/PE-doc/main/Header.png');
+    background-size: cover
+}
+
+.phb#p9:after { left: -387px; }
+
+.phb#p9 .pageNumber { right: 250px; }
+
+
+
+
+.phb#p1:after {display: none}
+.phb#p2:after {display: none}
+.phb#p3:after {display: none}
+
+.phb .pageNumber {
+    position   : absolute;
+    bottom     : 3px;
+    font-size  : 25px;
+    width: 7.5%;
+    text-align : center;
+    color : #00fff3;
+    z-index:2;
+}
+
+
+
+.phb#p1:after { display:none; }
+
+
 
 </style>
 
 
 <div style="text-align:center;">
     
-<H3 style="font-family: 'LucymarSansRegular'; color: #f7e9ca; font-size: 3 cm"> Proposição de práticas pedagógicas</H3>
+<H3 style="font-family: Sans-Serif; color: #f7e9ca; font-size: 3 cm"> Proposição de práticas pedagógicas</H3>
 
-<H1 style="font-size: 1.1cm; font-family: 'LucymarSansRegular'; color: #f7e9ca;">DESATATEMOS NÓS NA SALA DE AULA SOBRE AS RELAÇÕES DE GÊNERO NO FUNK</H2> 
+<H1 style="font-size: 1.1cm; font-family: Sans-Serif; color: #f7e9ca;">DESATATEMOS NÓS NA SALA DE AULA SOBRE AS RELAÇÕES DE GÊNERO NO FUNK</H2> 
 
-<H2 style="font-family: 'LucymarSansRegular'; color: #f7e9ca; padding-top: 0cm;"> Maria José Soares Genuino</H2>
+<H2 style="font-family: Sans-Serif; color: #f7e9ca; padding-top: 0cm;"> Maria José Soares Genuino</H2>
 
 <img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/cover.jpg' style='position:absolute;bottom:0px;left:0px;width:820px;mix-blend-mode:multiply;' />
 </div>
@@ -269,11 +381,11 @@ margin-bottom:5px
 
 \columnbreak
  
-<H2 style="font-size: 30px; text-align: center; color: black;"> Proposição de práticas pedagógicas </H3>
+<H2 style="font-size: 25px; text-align: center; color: black;"> Proposição de práticas pedagógicas </H3>
 
-<H2 style="font-size: 35px; text-align: center;"> Desatemos nós na sala de aula sobre as relações de gênero </H1>
+<H2 style="font-size: 30px; text-align: center;"> Desatemos nós na sala de aula sobre as relações de gênero </H1>
 
-<H2 style="font-size: 30px; text-align: center; padding-top: 1cm;"> Maria José Soares Genuino </H2>
+<H2 style="font-size: 25px; text-align: center; padding-top: 1cm;"> Maria José Soares Genuino </H2>
  
 </div>
 
@@ -299,15 +411,15 @@ Valdiney Veloso Gouveia (Reitor)
 
 Prof. Dr. Joseilme Fernandes Gouveia (Diretor)
 
-Profa. Dra. Fernanda Marques de Almeida Holanda
+Profa. Dra. Fernanda Marques de Almeida Holanda (Vice-diretora)
 
 <br> 
 
 **Mestrado Profissional em Letras – PROFLETRAS**
 
-Profa. Dra. Carla Alecsandra de Melo Bonifácio (coordenadora)
+Profa. Dra. Carla Alecsandra de Melo Bonifácio (Coordenadora)
 
-Prof. Dr. João Wandemberg Gonçalves Maciel (Vice/coordenador)
+Prof. Dr. João Wandemberg Gonçalves Maciel (Vice-coordenador)
 
 <br> 
 
@@ -371,28 +483,38 @@ column-width: 1px;
 column-gap: 1px;
 ">
 
-<H2>SUMÁRIO</H1>
+<br><br>
+
+<H1>SUMÁRIO</H1>
 
 <br>
 
-1.  SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
-2.VAMOS DESCOBRIR O QUE É GÊNERO E ESTEREÓTIPO DE GÊNERO?
+<div class="toc">
 
-3.  A PRÁTICA SOCIAL DA LEITURA E O FUNK
-
-4.  O TRABALHO DO PROFESSOR DE LÍNGUA PORTUGUESA A PARTIR DA PRÁTICA SOCIAL DE LEITURA, CONFORME A BNCC
-
-5.  METODOLOGIA E PLANO DE AÇÃO
-6.  ESTEREÓTIPOS MASCULINOS E FEMININOS
-7.  GLOSSÁRIO
-8.  CONSIDERAÇÕES FINAIS
-9.  REFERÊNCIA
-10. APÊNDICES
-11. ANEXOS
+- ### [<span>5</span><span>APRESENTAÇÃO</span>](#p6)
+- ### [<span>6</span><span>1. SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO</span>](#p7)
+- #### [<span>8</span><span> 1.1. GÊNERO E ESTEREÓTIPO DE GÊNERO?</span>](#p9)
+- #### [<span>16</span><span> 1.2. VAMOS MUDAR O MUNDO COM OS LIVROS E O FUNK?</span>](#p17)
+- #### [<span>26</span><span> 1.3. UM NOVO MUNDO PODE SER POSSÍVEL: PROFESSORES/AS, JUNTOS/AS À BNCC, FAÇAMOS A NOSSA PARTE!</span>](#p27)
+- ### [<span>42</span><span> 2. METODOLOGIA E PLANO DE AÇÃO</span>](#p43)
+- [<span>49</span><span> Primeira roda de conversa</span>](#p50)
+- [<span>55</span><span> Segunda roda de conversa</span>](#p56)
+- [<span>60</span><span> Terceira roda de conversa</span>](#p61)
+- [<span>74</span><span> Primeira oficina pedagógica</span>](#p75)
+- [<span>80</span><span> Segunda oficina pedagógica</span>](#p81)
+- [<span>86</span><span> Terceira oficina pedagógica</span>](#p86)
+- [<span>88</span><span> Quarta oficina pedagógica</span>](#p89)
+- ### [<span>97</span><span> GLOSSÁRIO</span>](#p98)
+- ### [<span>100</span><span> CONSIDERAÇÕES FINAIS</span>](#p101)
+- ### [<span>104</span><span> REFERÊNCIAS</span>](#p104)
+- ### [<span>112</span><span> ANEXOS</span>](#p112)
+</div>
 
 </div> 
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <!--Page 4/!-->
 
@@ -431,7 +553,10 @@ Tô numa crescente porque eu faço diferente<br>
 
 </div>
 
-\pagebreak
+
+\pagebreakNum
+
+
 
 <H2>APRESENTAÇÃO</H2>
 
@@ -447,11 +572,12 @@ Concluímos, portanto que na interface entre teoria e prática, este produto edu
 
 É preciso aderir essa ideia. Desejo-vos uma ótima leitura! <br> <br>
 
-Gratidão! Gratidão! Gratidão! Obrigada, meu Deus!
 
-<br> <p style="text-align:right">Maria José soares Genuino
+<br> <p style="text-align:right">Maria José Soares Genuino
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 </style>
 
@@ -488,6 +614,8 @@ SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
 
 \pagebreak
 
+<br><br>
+
 ## SOBRE AS DESIGUALDADES NAS RELAÇÕES DE GÊNERO
 
 <br>
@@ -500,7 +628,9 @@ O nosso papel, enquanto formadores/as de opinião é também questionar, resisti
 
 Com esse fim, desejamos que as leituras, as inferências a respeito dos diversos temas apresentados nos funks, trabalhados na sala de aula possam, por meio das discussões e reflexões, contribuir com o processo de  desconstrução do patriarcalismo, da dominação masculina e possibilitemos novas formas de aprendermos, de pensarmos, sermos e de agirmos no mundo. 
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 Dessa maneira, pelo uso social da língua, como sujeitos de direitos, usufruirmos de um mundo melhor, com menos preconceito, mais amor e respeito às diferenças e à diversidade, convergindo, portanto, para o companheirismo e a solidariedade entre os gêneros.
 
@@ -508,9 +638,9 @@ Dessa maneira, pelo uso social da língua, como sujeitos de direitos, usufruirmo
 
 <div style="column-count:2;  column-gap: 0px; column-rule-width: 0px; padding-top: 25px;">
 
-<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-50px;left:-180px;width:650px;' />
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-80px;left:-180px;width:650px;' />
 
-<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-50px;left:635px;width:650px;' />
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/VAMOS%20DESCOBRIR%20O%20QUE%20%C3%89%20G%C3%8ANERO%20E%20ESTERE%C3%93TIPO%20DE%20G%C3%8ANERO.png?raw=true' style='position:absolute;bottom:-80px;left:635px;width:650px;' />
 
 
 Consideramos que para explicitar as desigualdades nas relações de gênero, antes de tudo, é preciso que nós, professores e professoras compreendamos o conceito de gênero, pois  a configuração  dos papéis de homem e mulher perpassam por uma convenção social, arbitrária. 
@@ -523,7 +653,9 @@ Isto é, gênero como elemento constitutivo das relações sociais, inerente à 
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 > REPARE BEM! 
 
@@ -536,18 +668,19 @@ Isto é, gênero como elemento constitutivo das relações sociais, inerente à 
 <H2 style="text-align:center; margin-top:0px; margin-bottom:0px; padding-bottom:11px; padding-top:1px"> NATUREZA </H2>
 
 | HOMEM | MULHER |
-|:---------:|:---------:|
+|:--:|:--:|
 | Tem pênis e testículos | Tem vagina, útero e ovários Menstrua |
 | Produz espermatozóides | Produz óvulos |
 | Ejacula | Fica grávida, gesta crianças |
 |   | Pare (Dá à luz) |
 |   | Amamenta |
+
 \columnbreak
 
 <H2 style="text-align:center; padding:10px; margin:0px;"> CULTURA </H2>
 
 | HOMEM | MULHER |
-|:---------:|:---------:|
+|:--:|:--:|
 | Masculinidade | Feminilidade |
 | Desorganização | Organização |
 | Força | Fragilidade |
@@ -558,14 +691,13 @@ Isto é, gênero como elemento constitutivo das relações sociais, inerente à 
 | Seriedade | Futilidade |
 </div>
 </div>
-
-<p class="quote" style="margin-left:0px; text-align: center;"> Fonte: Carvalho, Andrade e Menezes (2003)</p>
-
-> ATENÇÃO!
+<p class="quote" style="margin-left:0px; text-align: center; margin-bottom: 10px;margin-top:0px;"> Fonte: Carvalho, Andrade e Menezes (2003)</p>
 
 As desigualdades nas relações de gênero (entendidas como processo cultural e fruto das relações de poder), os estigmas/estereótipos (rótulos) de gênero, são construídos e se dão em função de uma lógica binária e héteronormativa privilegiada. Comportamentos de meninas e de meninos já são esperados, mesmo antes de nascer. 
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos, Damares Alves, no governo de Jair Messias Bolsonaro: “menino veste azul e menina veste rosa.” O que consideramos um feito político, que inerente à língua, legitima a absolutização do patriarcado e da dominação masculina, oprimindo, consequentemente, os sujeitos que diferem da norma construída e convencionada como padrão. 
 
@@ -589,14 +721,16 @@ Já dizia a Ministra da Mulher, da Família e dos Direitos Humanos, Damares Alve
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 A seguir, alguns exempos de Estereótipos: masculinos e femininos,  citados por Souza e Carvalho (2003): 
 
 <div class="descriptive">
 
 | HOMEM | MULHER |
-|:---------:|:---------:|
+|:-------:|:-------:|
 | AGRESSIVO | SENSÍVEL |
 | RUDE | TERNA |
 | ATIVO | PASSIVA |
@@ -611,13 +745,15 @@ A seguir, alguns exempos de Estereótipos: masculinos e femininos,  citados por 
 
 </div>
 
-<p class="quote" style="margin-left:0px; text-align: center;"> Fonte: Souza e Carvalho (2003)</p>
+<p class="quote" style="margin-left:0px; text-align: center; margin-bottom: 10px"> Fonte: Souza e Carvalho (2003)</p>
 
 Pensar às relações de gênero em um sentido amplo, cultural, exige não somente pensar em um Estado forte, capaz de efetivar políticas públicas voltadas à diversidade e ao respeito aos direitos humanos, mas sobretudo, em um realinhamento do modo de pensar e de agir de uma legião de pessoas dispostas a tecer uma história distoate das regras estabelecidas de continuação de privilégios do gênero masculino, em detrimento do rebaixamento do feminino. 
 
 Ao refutar os discursos moralistas opostos aos estudos de gênero, Junqueira (2022), concomitantemente faz uma alerta importante, principalmente para todos/as nós, professores e professoras formadores/as de opinião: o machismo, o sexismo, a misoginia e tantos outros absurdos apresentados no dia a dia é que são verdadeiras manifestações da ideologia de gênero, já que essa só existe no pensamento do senso comum e/ou dos reacionários conservadores que pleiteiam disseminar calúnias, com o propósito de camuflar as verdadeiras intenções de manutenção do poder de um gênero sobre o outro.
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 > ESTAMOS NO CAMINHO CERTO!
 
@@ -633,19 +769,31 @@ A respeito da divisão sexual do trabalho, Arruda e Nascimento (2016) destacam:
 
 <p class="quote"> A responsabilidade atribuída às mulheres em relação ao trabalho doméstico e ao cuidado da família gera desigualdades de oportunidades no acesso aos recursos econômicos, culturais, sociais e políticos. Isso é consequência de uma ordem de gênero (que inclui não somente o trabalho, como todas as outras dimensões da vida social) e de uma divisão sexual do trabalho. As duas instâncias, ao mesmo tempo em que conferem à mulher a função básica e primordial do cuidado com o mundo privado e a esfera doméstica, atribuem a essa esfera um valor social inferior ao do mundo público e desconhecem por completo seu valor econômico. (ARRUDA; NASCIMENTO, 2016, p. 6).
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
+
+<div style="column-count: 2; margin-left: 0px; margin-right: 0px; column-gap: 0px;"> 
 
 Sob a perspectiva de Arruda e Nascimento (2016), consideramos importante pensar a questão estrutural da desigualdade nas relações de gênero imbricada à cultura patriarcal. Em Aguiar (2011), o conceito de patriarcado tem sido usado na literatura feminista internacional, como significado das relações de poder entre homens e mulheres. "As mulheres são subordinadas aos homens no sistema patriarcal.” (AGUIAR, 2011, p. 322).
 
 Nesse contexto, observamos que existem alguns imperativos no jogo arbitrário de forças do sistema sexo-gênero (impostas pelo patriarcalismo), a violência simbólica como força matriz  para a naturalização de estigmas de gênero, da dominação masculina, do sexismo, da misoginia  e das estratégias de reprodução dos bens simbólicos¹.
 
-Ao almejarmos trabalhar na sala de aula, precisamos ler sobre as relações de gênero, pois é fundamental, desvelar que o conceito de gênero é estabelecido socialmente, sem ligação exclusiva com o conceito de sexo. De maneira que fique bem compreendido o que são estes dois fatores, pois enquanto o sexo está diretamente ligado à configuração corpórea, biológica e genital, a ideia de gênero está  situada em um campo semântico que foge da caracterização puramente física. Gênero é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
+Ao almejarmos trabalhar na sala de aula, precisamos ler sobre as relações de gênero, pois é fundamental, desvelar que o conceito de gênero é estabelecido socialmente, sem ligação exclusiva com o conceito de sexo. 
+
+De maneira que fique bem compreendido o que são estes dois fatores, pois enquanto o sexo está diretamente ligado à configuração corpórea, biológica e genital, a ideia de gênero está  situada em um campo semântico que foge da caracterização puramente física. 
+
+Gênero é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
 
 Sob esse arcabouço teórico de Bourdieu (2020), entendemos que a cultura patriarcal é um  fenômeno restritivo e ideológico não criado subitamente, ou minimamente embasado em uma questão biológica, mas ideologicamente construído, por meio de um processo político, pensado, como efeito de organização dos papéis de cada sexo pelo sistema sexo-gênero, de geração a geração. 
 
+</div>
+
 <div class='footnote'> ¹ Elementos concretos e abstratos que respondem à posse de algum sujeito e são dotados de um valor social, valor este que lhes fora imbuído por questões culturais de simbologia e compõem o capital simbólico de seus detentores (BOURDIEU, 2020). </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 > PARA APROFUNDAR AS REFLEXÕES SOBRE GÊNERO!
 
@@ -668,11 +816,14 @@ Sob esse arcabouço teórico de Bourdieu (2020), entendemos que a cultura patria
 
 > MAIS UMA VEZ, FIQUE LIGADO!
 
+
+\pagebreakNum
+
+<br><br>
+
 Sobre as relações de poder estarem ligadas às relações de gênero, citamos Segundo Figueredo et al., (2021):
 
 <p class="quote"> As relações de gênero estão estritamente ligadas as relações sociais de poder entre homens e mulheres, construídas por meio das diferenças percebidas entre os sexos. Esse tipo de relação desigual é construído antes mesmo da entrada do indivíduo no ambiente escolar e é reforçado por meio de discursos e práticas que privilegiam um sexo sobre outro, contribuindo assim para a construção da identidade sexual de meninas e meninos. (FIGUEIREDO et al., 2021, p. 18).
-
-\pagebreak
 
 Como diz Figueredo, et al., (2021) quando nascemos, já somos determinados pelo contexto social, político, econômico, cultural, religioso, não há como se safar. Já nascemos em uma forma. Somos determinados/as. E o sexo masculino já tem esse lugar privilegiado. Como já ouvimos nos discursos maternos: <i>(in memorian), “em homem não pega nada [...]!” </i> Nessa fala, entendemos que elas estavam querendo nos proteger e ao mesmo tempo alertar que o lugar destinado para nós mulheres seria um lugar de submissão e  de falta de liberdade. 
 
@@ -680,7 +831,9 @@ Crescemos sentindo na pele essa violação de direitos, esse cárcere, no qual s
 
 O hoje é produção do ontem. Dessa forma, a perpetuação da supremacia masculina na vida prática, é institucionaliza pelos costumes, pela cultura, que em uma violência velada, naturaliza e fomentada pelos artefatos culturais, pela mídia, família, escola, igreja etc., sobrepõe os homens em relação às mulheres. Isso não for problematizado, continuaremos em um mundo feito e organizado por homens e para os homens. Não é isso que é justo, não é?
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <H2 style="color: white; background: rgba(5, 0, 35, .8); margin-down:0px; padding-bottom:40px; padding-left: 110px; margin-left: -70px; padding-right: 110px; margin-right: -70px;"> 1.2 VAMOS MUDAR O MUNDO COM OS LIVROS E O FUNK? <br> </H2>
 
@@ -705,6 +858,7 @@ Nesse ínterim,  a língua deve ser estudada, não de modo latente às questões
 
 <br><br>
 
+
 Sob essa ótica, as aulas de língua portuguesa não devem ser  indiferentes em relação às questões das desigualdades de gênero, todavia, nem apenas um simulacro, mas, acima de tudo, uma oportunidade para problematizar à realidade e com otimismo, promover mudanças, porque é preciso causar rupturas nos modelos que perpetuam a hierarquização entre os gêneros. 
 
 Desse modo, compreender que discutir as relações de gênero nas aulas de língua portuguesa é procurar sensibilizar a comunidade escolar a perceber que a desigualdade de gênero e o desrespeito às diferenças empobrece a espécie humana, pois é preciso se colocar no lugar do outro e respeitar os direitos individuais de cada um/a, ser o que são.
@@ -715,9 +869,10 @@ Dado isso, postulamos à importância da construção de narrativas individuais 
 
 Implica em trancender a leitura mecânica, pois é inerente à interação social e a dinamicidade da vida. Sob esse aspecto, ler é uma das formas de nos percebermos como pessoa, compreendermos o mundo e as pessoas à nossa volta. Nesse sentido, a leitura como prática social nos oportuniza uma vida com mais qualidade, condições de determinar e modificar à realidade.
 
-\pagebreak
+\pagebreakNum
 
-<br>
+<br><br>
+
 
 <div style="column-count: 2;">
 
@@ -729,73 +884,83 @@ Nesse ínterim, percebemos que a leitura quando trabalhada no chão da escola, c
 
 \columnbreak
 
-<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/mais%20livros.png' style="position:absolute; left:280px; top: 0px;width:560px"/>
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/mais%20livros.png' style="position:absolute; left:280px; top: 50px;width:560px"/>
 
 <br><br><br><br><br><br><br><br><br><br><br>
 
-<p class="quote" style="margin-left: -10px; padding-left:0px;"> Disponível em: Imagens disponíveis em: https://drive.google.com/file/d/1i7j-j8UOLtN2RNBSkAVkPrBATlCvl4wg/view?usp=drive_web. Acesso em: 06 de maio de 2023. <p style="margin-left: -50px;"> Com base em Cafiero (2010), sob a perspectiva de leitura como prática social, as aulas de leitura podem ser vistas como um espaço vivo, dinâmico, de discussões e inferências. 
+<p class="quote" style="margin-left: -10px; padding-left:0px;"> Disponível em: Imagens disponíveis em: https://drive.google.com/file/d/1i7j-j8UOLtN2RNBSkAVkPrBATlCvl4wg/view?usp=drive_web. Acesso em: 06 de maio de 2023. 
+
+<p style="margin-left: -50px;"> Com base em Cafiero (2010), sob a perspectiva de leitura como prática social, as aulas de leitura podem ser vistas como um espaço vivo, dinâmico, de discussões e inferências. 
 
 </div>
 
 Conceber a leitura desse modo muda radicalmente a forma de pensar e de organizar o ensino.  Se os sentidos não estão prontos no texto, é preciso contribuir para que os/as alunos/as criem boas estratégias para estabelecer relações necessárias à compreensão e à interpretação. Não adianta mandar o aluno/a ler, dizendo-lhe: *“Leia porque a informação está aí”. [...]*.  É importante que, nas aulas de leitura, o aluno faça perguntas, levante hipóteses, confronte interpretações, conte sobre o que leu e não apenas faça questionários de perguntas e respostas de localização de informação. (CAFIERO, 2010, p. 86).
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 O trabalho com o funk na sala de aula, pode ser uma das formas de atingir diretamente nossa aluna e nosso aluno, pois entendemos que o incentivo à leitura como prática social é, em uma interface do dia a dia desses sujeitos, compreender algo que possa fazer sentido às suas vivências, valores, culturas, isto é, ajudando-os/as a interpretarem o mundo de uma forma crítica, compreendendo o que ler, tanto no registro oral como escrito, fazendo-os perceber no texto, o contexto (o texto atravessado pelo sociocultural, político, econômico, pela historicidade). 
 
 Em um mundo cada vez mais bombardeado por informações e muitas vezes informações falsas, um trabalho nas aulas de língua portuguesa pautado na perspectiva da leitura como prática social que priorize o discernimento e a criticidade do que estamos lendo, e do que nosso, aluno/a ler, pode ser um compromisso desafiador, porém muito nobre, no sentido de permitir que haja um diálogo entre a palavra e o que ela significa pra nós. 
 
-O trabalho com o funk na sala de aula, pode ser uma das formas de atingir diretamente nossa aluna e nosso aluno, pois entendemos que o incentivo à leitura como prática social é, em uma interface do dia a dia desses sujeitos, compreender algo que possa fazer sentido às suas vivências, valores, culturas, isto é, ajudando-os/as a interpretarem o mundo de uma forma crítica, compreendendo o que ler, tanto no registro oral como escrito, fazendo-os perceber no texto, o contexto (o texto atravessado pelo sociocultural, político, econômico, pela historicidade).  
-
-Em um mundo cada vez mais bombardeado por informações e muitas vezes informações falsas, um trabalho nas aulas de língua portuguesa pautado na perspectiva da leitura como prática social que priorize o discernimento e a criticidade do que estamos lendo, e do que nosso, aluno/a ler, pode ser um compromisso desafiador, porém muito nobre, no sentido de permitir que haja um diálogo entre a palavra e o que ela significa pra nós. 
-
-\pagebreak
-
 >ATENÇÃO!
 
-Nas discussões sobre gênero, na escola, o que as professoras(es) podem fazer, caso se sintam ameaçadas(os), ao falar sobre gênero na escola?? 
+Nas discussões sobre gênero, na escola, o que as professoras(es) podem fazer, caso se sintam ameaçadas(os), ao falar sobre gênero na escola?
 
 <div style="margin-left:50px;">
 
 * Disponibilizamos para os interessados o link do Manual de Defesa Contra a Censura nas Escolas.  Disponível em:  www.manualcontraacensura.org.br  Acesso em: 08 de maio de 2023. 
-
 * Disponível em: https://deolhonosplanos.org.br/escola-de-qualidade-inclusiva-e-acolhedora/ Acesso em: 08 de maio de 2023.
 
 </div>
 
 Todos somos escultores da palavra, quando nos situamos nesse constante devir, de nos tornarmos pessoas melhores. E por meio da palavra, desgrudar-nos do indivíduo petrificado, nos construirmos como sujeitos sensíveis à diversidade, à complexidade da vida e à transformação.  Nesses termos, construimos memórias e nos ressignificamos. Usufruimos  de novas possibilidades, e pela leitura como prática social nos fazermos existir, pensar e agir em interação com os/as outro/as e o meio em que vivemos.
 
+\pagebreakNum
+
+<br><br>
+
+
+
 > FICA A DICA
 
-De fato, antes de qualquer outra coisa precisamos destacar que "Ler não se reduz à decodificação dos sinais gráficos, dispostos no papel, mas bem além disso implica em compreender o mundo e em recriá-lo a partir da consciência formada, doravante o novo aprendizado." (MOITA; ANDRADE, 2006, p. 3). Sob à égide sociointeracionista a leitura transcende a expressão de palavras, vazias de sentido. E esses se constroem em consonância ao repertório cultural, histórico, social, de vivências individuais, mas acima de tudo, coletivas. 
+<div style="column-count: 2"> 
 
-\pagebreak
-
-> DE VOLTA À LEITURA
-
-<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/ainda%20mais%20livros.png' style="column-span:all; position:absolute; left:55px; top: 95px; width:360px; z-index:1;"/>
-
-<div class="descriptive" style="column-count: 2;  font-size: 0.8em">
+De fato, antes de qualquer outra coisa precisamos destacar que "Ler não se reduz à decodificação dos sinais gráficos, dispostos no papel, mas bem além disso implica em compreender o mundo e em recriá-lo a partir da consciência formada, doravante o novo aprendizado." (MOITA; ANDRADE, 2006, p. 3). Sob à égide sociointeracionista a leitura transcende a expressão de palavras, vazias de sentido. E esses se constroem em consonância ao repertório cultural, histórico, social, de vivências individuais, mas acima de tudo, coletivas.
 
 \columnbreak
 
-<br>
-<div style="margin-left: -20px; margin-right: 20px;">
+</div>
+
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/SALADEAULA.png' style="position:absolute; top: 20%; left:50%; width: 50%"/>
+
+\pagebreakNum
+
+<br><br>
+
+
+<blockquote> DE VOLTA À LEITURA </blockquote>
+
+<div class="descriptive" style="column-count: 2; height: 25%; font-size: .8em; padding-right: 8px">
+
+<img src='https://raw.githubusercontent.com/davimatiassg/PE-doc/main/ainda%20mais%20livros.png' style="position:absolute; left:55px; top: 150px; width:360px; z-index:1;"/>
+
+\columnbreak
 
 * Com base em pesquisadores como Paulo Freire, Libâneo, Saviani e outros,  o livro:” As Questões Fundamentais da didática” fomenta práticas pedagógicas frente à realidade, um enfoque político-social construtivista.
 * A  Importância do Ato de Ler,  livro de Paulo Freire fala de uma palestra sobre a importância do ato de ler e sobre um artigo que expõe a experiência de Paulo Freire na alfabetização de adultos, em São Tomé e Príncipe.
 
-<br>
-</div>
 </div>
 
 Desse modo, por meio da leitura como prática social, imbricada ao gênero textual letra de canção de Funk, almejamos combater a inércia, a passividade dos/das estudantes, incitando-os/as a serem determinantes do meio e da realidade em que vivem. Contrariamente aos engessamentos apresentados pelas teorias tradicionais do ensino da língua,   investir em uma prática pedagógica, arraigada à leitura como um processo que envolve um contínuum devir entre leitor - texto - autor, parece, a priori, tornar possível gerar discussões, fomentar habilidades e competências múltiplas arraigadas aos diversos usos sociais da língua, e consequentemente, à promoção do respeito e da ética nas relações de gênero.
 
 Em acordo com Evangelista e Jerônimo (2014), elucidamos que a leitura como prática social está para cada indivíduo, nos diversos espaços de convivência, entre eles, na escola. Cotidianamente, nos deparamos com uma diversidade de textos dos mais variados gêneros, aonde quer que esteja: na rua, em casa, no  trabalho, inclusive, com o gênero textual, canção de funk.
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive" >
 
@@ -814,14 +979,15 @@ Para essa construção, Antunes (2003) afirma que em termos práticos, trabalhar
 
 <H2 style="padding-top: 0px;">CURIOSIDADES/ FUNK!</H2>
 
-* Quais são os subgêneros do funk? Disponível em: HTTPS://BATALHAFUNK.COM/SUBGENEROS-DO-FUNK/  Acesso em: 04 de fevereiro de 2022; <br>  <br> 
-* Funk: conheça os subgêneros Disponível em: https://www.magazineluiza.com.br/portaldalu/funk-conheca-os-subgeneros/73419/ Acesso em: 03 de maio de 2023. <br>  <br> 
-* O funk carioca. Disponível em: https://brasilescola.uol.com.br/artes/funk.htm Acesso em: 08 de maio de 2023. <br>  <br> 
-* Disponível em: https://tangerina.uol.com.br/musica/subgeneros-rap-grime-drill/   Disponível em: 03 de fevereiro de 2022.
-
+* Quais são os subgêneros do funk? Disponível em: HTTPS://BATALHAFUNK.COM/SUBGENEROS-DO-FUNK/  Acesso em: 04 de fevereiro de 2022; <br>
+* Funk: conheça os subgêneros Disponível em: https://www.magazineluiza.com.br/portaldalu/funk-conheca-os-subgeneros/73419/ Acesso em: 03 de maio de 2023. <br>  
+* O funk carioca. Disponível em: https://brasilescola.uol.com.br/artes/funk.htm Acesso em: 08 de maio de 2023. <br>  
+* Disponível em: https://tangerina.uol.com.br/musica/subgeneros-rap-grime-drill/   Acesso em: 03 de fevereiro de 2022.
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 Sob o prisma,  de que o funk pode ajudar aos/às alunos/as a desenvolver a leitura, relembramos que essa não se restringe à decodificação, nem à língua, somente no aspecto  formal, mas está atrelada à enunciação e à língua em uso, ela não é algo pronto,  pontual, fragmentado, individual e superficial, todavia, um processo permeado pela  intencionalidade comunicativa, em um dado contexto, inerente à historicidade do sujeito e às ideologias. Ou seja, desse modo, o texto, entendemos a leitura  sob o ponto de vista ressalto Vale (1995):
 
@@ -831,9 +997,10 @@ Em relação ao papel da escola, o trabalho com o Gênero textual letra de canç
 
 <p class="quote"> O funk proibidão dos anos 2000 difere do proibidão da década de 1990, porque muda o paradigma da temática, que, antes versava sobre a criminalidade, e agora, se ocupa da sexualidade. O proibidão dos anos 2000 está inserido em uma lógica de sexualidade consumista propagada pela globalização e mercantilização da pornografia, que afetou, de modo geral, a indústria cultural. Sobre a popularização e mercantilização do sexo, Giddens (1992) menciona que ela está fixada sobre um contexto moderno de expansão do mercado do erotismo e da pornografia. Nesse sentido, o funk do novo milênio pode ser considerado como mais um produto da globalização. Entretanto, novas orientações estéticas surgem em São Paulo e Santos. Trata-se de uma vertente do funk criado como alternativa à temática abordada pelo ritmo carioca, que citava essencialmente conteúdos relacionados à criminalidade e à sexualidade. (VASSOLÉR, 2018, p.49).
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 Com base em Vassolér (2018), o Funk “Proibidão”, pelo fato de parecer mais realinhado  com o tema e objetivos que propomos (embora de acordo com à necessidade e as pretensões dos/das discentes seja possível estudar também outros subgêneros do funk, o bregafunk, o funk melody, por exemplo) ajudar a contextualizar as relações e desigualdades e os estereótipos de gênero através das discussões sobre as letras dos Funk preferidas e proferidas pelos/pelas  discentes e fomentar o desenvolvimento do senso crítico deles/delas, e a desconstrução das desigualdades.
 
@@ -843,9 +1010,10 @@ Com esse fim, nos fundamentamos em Silva e Vale (2018):
 
 No geral, percebemos que a letra de canção que versa sobre a incitação à sexualidade, muitas vezes, pode ser apresentada como imoral e polêmica, porém, uma vez que envolvida por danças e gestos considerados “indecentes”, essa também está incluída em uma linguagem literomusical, inerente à linguagem verbal e musical. Sob essa perspectiva, e conforme Souza e Andrighetti (2015), o Funk pode instigar a construção  de sentidos novos. Esse fato nos trouxe o entendimento de que, o Funk explorado na sala de aula, lido e criticamente entendido nas subjacências, poderá incentivar discussões que gerem rupturas com a cultura patriarcal, e ressignificar saberes e modos dos sujeitos serem e agirem no mundo. De forma a fazerem prevalecer a equidade, e o respeito ao que concerne às relações de gênero.
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 <div class="descriptive" style="text-align:justify; ">
 
@@ -860,9 +1028,10 @@ No geral, percebemos que a letra de canção que versa sobre a incitação à se
 
 Em Carvalho (2021), o patriarcalismo divide e hierarquiza o mundo e as pessoas em um polo masculino (superior) e outro feminino (inferior), nesse ínterim, compreendemos que as relações de gênero também são aprendidas. Os sujeitos incorporam/subjetivam o gênero. Desse modo, a música Funk pode ser um importante instrumento para trabalhar a desnaturalização da desigualdade nas relações de gênero, uma vez que por ser explorada pelas  mídias, poderemos utilizá-la para fazer a interface com as vivências e experiências do/as alunos/as, nas aulas de português. Por meio do funk, alunas e alunos poderão reconhecer que a lingua usada na escola não está tão distante  da vida e da lingua deles/as. O trabalho com o funk pode permitir fazer a interface entre o saber assistemático e o sistematizado. 
 
-\pagebreak
+\pagebreakNum
 
-<br>
+<br><br>
+
 
 <H2 style="color: white; background: rgba(120, 30, 10, .9); margin-down:0px; padding-bottom:40px;  padding-right: 110px; margin-right: -70px;"> 1.3 UM NOVO MUNDO PODE SER POSSÍVEL: PROFESSORES/AS, JUNTOS/AS À BNCC,  FAÇAMOS A NOSSA PARTE! <br> </H2>
 
@@ -879,11 +1048,11 @@ Teoricamente, não vemos problema em pensar o professor de língua portuguesa co
 </div>
 
 <img src='https://github.com/davimatiassg/PE-doc/blob/main/UM%20NOVO%20MUNDO%20PODE%20SER%20POSS%C3%8DVEL%20PROFESSORES,%20JUNTOS%20%C3%80%20BNCC%20FA%C3%87AMOS%20A%20NOSSA%20PARTE.png?raw=true' style='position:absolute;top:0px;left:-20px;width:1180px;' />
-</div>
 
 \pagebreak
 
 <br><br>
+
 
 Cabe entender o enorme desafio  apresentado, pois ainda existem sérias dificuldades em relação a isso, que precisam ser problematizadas e erradicadas (uma vez que o  ensino ainda reproduz analfabetos/as funcionais leitores/as que apenas decodificam, mas não constroem sentido, não compreendem o que lê), pois essas são manifestadas na relação entre os conteúdos selecionados para o ensino e o/a professor/a de língua portuguesa (muitas vezes com práticas pedagógicas obsoletas e tecnicistas) e refletidas na interação docente, discente e no ensino-aprendizagem.
 
@@ -893,9 +1062,10 @@ Cabe entender o enorme desafio  apresentado, pois ainda existem sérias dificuld
 
 Sobre o papel de educador/a no ensino de língua portuguesa, conforme, Cafiero (2010), vemos que existe uma série de desafios em torno da tarefa de promover o desenvolvimento das habilidades dos sujeitos, referentes à linguagem. Trata-se de um processo que envolve múltiplas variáveis, inclusive, perpassa por crenças e valores, isto é, pressupõe uma cultura, competências a serem desenvolvidas e exercitadas, teorias que precisam ser ressignificadas pelos/as docentes e discentes, e práticas da linguagem para serem internalizadas e naturalizadas. Tudo isso, somado  a um equilíbrio com a promoção de um ritmo de aula profícuo, com propósito bem definido e claro para os alunos e alunas.
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 Com isso em mente, Antunes (2003) atesta:
 
@@ -907,9 +1077,10 @@ Uma deixa para o trabalho efetivo do professor, o planejamento de ensino em cons
 
 <p class="quote"> Uma sugestão que pode ajudar na elaboração de um planejamento que integre todos os segmentos em torno de concepções e objetivos comuns pode ser a organização por gêneros textuais. O texto materializado nos diversos gêneros que circulam socialmente (como em cartas, cartazes, notícias, artigos, resumos, bilhetes, entre outros) funciona como elemento organizador do trabalho2. Constrói-se uma planilha (ver QUADRO I) com a indicação de que gêneros serão sistematizados em cada ano/série. O ideal é que o quadro contemple todas as séries do ensino fundamental. Quando a escola tiver ensino infantil e médio, a planilha deve incorporar todos os segmentos para evidenciar a visão de conjunto. Coloca-se um “X” nos gêneros que serão sistematizados em cada ano/série e eles serão uma referência para o professor. O fato de indicar aqueles que serão enfatizados não significa que os mesmos gêneros não possam ser estudados novamente em séries subsequentes. A noção é de espiral: a cada novo contato com um determinado gênero, novas possibilidades de leitura vão sendo explorada. (CAFIERO, 2010, p. 90).
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 Com base no planejamento apresentado por Cafiero (2010), entendemos que o trabalho do professor de língua portuguesa pode se resignificar, à medida que por meio de estratégias pensadas, os gêneros textuais estudados na sala de aula sejam práticas extensivas (práticas tradicionais) da vida cotidiana, a serem dissecados por alunos e alunas estimulados pela curiosidade e por novos desafios. Nesse intento, sob a concepção de leitura como prática social, almejamos que novos saberes, conhecimentos seja compartilhados e multiplicados.
 
@@ -921,9 +1092,10 @@ Rojo (2010):
 
 Sob o que explicita Rojo (2010), sobre relacionar a cultura dos alnos/as ao ensino sitemático, entendemos que o Funk pode contribuir com o realinhamento e a ressignificação de modelos preestabelecidos, preconceituosos, excludentes e reprodutores da desigualdade de gênero.
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 Esse fato nos trouxe o entendimento de que, o Funk explorado na sala de aula, lido e criticamente entendido nas subjacências, poderá fomentar discussões que gerem rupturas com a cultura patriarcal, e ressignificar saberes e modos dos sujeitos serem e agirem no mundo, de forma a fazerem prevalecer a equidade, e o respeito ao que concerne às relações de gênero.
 
@@ -936,9 +1108,10 @@ Esperamos que diante dessas reflexões, as vozes de comando do patriarcalismo po
 <p class="quote" style="padding: 0px; margin: 0px;">² MC 2JHOW; MC BIANCA. Mulher Independente. Cidade: Rio de Janeiro, Gravadora: Soull Music, 2020 (2:54 minutos). Disponível em: https://music.youtube.com/watch?v=K_LdZDUtAzw.  Acesso em 12 ago. 2022. <br> MC CAROL; KAROL CONKA. 100% Feminista. Cidade: Rio de Janeiro, Gravadora: Heavy Baile Sounds, 2016 (3:19 minutos). Disponível em: https://music.youtube.com/watch?v=W05v0B59K5s.  Acesso em: 12 ago. 2022. <br> Bonde das Maravilhas. Academia Das Maravilhas. Cidade: Rio de Janeiro, Gravadora: Pop Funk Produções, 2016 (2:14 minutos). Disponível em: https://www.youtube.com/watch?v=v1oMYKKJBv0.  Acesso em 12 ago. 2022.
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 A música Funk, cujo teor da sexualidade exacerbada não retrata somente a virilidade e o poder masculino, condecorado pelas instituições sociais, mas rompe com o cunho  moralista e o jugo feminino. Nessas canções emergem uma nova forma de pensar, agir e de ser mulher. Mulher essa que não é o retrato esperado pelas construções elitistas e conservadoras, mas que faz suscitar, àquela que pode sentir, falar e agir de forma destemida e empoderada sobre suas dores e seus desejos, causando um “jeito transgressor” nas representações e no imaginário social.
 
 A Base Nacional Comum Curricular – BNCC, (BRASIL, 2018), documento que rege a Estrutura Curricular de conteúdos, atualmente trabalhados nas escolas públicas brasileiras, referenda a leitura como um  procedimento dinâmico, implicando-o em “Compreender a língua  como fenômeno cultural, histórico, social, variável, heterogêneo e sensível aos contextos de uso, reconhecendo-a como meio de construção de identidades de seus usuários e da comunidade a que pertencem”. (BRASIL, 2018, p. 87). Além disso:
@@ -949,9 +1122,10 @@ Diante de um país continental e com uma diversidade cultural tão ampla, como n
 
 Além disso, ela expande o sentido da leitura para cinco eixos: leitura, produção escrita, oralidade e de análise linguística e semiótica (BRASIL, 2018). 
 
-\pagebreak
+\pagebreakNum
 
-<br> <br>
+<br><br>
+
 
 O documento também elabora uma série de detalhamentos que devem ser seguidos, dentre esses, posso destacar a preocupação com a valorização dos/as leitores/as, a fim de que a leitura esteja imbricada às suas  vivências e práticas sociais. A BNCC postula aulas de leitura transcendentes às aulas artificiais de leitura e do estudo da gramática, de frases soltas, desconexas da realidade do uso da língua.
 
@@ -961,9 +1135,10 @@ Nesse sentido, imbricado à BNCC, a leitura como prática social fomenta os espa
 
 Confome Brasil (2018): <p class="quote"> Por fim, cabe aos sistemas e redes de ensino, assim como às escolas, em suas respectivas esferas de autonomia e competência, incorporar aos currículos e às propostas pedagógicas a abordagem de temas contemporâneos que afetam a vida humana em escala local, regional e global, preferencialmente de forma transversal e integradora. Entre esses temas, destacam-se: direitos da criança e do adolescente (Lei nº 8.069/199016), educação para o trânsito (Lei nº 9.503/199717), educação ambiental (Lei nº 9.795/1999, Parecer CNE/CP nº 14/2012 e Resolução CNE/CP nº 2/201218), educação alimentar e nutricional (Lei nº 11.947/200919), processo de envelhecimento, respeito e valorização do idoso (Lei nº 10.741/200320), educação em direitos humanos (Decreto nº 7.037/2009, Parecer CNE/CP nº 8/2012 e Resolução CNE/CP nº 1/201221), educação das relações étnico-raciais e ensino de história e cultura CNE/CP nº 3/2004 e Resolução CNE/CP nº 1/200422), bem como saúde, vida familiar e social, educação para o consumo, educação financeira e fiscal, trabalho, ciência e tecnologia e diversidade cultural (Parecer CNE/CEB nº 11/2010 e Resolução CNE/CEB nº 7/201023).  Na BNCC, essas temáticas são contempladas em habilidades dos componentes curriculares, cabendo aos sistemas de ensino e escolas, de acordo com suas especificidades, tratá-las de forma contextualizada afro-brasileira, africana e indígena (Leis nº 10.639/2003 e 11.645/2008, Parecer. (BRASIL, 2018, p.19 - 20).
 
-\pagebreak 
+\pagebreakNum 
 
 <br><br>
+
 
 <div class="descriptive">
 
@@ -975,7 +1150,9 @@ As Competências Específicas de língua portuguesa para o ensino fundamental qu
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive">
 
@@ -1006,7 +1183,9 @@ A cultura digital entra em cena com os textos multimodais, em que as produções
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive" style="column-count: 2; column-rule: 2px solid #c9ad6a; column-gap: 10px; margin-left: 0px;">
 
@@ -1024,15 +1203,19 @@ Não é só para valorizar, para dizer que estamos atualizados, mas até para co
 
 O aluno pode, por exemplo, fazer uma playlist e, depois, escrever uma resenha baseada naqueles artistas que ele escolheu e de quem ele realmente gosta. Ou seja, a ideia não é só trabalhar os gêneros novos, mas ampliar as possibilidades, até mesmo para dar a oportunidade ao aluno de comparar e perceber as diferenças entre eles. [...] <br><br>
 
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+<div class="descriptive">
+
+
 ### PROGRESSÃO DOS CONTEÚDOS
 
 <br> A Base cita aproximadamente 170 habilidades que precisam ser trabalhadas nos alunos durante todo o Ensino Fundamental, porém, muitas delas são comuns a vários anos. Por isso, pode haver uma certa dificuldade em estabelecer uma progressão na forma como os conteúdos devem ser trabalhados. 
 
-</div>
-
-\pagebreak
-
-<div class="descriptive">
 
 Uma sugestão é organizar as aulas a partir da escolha dos gêneros que serão tratados em cada ciclo, em interlocução com os campos de atuação. Os gêneros seriam, portanto, um primeiro elemento norteador, partindo dos mais simples para os mais complexos, conforme a capacidade de entendimento e análise do aluno. (NOVA ESCOLA. BNCC NA PRÁTICA, p. 11 – 20).
 
@@ -1044,13 +1227,14 @@ Uma sugestão é organizar as aulas a partir da escolha dos gêneros que serão 
  
  <p class="quote"> DIMENSÃO 8: EDUCAÇÃO: MOVIMENTOS SOCIAIS, INCLUSÃO E DIREITOS HUMANOS <br> META 1 <br> Garantir e assegurar até 2025 a implementação de 90% das políticas públicas inclusivas e afirmativas, integradas aos Programas e Ações do Sistema Educacional do Estado do RN, em sintonia com as políticas nacionais, com vistas a contribuir para o enfrentamento das desigualdades sociais, contemplando as especificidades econômicas, culturais, éticas, históricas e sociais, na perspectiva de promoção de todas as formas de igualdade e equidade. <br> Estratégias <br> 1 – Assegurar e garantir, em regime de colaboração, recursos necessários para a implementação de ações de inclusão, objetivando a superação das desigualdades que atingem mulheres, indígenas, negros, quilombolas, povos tradicionais, povos do campo e pessoas com deficiência. <br> 2 – Garantir e assegurar, em regime de colaboração, políticas públicas para efetivar as ações afirmativas em todos os níveis, etapas e modalidades da educação, com vistas à promoção da igualdade étnico-racial, da pessoa com deficiência, dos direitos humanos e do respeito em todas as dimensões humanas.<br> (RIO GRANDE DO NORTE, 2016, p. 32). 
 
+\pagebreakNum
+
+<br><br>
+
 Em relação ao que o Currículo do RN estabelece no que concerne ao respeito aos direitos humanos e às dimensões humanas³, mencionados na citação anterior, faz-nos inferir que mesmo de uma forma ainda muito tímida (pois não fala explicitamente sobre a diversidade de gênero) garante a sueperação e o enfrentamento das desigualdades nas relações de gênero, uma vez que tráz à tona de forma geral à inclusão. 
 
-<div class='footnote' style="left: 9%; margin-right: 0px; padding-right: 21%; width: 100%">
-    
-<p class="quote" style="padding: 0px; margin: 0px;">³ Termo usado, nesse contexto, para abarcar os diferentes aspectos – dimensões – do comportamento da vida e da sociedade humanos. Não confundir com as dimensões do PEE-RN, enumeradas de 1 a 8 no anexo da lei citada, que “orientarão a formulação das diretrizes, metas e estratégias propostas para a educação do Estado do Rio Grande do Norte” (RIO GRANDE DO NORTE, 2016, p. 1-2).</div>
 
-\pagebreak
+<div class='footnote' style="left: 9%; margin-right: 0px; padding-right: 21%; width: 100%"> <p class="quote" style="padding: 0px; margin: 0px;">³ Termo usado, nesse contexto, para abarcar os diferentes aspectos – dimensões – do comportamento da vida e da sociedade humanos. Não confundir com as dimensões do PEE-RN, enumeradas de 1 a 8 no anexo da lei citada, que “orientarão a formulação das diretrizes, metas e estratégias propostas para a educação do Estado do Rio Grande do Norte” (RIO GRANDE DO NORTE, 2016, p. 1-2).</div>
 
 <div class="descriptive">
 
@@ -1067,7 +1251,9 @@ Em relação ao que o Currículo do RN estabelece no que concerne ao respeito ao
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive">
 
@@ -1092,9 +1278,11 @@ Em relação ao que o Currículo do RN estabelece no que concerne ao respeito ao
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-## DICA DE LINKS :
+<br><br>
+
+# DICA DE LINKS :
 <div class="descriptive">
 
 ### SOBRE A VIOLÊNCIA CONTRA A MULHER
@@ -1121,7 +1309,9 @@ Em relação ao que o Currículo do RN estabelece no que concerne ao respeito ao
 *   Disponível em:   https://www.pucrs.br/blog/5-livros-e-filmes-igualdade-de-genero/ Acesso em: 08 de maio de 2023. 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive">
 
@@ -1157,14 +1347,19 @@ Com base nos autores/as estudados, sugerimos alguns aspectos que poderiam ajudar
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
+<br><br>
 
 <div class="descriptive">
 Fazer a nossa parte para contribuir com a construção de um mundo melhor é promover a cidadania e a emancipação dos/as nossos/as educandos/as. Nesse contexto, esperamos que com base na BNCC, no Currículo Escolar do RN, acessorados/as pelas mídias sociais, possamos ser agentes transformadores, enchergando que se a gente quiser, apesar dos desafios, existem meios para promover um mundo mais democrático e sensível à igualdade de gênero, também na escola.
 </div>
 
-\pagebreak
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/studio.png?raw=true' style='position:absolute;top:35%; left:0px; width:100%;' />
+
+\pagebreakNum
+
+<br><br>
 
 <img src='https://github.com/davimatiassg/PE-doc/blob/main/METODOLOGIA.png?raw=true' style='position:absolute;top:0px;left:-110px;width:1060px;' />
 
@@ -1205,6 +1400,7 @@ METODOLOGIA E PLANO DE AÇÃO
 
 <br><br>
 
+
 A nossa intenção de discutir sobre as relações de desigualdades de gênero no funk, partiu das nossas necessidades e subjetividades, no entanto, mediante as vivências no chão da escola, essa demanda fez emergir dentro de nós gritos de indignação, a ponto de nos instigar a ser um pouco mais solidário/a, com mais alteridade, buscando aguçar, na sala de aula, o  senso crítico dos/das alunos/as. 
 
 Por conseguinte, nas linhas a seguir, pretendemos apontar sugestões possíveis para aquelas e aqueles professores/as que se sensibilizam e não aceitam quaisquer tipos de injustiças e estão dispostos/as a desapontar o sistema patriarcal e também escolar, no sentido de que, em suas práticas pedagógicas, querer problematizar e focar em aulas mais produtivas, que façam sentido aos novos desafios, inclusive relacionados aos direitos humanos e ao exercício pleno da cidadania. 
@@ -1218,7 +1414,7 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Roda de conversa 01
 |  |
-|:---:|
+|---|
 | **Atividade diagnóstica inicial:** conceito de gênero/ relações de gêneros e os papéis atribuídos a cada gênero pelos/as discentes. |
 | **Objetivo:** Refletir e explicitar os preconceitos e estereótipos nas relações de gênero, através da compreensão do conceito de gênero e dos papéis que os/as discentes atribuem ao sexo feminino e masculino. |
 | **Carga horária:** 400min ou 8H/A (aproximadamente). |
@@ -1230,7 +1426,7 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Roda de conversa 02 
 |  |
-|:---:|
+|---|
 | **O papel da mulher e do homem no gênero Funk**|
 | **Objetivo:** Observar a familiaridade dos/das discentes com o Funk e articular a identificação de estereótipos a respeito da figura feminina nas letras desse gênero musical. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
@@ -1238,9 +1434,10 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 </div>
 
-\pagebreak 
+\pagebreakNum 
 
 <br><br>
+
 
 <div style="column-count: 2; column-gap: 5%; ">
 
@@ -1248,7 +1445,7 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Roda de conversa 3 
 |  |
-|:---:|
+|---|
 | **Atividade diagnóstica final:** aferindo o desenvolvimento do processo da aplicação da pesquisa sobre as relações de gênero na letra de canção de funk.|
 | **Objetivo:** avaliar através de uma atividade diagnóstica final, e por meio de dinâmicas, o desenvolvimento da aplicação da pesquisa sobre as relações de gênero na letra de canção de funk. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
@@ -1258,7 +1455,7 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Oficina 01 
 |  |
-|:---:|
+|---|
 | **Percepção das influências dos estereótipos de gênero no cotidiano** 
 | **Objetivo:** : instigar os/as estudantes para compreender como a desigualdade de gênero afeta a vida em sociedade, de modo que os/as discentes reflitam e percebam o perigo de reproduzir hábitos que estigmatizam a mulher e o homem. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
@@ -1270,7 +1467,7 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Oficina 02 
 |  |
-|:---:|
+|---|
 | **Análise de letras de canções de funk** 
 | **Objetivo:** : Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções funk e buscar alternativas para minimizar esses problemas. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
@@ -1280,56 +1477,82 @@ Dito isso, não temos pretensão alguma de colocar um ponto final nas discussõe
 
 ##### Oficina 03 
 |  |
-|:---:|
+|---|
 | **Socialização dos alunos e contraponto das letras de canção de funk** 
 | **Objetivo:** : Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
 </div>
+</div>
+
+\pagebreakNum 
+
+<br><br>
+
+
+<div style="column-count: 2; column-gap: 5%; ">
 
 <div class='classTable'>
 
 ##### Oficina 04 
 |  |
-|:---:|
+|---|
 | **Síntese da análise e contraponto das aulas sobre as relações de gênero no funk** 
 | **Objetivo:** : Compartilhar as informações, incitar discussões e enfatizar a importância da mudança de atitude, em relação à desigualdade de gênero, a partir do estudo realizado na letra de funk. |
 | **Carga horária:** 200min ou 4H/A (aproximadamente). |
 </div>
 
-</div>
+\columnbreak
 
-\pagebreak
-
-<br><br>
-
-> ROTEIRO
+<blockquote style="column-span: none;"> ROTEIRO </blockquote>
 
 Gênero uma construção social que envolve as relações de poder e gera as desigualdades de gênero. Os papéis determinantes para homens e para mulheres no trabalho e na esfera pública em geral continuam sendo definidos como extensão dos papéis biológicos/sexuais, portanto, naturalizados. Problematizemos os ditames do patriarcado, do machismo e da desigualdade nas relações de gênero, nas aulas de língua portuguesa.
 
+</div>
+
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/cooperativa.png?raw=true' style='position:absolute;bottom:0px;left:0px;width:100%;' />
+
+
+\pagebreakNum 
+
+<br><br>
 
 <div class="classTable"> 
 
 <H2 style=" padding:0px; margin:0px; "> Roteiro: Roda de conversa </H2>
 
 | Nº | Atividade/tema | Objetivos | Procedimentos | Carga horária |
-|:-:|:-:|:-:|:-----------------:|:-:|
+|--|--|--|-----------------|--|
 | 01 | Conceito de gênero e os papéis atribuídos a cada gênero pelos/as discentes| Objetivo: Refletir e explicitar os preconceitos e estereótipos nas relações de gênero, através da compreensão do conceito de gênero e dos papéis que os/as discentes atribuem ao sexo feminino e masculino.| **a)** Tempestade mental sobre o conceito de gênero <br> **b)** Pesquisa instantânea na internet sobre o conceito de gênero e socialização oral. <br> **c)** Divisão da turma em 04 grupos de seis ou sete componentes para responderem algumas questões do que entendem sobre o que é ser homem e mulher. <br> **d)** Apresentação das respostas das questões no grande grupo. <br> **e)** Vídeo sobre o conceito de gênero. 2022. <br> **f)** Anotação do conceito de gênero nos cadernos individuais dos/das discentes de gênero e estereótipos de <br> **g)** Exposição dos conceitos debatidos e trabalhados nos grupos em forma de mural. <br> **h)** Avaliação| 4H/A |
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
+
 <div class="classTable"> 
 
-| | | | | |
-|:--:|:--:|:--:|:-----------------:|:-:|
 | **Nº** | **Atividade/tema** | **Objetivos** | **Procedimentos** | **Carga horária** |
+|--|--|--|-----------------|--|
 | 02 | O Papel da Mulher e do Homem no Gênero Funk | Observar a familiaridade dos/das discentes com o Funk e articular a identificação de estereótipos a respeito da figura feminina nas letras desse gênero musical| **a)** Conversa informal sobre o conceito de gênero e estereótipos de gênero para retomar a roda de conversa 01. <br> **b)** Vídeo sobre estereótipos de gênero. <br> **c)** Discussão sobre os estereótipos de gênero. <br> **d)** Escuta do funk, leitura oral e discussão do funk: “Academia das maravilhas” (Bonde Das Maravilhas) <br> **e)** Desenvolvendo a criticidade do aluno/a sobre as relações de gênero no funk através dos tópicos para discussão nos grupos. <br> **f)** Avaliação. | 4H/A
-| 03 | Roda de Conversa Final: Avaliando o que aprendemos sobre as relações de gênero na letra de canção de funk | | **a)** Recapitular as discussões referentes às Rodas de Conversas 01, 02 e o que construímos nas oficinas. <br> **b)** Distribuição da atividade diagnóstica final. Os/as discentes deverão responder as questões discursivas abertas, por escrito e individualmente. Em círculo, cada aluno deverá ler as respectivas respostas oralmente. <br> **c)** Desenvolvimento da Dinâmica: jogo da aparência, Disponível em: é demonstrar como os estereótipos e interpretações subjetivas interferem na comunicação. <br> **d)** Discussão: Como adquirimos os estereótipos? Por que, muitas vezes, as aparências enganam? Os estereótipos influenciam no comportamento e nos sentimentos das pessoas? <br> **e)** Desenvolvimento da Dinâmica: Trabalhando Conceitos. <br> **f)** Avaliação escrita | 4H/A|
-<p class="quote" style="margin:0px; padding: 0px; text-align: center;"> Fonte: A autora (2022). 
+| 03 | Roda de Conversa Final: Avaliando o que aprendemos sobre as relações de gênero na letra de canção de funk | | **a)** Recapitular as discussões referentes às Rodas de Conversas 01, 02 e o que construímos nas oficinas. <br> **b)** Distribuição da atividade diagnóstica final. Os/as discentes deverão responder as questões discursivas abertas, por escrito e individualmente. Em círculo, cada aluno deverá ler as respectivas respostas oralmente. <br> **c)** Desenvolvimento da Dinâmica: jogo da aparência, Disponível em: é demonstrar como os estereótipos e interpretações subjetivas interferem na comunicação. <br>
+
 </div>
 
-\pagebreak
+\pagebreakNum
 
+<br><br><div class="classTable"> 
+| **Nº** | **Atividade/tema** | **Objetivos** | **Procedimentos** | **Carga horária** |
+|--|--|--|-----------------|--|
+|||        ||
+| 03 | Roda de Conversa Final: Avaliando o que aprendemos sobre as relações de gênero na letra de canção de funk | |**d)** Discussão: Como adquirimos os estereótipos? Por que, muitas vezes, as aparências enganam? Os estereótipos influenciam no comportamento e nos sentimentos das pessoas? <br> **e)** Desenvolvimento da Dinâmica: Trabalhando Conceitos. <br> **f)** Avaliação escrita | 4H/A|
+<p class="quote" style="margin:0px; padding: 0px; text-align: center;"> Fonte: A autora (2022).
+
+</div>
+
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive"> 
 
@@ -1351,7 +1574,9 @@ Gênero uma construção social que envolve as relações de poder e gera as des
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive"> 
 
@@ -1375,9 +1600,10 @@ Propor concomitantemente, à turma (aos que dispunham de celular e internet) faz
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 <div class="descriptive">
 
@@ -1387,72 +1613,66 @@ A partir disso, fomentar uma discussão entre os grupos e propor que identifique
 
 Posteriormente, problematizar as falas dos alunos/as, para isso, assistir a um pequeno vídeo sobre o conceito de gênero, intitulado O que é (e o que não é) (LIMA, 2018).
 
+</div>
+
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
-<H2 style="padding-top; 0px;"> ROTEIRO DAS QUESTÕES DO VÍDEO: O QUE É (E O QUE NÃO É) - RODA DE CONVERSA 01 </H2>
+<H3 style="padding-top; 0px;"> ROTEIRO DAS QUESTÕES DO VÍDEO: O QUE É (E O QUE NÃO É) - RODA DE CONVERSA 01 </H3>
 
 Disponível em: https://www.youtube.com/watch?v=x_WkMLkdl6M Acessso 20 de julho de 2022. Acessso em: 20 de julho de 2022. <br>
-Roteiro das questões do Vídeo: o que é (e o que não é) - Roda de Conversa 01
+Roteiro das questões do Vídeo: o que é (e o que não é) - Roda de Conversa 01<br>
+
 1. Vocês concordam que gênero é uma construção social?
 2. Socialmente você vai ocupando um lugar, conforme a cultura em que está inserido/a? 
 3. Em uma cultura o homem pode ser educado a ser mais emotivo, sensível e em outra ele pode ser educado a ser guerreiro, com espadas? O mesmo pode acontecer com as mulheres, sim ou não?
 4. Vocês concordam que é necessário estarmos preocupados com uma cultura diferente, aonde homens e mulheres sejam educados para se respeitarem e se ajudarem mutuamente, sim ou não? 
-
-</div>
-
-</div>
-
-\pagebreak
-
-<br><br>
-
-<div class="descriptive"> 
-
-<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;"> 
-
 5. Estudar gênero, é querer incentivar uma sociedade mais humana e justa?  Por quê? 
 6. É urgente e necessário pensar na sociedade que queremos construir, com mais igualdade nas relações de gênero?
 
-
 </div>
 
+\pagebreakNum
+
+<br><br>
+
+<br><br> <div class="descriptive"> 
 
 Em seguida os discentes anotar no caderno o conceito de gênero e estereótipos de gênero retirado do texto: “Gênero: você entende o que significa?” Por Moraes e Medeiros (2021). Os papéis com os conceitos de gênero e as respostas das perguntas deverão ser colados em uma folha de papel madeira, exposta ao lado do quadro branco para leitura a posteriori. 
 
 Após a leitura, fotografar e recolher os papéis com o registro escrito das falas dos alunos. Dando sequência, entregar a atividade diagnóstica inicial, com perguntas discursivas abertas, para conhecer o gênero musical dos/das alunos/as. As respostas escritas deverão ser entregues e discutidas na aula seguinte. O tempo para a realização da roda de conversa 01 foi de uma carga horária de 04 horas/aula. Ao concluí-la, foi feita a avaliação.
+
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
 ### Roteiro da atividade diagnóstica inicial
 
 |Atividade | Objetivos | Procedimentos|
-|:--:|:--:|:--:|
+|--|--|--|
 |Atividade escrita <br> com questões discursivas abertas <br> sobre as relações de gênero.|Realizar atividade escrita <br> com questões discursivas <br> abertas para identificar <br> eventuais vieses e/ou <br> perspectivas individuais <br> dos/as alunos/as no que diz respeito às relações de gênero. |- Leitura e discussão sobre o conceito de gênero. <br> - Distribuição das questões discursivas abertas; <br> - Respostas às questões discursivas sobre o gênero musical preferido. <br> - Discussões sobre as desigualdades nas relações de gênero, apresentadas nas letras de Funk.|
 <p class="quote" style="margin:0px; margin-top: -15px; text-align: center;"> Fonte: A autora (2022).</p>
 </div>
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br> <br> <div class="descriptive"> 
+<br><br> <div class="descriptive"> 
 
 ## ROTEIRO DAS QUESTÕES DA ATIVIDADE DIAGNÓSTICA INICIAL
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
 ### CONHECENDO O SEU GOSTO MUSICAL
-
-1 – Responda as questões abaixo:<br>
-a. Quais gêneros musicais você gosta? (Ex.: Sertanejo, Funk, Rock, Samba,  Forró...).     
-b. Na sua visão, quais são os temas que estão mais presentes  nas letras de funk? <br> 
-c.  O que as letras de Funk falam sobre a mulher? <br>
-d.  Se estudarmos a música Funk, o que você acha que podemos aprender? <br>
-e.  Qual  o local que você escuta as músicas funk? <br>
-f.  Qual é o horário do dia que você mais gosta de escutar funk? <br>
-g.  Seus/as colegas e grupos dos quais você participa escuta funk? <br>
-h.  Como foi seu primeiro contato com o funk? <br>
-i.  Por que esse estilo musical lhe atrai? <br>
-j.  Como o homem é representado no funk?
+<br>1 – Responda as questões abaixo:<br>
+**a)** Quais gêneros musicais você gosta? (Ex.: Sertanejo, Funk, Rock, Samba,  Forró...).     
+**b)** Na sua visão, quais são os temas que estão mais presentes  nas letras de funk? <br> 
+**c)**  O que as letras de Funk falam sobre a mulher? <br>
+**d)**  Se estudarmos a música Funk, o que você acha que podemos aprender? <br>
+**e)**  Qual  o local que você escuta as músicas funk? <br>
+**f)**  Qual é o horário do dia que você mais gosta de escutar funk? <br>
+**g)**  Seus/as colegas e grupos dos quais você participa escuta funk? <br>
+**h)**  Como foi seu primeiro contato com o funk? <br>
+**i)**  Por que esse estilo musical lhe atrai? <br>
+**j)**  Como o homem é representado no funk?
 
 **Resposta Pessoal**
 
@@ -1460,7 +1680,7 @@ j.  Como o homem é representado no funk?
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1471,7 +1691,7 @@ j.  Como o homem é representado no funk?
 Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--|--|--|--|--|--|--|
 |Discussão e reflexão sobre o conceito de gênero e estereótipos de gênero.| | | | | | |
 |<br>Compreensão do conceito de gênero e estereótipo de gênero. | | | | | | |
 
@@ -1480,9 +1700,12 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/mesa.png?raw=true' style='position:absolute;bottom:-40%;left:0px;width:100%;' />
+
+\pagebreakNum
 
 <br><br>
+
 
 
 
@@ -1509,7 +1732,9 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive"> 
 
@@ -1528,22 +1753,42 @@ Roteiro das Questões do Vídeo: “Gênero estereótipos” - Roda de Conversa 
 2.  É importante desenvolver o senso crítico e saber se portar, ambos os gêneros ou somente as mulheres? 
 3.  Os estereótipos fazem a gente enxergar a realidade de uma forma destorcida? Vocês acham que mulheres, negros, homossexuais (as minorias) podem exercer lugares de poder, ou somente os homens? Vocês acham que pessoas brancas ou pretas; heterossexuais ou homossexuais podem ser desonestas, cometerem delitos etc., sim ou não?
 4.  A ideia de que homem não lavar a louça, não cozinhar, não usar saia e de que não pode vestir rosa, nem ser dócil, é só uma questão de estereótipo de gênero? sim ou não? 
+
+</div>
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+
+<div class="descriptive">
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;"> 
+
 5.  vocês acham que esses modelos para homens e mulheres podem influenciar no sentimento e modo de agir das pessoas?
 6.  Os modelos prefixados para homens e para as mulheres podem gerar problemas de feminicídio? Por quê?
 
 </div>
-</div>
-
-\pagebreak
-
-<br><br>
-
-<div class="descriptive">
 
 Essa atividade pode ser realizada fora ou dentro da sala de aula. Em seguida pedir que os/as discentes façam um círculo, com as cadeiras nos cantos da sala. Retomar a aula anterior, relembrando o que havia sido discutido sobre gênero e estereótipos de gênero e os conceitos tabalhados no vídeo assistido. Em seguida, sempre tentar fazer uma interface com os temas discutidos e as fontes, fazendo menção as letras de canção de Funk, advindas de sugestões dos/as discentes, requisitadas em aulas anteriores. Uma das formas de aguçar a criticidade do aluno/a sobre as relações de gênero no funk. Para prosseguir, entregar a cópia da letra do funk: “Academia das maravilhas” (Bonde Das Maravilhas).
 
  A partir da escuta e da leitura oral, desse funk, deverá ser discutido os seguintes tópicos:
 
+
+</div>
+
+
+
+
+
+
+\pagebreakNum
+
+<br><br>
+
+
+<div class="descriptive"> 
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
@@ -1559,19 +1804,6 @@ Essa atividade pode ser realizada fora ou dentro da sala de aula. Em seguida ped
 8.  Quem é/são os/as autores/as?
 9.  Qual é a voz que fala no poema?
 10. Vocês ouviriam essa música porque gostam da letra ou do ritmo? (revisar/explicar letra e rítimo).
-
-</div>
-
-</div>
-
-\pagebreak
-
-<br><br>
-
-<div class="descriptive"> 
-
-<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
-
 11. Vocês também gostam da letra? Há algum detalhe que incomoda?
 12. Tem alguma coisa que vocês mudariam na letra?
 13. Vocês acham que essa música retrata a mulher e o homem de uma forma realista?
@@ -1583,14 +1815,28 @@ Essa atividade pode ser realizada fora ou dentro da sala de aula. Em seguida ped
 
 A principal vertente dessa discussão deve ser a identificação de estereótipos de gênero. Após serem debatidas essas questões, e revisada a aula anterior, encerrar o momento da segunda roda de conversa, com uma avaliação escrita. Essa roda de conversa 2 teve uma duração de 04 horas aulas (H/A), de 50 minutos cada, somando um total de 200 minutos. 
 
-### AVALIAÇÃO – RODA DE CONVERSA 02 – O PAPEL DA MULHER E DO HOMEM NO GÊNERO FUNK.
+
+
+
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+
+<div class="descriptive"> 
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
+
+### AVALIAÇÃO – RODA DE CONVERSA 02 – O PAPEL DA MULHER E DO HOMEM NO GÊNERO FUNK.
+
 
 Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--|--|--|--|--|--|--|
 |Identificação de estereótipos a respeito da figura feminina e masculina nas letras de funk.| | | | | | |
 
 
@@ -1599,9 +1845,12 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/instruments.png?raw=true' style='position:absolute;bottom:-25%;left:20px;width:100%;' />
+
+\pagebreakNum
 
 <br><br>
+
 
 <div class="descriptive">
 
@@ -1616,7 +1865,7 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 ### Roteiro da atividade diagnóstica final
 
 |Atividade | Objetivos | Procedimentos|
-|:--:|:--:|:--:|
+|--|--|--|
 |Atividade escrita <br> com questões discursivas abertas <br> sobre as relações de gênero.|Realizar atividade escrita <br> com questões discursivas <br> abertas como instrumento <br>  de geração de dados no que diz respeito às relações de gênero. |- Leitura oral e discussão de um texto motivador sobre as relações de gênero. <br> - Distribuição das questões discursivas abertas <br> - Resposta escrita às questões discursivas abertas. <br> - Interface entre as discussões do texto e as discussões sobre as desigualdades nas relações de gênero apresentadas nas letras do Funk.|
 <p class="quote" style="margin:0px; margin-top: -15px; text-align: center;"> Fonte: A autora (2022).</p>
 </div>
@@ -1625,15 +1874,16 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 Recapitular as discussões referentes às Rodas de Conversas 01 e 02 e o que construímos nas oficinas. Para iniciar, posicionaremos as cadeiras nos cantos da sala de aula, deixando espaço no centro. Informamos que a aula será gravada. Distribuição da atividade diagnóstica final. 
 
-Os/as discentes deverão responder as questões discursivas abertas, por escrito e individualmente. Em círculo, cada aluno deverá ler as respectivas respostas oralmente. Em seguida será desenvolvida a Dinâmica: jogo da aparência, cujo objetivo é demonstrar como estereótipos e interpretações subjetivas interferem na comunicação.
-
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
 
+
 <div class="descriptive">
+
+Os/as discentes deverão responder as questões discursivas abertas, por escrito e individualmente. Em círculo, cada aluno deverá ler as respectivas respostas oralmente. Em seguida será desenvolvida a Dinâmica: jogo da aparência, cujo objetivo é demonstrar como estereótipos e interpretações subjetivas interferem na comunicação.
 
 Tempo: 1 hora/aula.
 
@@ -1643,11 +1893,12 @@ Material: Sala ampla e confortável, balões, pedaços de papel, lápis ou canet
 
 1. Entregar um balão vazio e um pedaço pequeno de papel em branco para cada um dos participantes. <br> 2. Cada pessoa deverá escrever no papel 3 (três) características pessoais, de maneira que, a partir dessas características ela possa ser identificada pelos outros participantes.<br> 3. A seguir, os participantes deverão dobrar o papel e colocá-lo dentro do balão.<br>4. Agora, cada pessoa deverá encher o seu balão. Quando todos os balões estiverem cheios deverão ser jogados todos para cima, ao mesmo tempo, ao som de um do funks já trabalhados durante as atividades anteriores.<br>5. Quando a música parar, cada um deve pegar o balão que estiver na sua frente e estourá-lo.<br> 6. Finalmente, cada participante deverá ler o papel que encontrar dentro do balão e tentar identificar a pessoa que apresenta as características descritas. Pontos para discussão:<br>a) Como adquirimos os estereótipos?<br>b) Por que, muitas vezes, as aparências enganam?<br>c) Os estereótipos influenciam no comportamento e nos sentimentos das pessoas? <br> https://www.escoladapaz.com.br/blog/dinamica-aborda-o-trabalho-em-equipe-em-nocoes-de-administracao/
 
-</div></div>
+</div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 <div class="descriptive">
 
@@ -1675,9 +1926,10 @@ Estereótipo: é uma generalização de julgamentos subjetivos feitos a um grupo
 </div>
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
 
 <div class="descriptive">
 
@@ -1695,7 +1947,7 @@ Distribuir a atividade diagnóstica final. Nesse instante, ler oralmente e discu
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1703,7 +1955,15 @@ Finalização da oficina - Peça para todas e todos se levantarem, darem as mão
 
 **Avaliação:** Responder as questões, refletir e discutir o tema.
 
+<img src='https://github.com/davimatiassg/PE-doc/blob/main/golden%20woman.png?raw=true' style='margin-left:5%; width: 90%; mix-blend-mode:multiply;'/>
+
 </div>
+
+
+
+\pagebreakNum
+
+<br><br>
 
 <div class="descriptive">
 
@@ -1715,21 +1975,21 @@ Prezado (a) aluno (a), <br> Para fazer uma breve avaliação sobre todas as disc
 <br> 1 – Com base no texto estudado sobre a divisão sexual do trabalho e nas discussões sobre as letras de canção de funk, responda as questões abaixo:
 <br> **a.** O que é gênero?
 <br> **b.** De que forma a divisão do trabalho pode gerar estereótipos de gênero?
+<br> **c.** A análise das letras de funk pode fazer pensar sobre a desigualdade nas relações de gênero? Por quê?
+<br> **d.** A linguagem provinda do gênero funk tem função social? Qual?
+<br> **e.** Os comportamentos de mulheres e homens representados no funk repetem os estereótipos de gênero apresentados no dia a dia? Explique.
 
 
 </div>
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
-<br> **c.** A análise das letras de funk pode fazer pensar sobre a desigualdade nas relações de gênero? Por quê?
-<br> **d.** A linguagem provinda do gênero funk tem função social? Qual?
-<br> **e.** Os comportamentos de mulheres e homens representados no funk repetem os estereótipos de gênero apresentados no dia a dia? Explique.
 <br> **f.** Na sua visão, ler, compreender e interpretar a letra de canção do funk pode ajudar a compreender os modelos preconceituosos atribuídos a homens e mulheres? Justifique.
 <br> **g.** Como o estudo da letra de funk pode possibilitar o desenvolvimento da criticidade sobre as relações de gênero? Explique.
 <br> **h.** Dançar e ouvir o funk sem refletir sobre o que dizem as letras pode incentivar a reprodução de estereótipos e preconceitos em relação aos papéis sociais do que é ser mulher e homem?
@@ -1740,13 +2000,13 @@ Prezado (a) aluno (a), <br> Para fazer uma breve avaliação sobre todas as disc
 
 </div>
 
+Em seguida, desenvolver a Dinâmica: jogo da aparência, cujo objetivo é demonstrar como estereótipos e interpretações subjetivas interferem na comunicação. Essa dinâmica teve uma duração de 50 minutos e os materiais usados, foram: balões, pedaços de papel, lápis ou canetas e a impressão de um dos funks trabalhados. Para o desenvolvimento, o/a professor/a deve entregar um balão vazio e um pedaço pequeno de papel em branco para cada um dos participantes. 
+
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
-
-Em seguida, desenvolver a Dinâmica: jogo da aparência, cujo objetivo é demonstrar como estereótipos e interpretações subjetivas interferem na comunicação. Essa dinâmica teve uma duração de 50 minutos e os materiais usados, foram: balões, pedaços de papel, lápis ou canetas e a impressão de um dos funks trabalhados. Para o desenvolvimento, o/a professor/a deve entregar um balão vazio e um pedaço pequeno de papel em branco para cada um dos participantes. 
 
 Cada discente deverá escrever no papel 3 (três) características pessoais, de maneira que, a partir dessas características ela/ele possa ser identificada pelos outros participantes. Em seguida, pedir para os participantes dobrarem o papel e colocá-lo dentro do balão (ESCOLA DE ENFERMAGEM DA PAZ, 2013). Cada aluno/a deverá encher o seu balão. Quando todos os balões estiveram cheios, jogar todos para cima, ao mesmo tempo, ao som do funk “Sou Favela”, de MC Bruninho e Vitinho Ferrari (2018)
 
@@ -1758,7 +2018,7 @@ Quando a música parar, cada discente deverá pegar o balão que estiver à sua 
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1781,7 +2041,7 @@ Finalização das dinâmicas.
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1798,46 +2058,55 @@ No final, perguntar aos/às discentes se gostariam de contar o que imaginou. Lem
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="classTable">
+<br><br>
+ <div class="classTable">
 
 <H2 style="padding-top: 0px;"> OFICINAS PEDAGÓGICAS </H2>
 
 | **Nº** | **Atividade/tema** | **Objetivos** | **Procedimentos** | **Carga horária** |
-|:--:|:--:|:--:|:-----------------:|:-:|
+|--|--|--|-----------------|--|
 | 01 | Percepção das Influências dos Estereótipos de Gênero no Cotidiano | Instigar os/as estudantes para compreender como a desigualdade de gênero afeta a vida em sociedade, de modo que os/as discentes reflitam e percebam o perigo de reproduzir hábitos que estigmatizam a mulher e o homem. | **a)** Retomada dos conceitos anteriores para fixação do assunto discutido anteriormente, através a um vídeo esclarecedor sobre o conceito de gênero. <br> **b)** Construção de uma tabela em seus respectivos cadernos, separando uma página em dois campos, com cabeçalhos escritos: “masculino” e “feminino”. Pronúncia e escrita de palavras no espaço que acharem mais apropriada para homem ou mulher, de forma apressada, sem pensar muito. <br> **c)** Discussão sobre as seleções das palavras escritas nos cabeçalhos masculino e/ou feminino, anotados no caderno. <br> **d)** Contagem das palavras mais frequentemente associadas a cada um dos lados: “Masculino” e “Feminino”. Um/uma discente escreverá e marcará na lousa, o campo ao qual essa palavra foi associada. <br> **e)** Críticas e discussões sobre cada uma das palavras associadas ao masculino e/ou feminino. <br> **f)** Vídeo esclarecedor sobre a desigualdade de gênero.<br> **g)** Avaliação.| 4H/A |
-| 02 | Análise de Letras de Canções de Funk | Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. | **a)** Oralmente, discutir e recapitular as contribuições da oficina anterior. Sugestão de letras de canções de Funk pelos/as discentes. <br>**b)** assistir a um vídeo sobre como fazer paródia |4H/A|
+
 
 </div>
 
-\pagebreak
+\pagebreakNum
+
+<br> <div class="classTable">
+
+| | | | | |
+|--|--|--|-----------------|--|
+| | | | | |
+| 02 | Análise de Letras de Canções de Funk | Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. | **a)** Oralmente, discutir e recapitular as contribuições da oficina anterior. Sugestão de letras de canções de Funk pelos/as discentes. <br>**b)** assistir a um vídeo sobre como fazer paródia <br>**c)** Formação de 02 grupos. <br>**d)** Cada grupo dos/das discentes participantes da oficina deveria escolher das letras de funks sugeridas e pré-selecionadas, por eles/as, em aulas anteriores, 2 (dois) funks preferidos: Cachorrinhas (Luísa Sonza). Bum Bum Tam Tam (MC Fioti). <br>**e)** Distribuição das letras das canções para serem lidas, ouvidas, cantadas e discutidas. <br>**f)** As letras dos funks serão lidas, discutidas de maneira semelhante ao que fora feito na roda de conversa nº 2, os estereótipos e as marcas de desigualdade de gênero, dispersas nas letras de Funk. <br>**g)** Breve discussão sobre a importância do conhecimento dos elementos fundamentais de composição das músicas de funks que serão trabalhadas: letra, sonoridade; levantamento de hipóteses: isto é: dizer o título da música, o que eles/as acham que será tratado na letra e a estrutura textual das músicas compostas de versos e estrofes. <br>**h)** Análise crítica sobre a necessidade de desconstrução das desigualdades de gênero. <br>**i)** Escrita na lousa alguns exemplos de estereótipos de gênero. <br>**j)** Desenvolvimento de uma paródia relacionada às letras de funk estudadas anteriormente, nos grupos. <br>**k)** Avaliação. |4H/A|
+
+</div>
+
+\pagebreakNum
 
 <br><br> <div class="classTable">
 
 | | | | | |
-|:--:|:--:|:--:|:-----------------:|:-:|
-| | | | | |
-| 02 | Análise de Letras de Canções de Funk | Incitar os/as estudantes a fazerem uma verificação das desigualdades entre gêneros nas letras de canções Funk e buscar alternativas para minimizar esses problemas. | **c)** Formação de 02 grupos. <br>**d)** Cada grupo dos/das discentes participantes da oficina deveria escolher das letras de funks sugeridas e pré-selecionadas, por eles/as, em aulas anteriores, 2 (dois) funks preferidos: Cachorrinhas (Luísa Sonza). Bum Bum Tam Tam (MC Fioti). <br>**e)** Distribuição das letras das canções para serem lidas, ouvidas, cantadas e discutidas. <br>**f)** As letras dos funks serão lidas, discutidas de maneira semelhante ao que fora feito na roda de conversa nº 2, os estereótipos e as marcas de desigualdade de gênero, dispersas nas letras de Funk. <br>**g)** Breve discussão sobre a importância do conhecimento dos elementos fundamentais de composição das músicas de funks que serão trabalhadas: letra, sonoridade; levantamento de hipóteses: isto é: dizer o título da música, o que eles/as acham que será tratado na letra e a estrutura textual das músicas compostas de versos e estrofes. <br>**h)** Análise crítica sobre a necessidade de desconstrução das desigualdades de gênero. <br>**i)** Escrita na lousa alguns exemplos de estereótipos de gênero. <br>**j)** Desenvolvimento de uma paródia relacionada às letras de funk estudadas anteriormente, nos grupos. <br>**k)** Avaliação. |4H/A|
-| 03 | Síntese da análise e contraponto das aulas sobre as relações de gênero no funk. | Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. | **a)** Formação dos grupos, conforme a preferência e a afinidade dos/das discentes. <br>**b)** Recapitular a oficina anterior: escrevendo e pontuando no caderno o que pensam sobre a letra original do funk (lida, reproduzida e discutida nos grupos). <br>**c)** Cada grupo deverá produzir um texto argumentativo que deverá ser lido e socializado para todos/as e entregue à professora pesquisadora. |4H/A|
+|--|--|--|-----------------|--|
+| 03 | Síntese da análise e contraponto das aulas sobre as relações de gênero no funk. | Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. | **a)** Formação dos grupos, conforme a preferência e a afinidade dos/das discentes. <br>**b)** Recapitular a oficina anterior: escrevendo e pontuando no caderno o que pensam sobre a letra original do funk (lida, reproduzida e discutida nos grupos). <br>**c)** Cada grupo deverá produzir um texto argumentativo que deverá ser lido e socializado para todos/as e entregue à professora pesquisadora. <br>**d)** Apresentação das paródias das músicas funk, produzidas na Oficina pedagógica nº 02. <br> **e)** Vídeo sobre “Como Surgiu o Funk”. <br> **f)** Contrapontos entre a síntese que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk).<br> **g)** Avaliação.|4H/A|
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="classTable">
 
-
 | | | | | |
-|:--:|:--:|:--:|:-----------------:|:-:|
-| 03 | Síntese da análise e contraponto das aulas sobre as relações de gênero no funk. | Verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk. | <br> **d)** Apresentação das paródias das músicas funk, produzidas na Oficina pedagógica nº 02. <br> **e)** Vídeo sobre “Como Surgiu o Funk”. <br> **f)** Contrapontos entre a síntese que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk).<br> **g)** Avaliação.|4H/A|
+|--|--|--|-----------------|--|
+| | | | | |
 | 04 | Síntese, contraponto e reflexão sobre uma nova maneira de perceber a desigualdade nas relações de gênero no funk. | Compartilhar as informações, incitar discussões e enfatizar a importância da mudança de atitude, em relação desigualdade de gênero, a partir do estudo realizado na letra de funk | <br> **a)** Recapitular a oficina anterior. <br> **b)** Formação de 04 grupos, com 06 ou 07 componentes cada. <br>**c)** Em pesquisa anterior, os alunos/as de cada grupo deverão trazer para esta oficina, fotografias de papéis sociais de homens e mulheres costumes, comportamentos, profissões e culturas diferentes para ser colado em folhas de papel A4, que serão afixadas uma ao lado da outra, e expostas em um papel madeira, formando um mural, com um título apelativo ao respeito à diversidade, aos direitos da pessoa humana e à igualdade de gênero. <br> **d)** Escrita no caderno pelos/as discentes sugestões para a construção de uma sociedade menos preconceituosa e com mais respeito à igualdade nas relações de gênero. <br> **e)** Socialização dos textos, oralmente. <br> **f)** Discussão, contrapontos e comentários sobre a socialização das produções dos alunos/as, referente às relações de gênero. <br> **g)** Avaliação escrita.| 4H/A |
 
 <p class="quote" style="margin:0px; padding: 0px; text-align: center;"> Fonte: A autora (2022). 
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1858,7 +2127,7 @@ No final, perguntar aos/às discentes se gostariam de contar o que imaginou. Lem
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1880,13 +2149,13 @@ No final, perguntar aos/às discentes se gostariam de contar o que imaginou. Lem
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
-## TEMÁTICA DA PRIMEIRA OFICINA PEDAGÓGICA
+## **TEMÁTICA DA PRIMEIRA OFICINA PEDAGÓGICA**
 
 ### PERCEPÇÃO DAS INFLUÊNCIAS DOS ESTEREÓTIPOS DE GÊNERO NO COTIDIANO
 
@@ -1900,7 +2169,7 @@ Após a pronúncia de cada palavra, os alunos/as deverão, imediatamente, escrev
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1916,7 +2185,7 @@ O Tempo dessa oficina é de 2 horas/aula.
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1937,7 +2206,7 @@ Roteiro das questões sobre o vídeo: “Igualdade de Gênero” Disponível em:
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
 <br><br> <div class="descriptive">
 
@@ -1950,7 +2219,7 @@ Roteiro das questões sobre o vídeo: “Igualdade de Gênero” Disponível em:
 Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--|--|--|--|--|--|--|
 |Reflexão sobre o perigo de reproduzir estereótipos, preconceito de gênero contra mulheres e homens.| | | | | | |
 |Compreensão de como a desigualdade de gênero afeta a vida em sociedade. | | | | | | |
 
@@ -1960,9 +2229,11 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
 
-<br><br><div class="descriptive">
+
+\pagebreakNum
+
+<br><br> <div class="descriptive">
 
 ## ROTEIRO DA OFICINA 2 - ANÁLISE DE LETRAS DE CANÇÕES DE FUNK 
 
@@ -1979,11 +2250,13 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-</div>
 
-\pagebreak
 
-<br><br><div class="descriptive">
+\pagebreakNum
+
+<br><br>
+
+<div class="descriptive">
 
 <br>**j)**  Desenvolvimento de uma paródia relacionada às letras de funk estudadas anteriormente, por cada grupo, com o propósito de trazer uma reflexão sobre a importância da igualdade nas relações de gênero.<br>
 **k)**  Avaliação escrita da oficina.<br>
@@ -2017,9 +2290,11 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 </div>
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+
+ <div class="descriptive">
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
@@ -2043,9 +2318,11 @@ Roteiro das Questões do Filme: “Como Fazer Paródia” Disponível em: https:
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+
+ <div class="descriptive">
 
 <br>**c)**  Qual o tema escolhido para fazer a paródia: desigualdade de gênero, violência contra a mulher, profissões masculinas e femininas, trabalho doméstico X trabalho público etc
 <br> **d)** Você acha que a desigualdade de gênero é um tema que pode ser trabalhado em uma paródia de funks?
@@ -2060,9 +2337,11 @@ Oralmente fazer uma retrospectiva sobre a necessidade da desconstrução das des
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+
+ <div class="descriptive">
 
 Em seguida, os discentes dos dois grandes grupos, deverão ser instigados pelo/a professor/a a desenvolverem uma paródia relacionada às letras dos funk, com o propósito de trazer uma reflexão sobre o conceito de gênero e estereótipos de gênero e a importância da discussão sobre as desigualdades nas relações de gênero. Logo em seguida, realizar a avaliação escrita da oficina. Essa oficina terá uma duração de 4 horas/aula (2 encontros de 2 horas/aula, cada), entre o início e a conclusão.
 
@@ -2073,18 +2352,20 @@ Em seguida, os discentes dos dois grandes grupos, deverão ser instigados pelo/a
 Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--|--|--|--|--|--|--|
 |Discussão e averiguação das desigualdades de gêneros nas letras de canções Funk.| | | | | | |
 
 <blockquote style="column-span: none; height: 100%; text-align: center;"> Obrigada pelas respostas! (●’◡’●) </blockquote>
 </div>
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
 
-## TEMÁTICA DA TERCEIRA OFICINA PEDAGÓGICA: DESENVOLVIMENTO DO SENSO CRÍTICO SOBRE A DESIGUALDADE NAS RELAÇÕES DE GÊNERO ATRAVÉS DA LETRA DE FUNK.
+ <div class="descriptive">
+
+## **TEMÁTICA DA TERCEIRA OFICINA PEDAGÓGICA** Desenvolvimento do senso crítico sobre a desigualdade nas relações de gênero através da letra de Funk.
 
 ### Roteiro da Oficina 03 - síntese da análise e contraponto das aulas sobre as relações de gênero no funk <br>
 
@@ -2101,9 +2382,11 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+
+ <div class="descriptive">
 
 O objetivo dessa oficina é verificar se os/as estudantes, com base nas discussões e atividades desenvolvidas ao longo da pesquisa, desenvolveram a criticidade sobre a questão da desigualdade de gênero nas letras de funk.
 
@@ -2126,34 +2409,45 @@ A partir disso, orientar que os grupos apresentem as paródias das músicas funk
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive"> <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+<br><br>
+
+<div class="descriptive"> 
+
+<div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
+
 O período restante será reservado para os comentários sobre as relações de gênero, sempre procurando fazer uma interface entre o que os/as discentes expuseram sobre a letra de funk e a paródia. Tomando como base o vídeo anterior (Como surgiu o funk), posteriormente, reproduzir e ouvir os funk’s: “100% Feminista” (MC CAROL; KAROL CONKÁ, 2016) e “Mulher Independente” (MC 2JHOW; MC BIANCA, 2020), no intuito de provocar reflexão e fomentar o entendimento de que o funk também é representação da diversidade. Concluir essa oficina com a avaliação escrita.
 
 **Tempo de duração:** 4 horas/aula.
 
 </div>
 
+
+
 ### AVALIAÇÃO – OFICINA 03 – DESENVOLVIMENTO DO SENSO CRÍTICO SOBRE A DESIGUALDADE NAS RELAÇÕES DE GÊNERO ATRAVÉS DA LETRA DE FUNK.
+
 
 <div class="classTable" style="column-span: none; width: 90%; position:relative; left:5%;">
 
 Avalie a oficina marcando um x em positivo ou negativo.
 
 |ATIVIDADE|positivo|negativo|
-|:--:|:--:|:--:|
+|--|--|--|
 |Desenvolvimento do senso crítico sobre a questão da desigualdade de gênero nas letras de funk.| | |
 
 <blockquote style="column-span: none; height: 100%; text-align: center;"> Obrigada pelas respostas! (●’◡’●) </blockquote>
+
 </div>
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive"> 
+<br><br>
 
-## **TEMÁTICA DA QUARTA OFICINA PEDAGÓGICA:** <br> SÍNTESE, CONTRAPONTO E REFLEXÃO SOBRE UMA NOVA MANEIRA DE PERCEBER A DESIGUALDADE NAS RELAÇÕES DE GÊNERO NO FUNK.
+ <div class="descriptive"> 
+
+## **TEMÁTICA DA QUARTA OFICINA PEDAGÓGICA:** <br> Síntese, contraponto e reflexão sobre uma nova maneira de perceber a desigualdade nas relações de gênro no Funk.
 
 <br>
 
@@ -2166,15 +2460,17 @@ Avalie a oficina marcando um x em positivo ou negativo.
 <br>**b)**  Formação de 04 grupos, com 06 ou 07 componentes cada.
 <br>**c)**  Em pesquisa anterior, os alunos/as de cada grupo deverão trazer para esta oficina, fotografias de papéis sociais de homens e mulheres costumes, comportamentos, profissões e culturas diferentes para ser colado em folhas de papel A4, que serão afixadas uma ao lado da outra, e expostas em um papel madeira, formando um mural, com um título apelativo ao respeito à diversidade, aos direitos da pessoa humana e à igualdade de gênero.
 <br>**d)**  Escrita no caderno pelos/as discentes sugestões para a construção de uma sociedade menos preconceituosa e com mais respeito à igualdade nas relações de gênero. 
-<br>**e)**  Socialização dos textos, oralmente.  
+<br>**e)**  Socialização dos textos, oralmente.
 <br>**f)**  Discussão, contrapontos e comentários sobre a socialização das produções dos alunos/as, referente às relações de gênero.
 <br>**g)**  Avaliação escrita.
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive"> 
+<br><br>
+
+ <div class="descriptive"> 
 
 O objetivo da quarta e última oficina é compartilhar as informações, fomentar discussões e enfatizar a importância da mudança de atitude, em relação desigualdade de gênero, a partir do estudo realizado na letra de funk.
 
@@ -2189,9 +2485,11 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive"> 
+<br><br>
+
+ <div class="descriptive"> 
 
 <p class="quote" style="margin-left:0px;"> Imagem – o que é a nova atribuição do/da profissional.
 
@@ -2207,9 +2505,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 <div style="column-count:2"> 
 
@@ -2231,9 +2530,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 <p class="quote" style="margin-left:0px;"> imagem – mulheres e homens no mercado de trabalho.
  
@@ -2249,9 +2549,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 <p class="quote" style="margin-left:0px;">Imagem - mulheres quebrando tabus 1.
  
@@ -2268,9 +2569,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 <p class="quote" style="margin-left:0px;"> Imagem - mulheres quebrando tabus 3.
 
@@ -2286,9 +2588,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 ### PARA PESQUISAR:
 
@@ -2304,9 +2607,10 @@ Iniciar essa quarta e última oficina, recapitulando as discussões da oficina a
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
-<br><br> <div class="descriptive">
+<br><br>
+ <div class="descriptive">
 
 Em seguida pedir aos/às discentes que pontuem e escrevam no caderno, sugestões para a construção de uma sociedade menos preconceituosa e com mais respeito à igualdade nas relações gênero. Cada grupo fará a socialização dos textos, oralmente. Em seguida fazer os contrapontos tecendo comentários sobre a socialização das produções dos/as alunos/as, referente às relações de gênero. Em seguida foi realizar a avaliação escrita.
 
@@ -2319,7 +2623,7 @@ Em seguida pedir aos/às discentes que pontuem e escrevam no caderno, sugestões
 Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 |ATIVIDADE|0🙄|2😑|4😕|6🙂|8😃|10😁|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--|--|--|--|--|--|--|
 |Percepção da necessidade de uma nova forma de ser e de agir no mundo, no que diz respeito à desigualdade nas relações de gênero na letra de canção de funk.| | | | | | |
 
 
@@ -2329,8 +2633,9 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 
 </div>
 
-\pagebreak
+\pagebreakNum
 
+<br><br>
 
 <div style="background-color: #000310; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
 
@@ -2345,6 +2650,7 @@ Atribua uma nota de 0 a 10, marcando um X no quadro abaixo.
 \pagebreak
 
 <br><br>
+
 
 **BINARISMO** -   Ao tratarmos de questões de gênero, binarismo se refere a uma perspectiva de bases biológicas, segundo a qual o sexo define o gênero: “[...]quem nasce com pênis é homem e quem nasce com vagina é mulher” (FERREIRA, 2021, p. 362).
 
@@ -2361,7 +2667,9 @@ TRANSGENERIDADE -   Conceito relativo à incongruência entre o gênero e o sexo
 
 **GÊNERO** - é um parâmetro abstrato, conceituado com base no conjunto de valores, comportamentos, características e ideais que foram socialmente atribuídos a indivíduos de determinado sexo (BOURDIEU, 2020).
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 **HETEROSSEXUALIDADE** – [...] heterossexualidade (expressão da complem única via natural de manifestação do desejo sexual e de realização da vocação reprodutiva), identidade e diferença sexual (binárias, fixas, inalteráveis, cromossômicas e hierarquizadas). (JUNQUEIRA, 2018, p.454-455).
 
@@ -2381,7 +2689,9 @@ Define-se como expressão de desejos e prazeres. Envolve preferências, predispo
 
 O espectro heterossexual, atuante entre indivíduos de gêneros diferentes, não é a única  manifestação da sexualidade (e menos ainda da falta dela) que se apresenta no desenvolvimento da subjetividade humana, mesmo que tenha sido "construída socialmente e socialmente constituída como padrão universal de toda prática sexual 'normal', isto é, distanciada da ignomínia da 'contranatureza'" (BOURDIEU, 2020, p. 140).
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <div style="background-color: #000310; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
 
@@ -2408,7 +2718,8 @@ CONSIDERAÇÕES FINAIS
 
 <br><br>
 
-**Prezado/a, professor/a!**
+
+## Prezado/a, professor/a!
 
 <br>
 
@@ -2418,13 +2729,13 @@ Diante disso, imersa por memórias afetivas construídas ao longo do ano letivo,
 
 Sob a égide da (Des)construção dos estereótipos de gênero, por meio da leitura como prática social, das letras de canção de funk, um dos artefatos culturais, presentes nas mídias, esperamos, portanto, contribuir com um novo modo de pensar, ser e agir de uma sociedade mais humana e fraterna. Nesse sentido, diante de um quadro de educadores/as em constante formação, críticos, formadores de opinião e dispostos a desenvolverem um trabalho pedagógico, focado no respeito aos sujeitos de direitos, agradecemos à possível adesão a causa do desatemos nós das desigualdades nas relações de gênero. 
 
-\pagebreak
+\pagebreakNum
+
+<br><br>
 
 <img src='https://github.com/davimatiassg/PE-doc/blob/main/salvei%20por%20que%20tava%20bonita.png?raw=true' style='position:absolute;top:-100px;left:0;width:100%; z-index:-1;' />
 
-<div style="margin-top:100%; text-align: center">
-
-<br>
+<div style="margin-top:93%; text-align: center">
 
 # AUTORA:
 
@@ -2436,26 +2747,27 @@ Sob a égide da (Des)construção dos estereótipos de gênero, por meio da leit
 
 # JOSEVAL DOS REIS MIRANDA²
 
-<div class='footnote'><br>
-¹Especialista em Leitura e Produção Textual pela Universidade Estadual da Paraíba - UEPB, Mestranda do Mestrado Profissional em Letras – PROFLETRAS/UFPB.<br>
-²Professor Orientador: Doutor e Mestre em Educação pela Universidade de Brasília – UnB.
-</div>
 </div>
 
-\pagebreak
+<div class='footnote' style="text-align:left; margin-right: -160px;"> ¹ Especialista em Leitura e Produção Textual pela Universidade Estadual da Paraíba – <br> UEPB, Mestranda do Mestrado Profissional em Letras – PROFLETRAS/UFPB.<br>
+² Professor Orientador: Doutor e Mestre em Educação pela Universidade de Brasília –<br> UnB.
+</div>
 
+
+\pagebreakNum
+
+<br><br>
 
 ## REFERÊNCIAS 
 
 <br>
-
 AGUIAR, Neuma. Patriarcado, sociedade e patrimonialismo. **Sociedade e Estado**, p. 303-330, 9 set 2011. Disponível em: https://www.scielo.br/j/se/a/cRnvYmPTgc59jggw7kV5F4d/?lang=pt. Acesso em: 12 jan. 2022.<br><br>
 ALDAIR PLAYBOY. **Amor falso.** 2018 (2:58 minutos). Disponível em: https://www.youtube.com/watch?v=do1qPQEPrnM. Acesso em: 10 out. 2022.<br><br>
 ALVES, Ana Rodrigues Cavalcanti. O conceito de hegemonia: de Gramsci a Laclau e Mouffe. **Lua Nova: Revista de Cultura e Política**, São Paulo, v. 80, p. 71-96, 2010. Disponível em: https://www.scielo.br/j/ln/a/mQtGPDfjR85HxSSLtmgCzbM/. Acesso em: 11 jan. 2022.<br><br>
 SOUZA, José Peixoto Coelho de; ANDRIGHETTI, Graziela Hoerbe. A canção de funk carioca no ensino de Português como Língua Adicional: uma proposta de material didático. **Revista Leitura**, [S. l.], ano jan/jun 2015, v. 1, n. 55, 3 maio 2016. Número temático: Estudos em perspectivas dialógicas., p. 41-66. DOI 10.28998/2317-9945.2015v1n55p41-66. Disponível em: https://www.seer.ufal.br/index.php/revistaleitura/article/view/2307. Acesso em: 27 mar. 2022.<br><br>
 ANTUNES, Irandé. **Aula de português:** encontro e interação. São Paulo: Parábola Editorial, 2003.<br><br>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
 ARRUDA, Silvani; NASCIMENTO, Marcos. Plano de aula 5 - Estereótipos de gênero, carreiras e profissões: diferenças e desigualdades. In: ARRUDA, Silvani; NASCIMENTO, Marcos. **O Valente não é Violento**. São Paulo: ONU Mulheres Brasil, 2016. Disponível em: https://www.onumulheres.org.br/noticias/na-volta-as-aulas-a-onu-mulheres-divulga-curriculo-e-planos-de-aulas-para-o-ensino-fundamental-sobre-igualdade-de-genero-e-enfrentamento-a-violencia-contra-as-mulheres-e-meninas/. Acesso em: 14 fev. 2023.<br><br>
@@ -2464,77 +2776,298 @@ Bonde das Maravilhas. **Academia Das Maravilhas.** Cidade: Rio de Janeiro, Grava
 BOURDIEU, Pierre. **A dominação masculina.** Tradução Maria Helena Kühner. 18 ed. Rio de Janeiro: Bertrand Brasil, 2020. 207 p. Tradução de: La domination masculine.<br><br>
 BRASIL. Ministério da Educação - Governo Federal. Base Nacional Comum Curricular - BNCC. Registro em: 14 dez. 2018.
 BRASIL. Parâmetros curriculares nacionais: língua portuguesa. Brasília: MEC; SEF, 1997. 144p.<br><br>
+CAFIERO, Delaine. Letramento e leitura: formando leitores críticos. In: RANGEL, Egon de Oliveira; ROJO, Roxane Helena Rodrigues (Coord.). Língua Portuguesa: ensino fundamental. Brasília: Ministério da Educação, Secretaria de Educação Básica. Coleção Explorando o Ensino, v. 19, p. 85- 106, 2010.<br><br>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
-CAFIERO, Delaine. Letramento e leitura: formando leitores críticos. In: RANGEL, Egon de Oliveira; ROJO, Roxane Helena Rodrigues (Coord.). Língua Portuguesa: ensino fundamental. Brasília: Ministério da Educação, Secretaria de Educação Básica. Coleção Explorando o Ensino, v. 19, p. 85- 106, 2010.<br><br>
 CARDOSO, Luciana Marins. **Os Desafios da Escola Pública Paranaense na Perspectiva do Professor.** Na Temática das Relações de Gênero e sexualidade nas Aulas de educação Física. In: PARANÁ. Secretaria de Educação. Produções didático-pedagógica. Superintendência de Educação. Os Desafios da Escola Pública Paranaense na Perspectiva do Professor PDE, 2016. Curitiba: SEED/PR., 2018. V.II. (Cadernos PDE). Disponível em:  http://www.diaadiaeducacao.pr.gov.br/portals/cadernospde/pdebusca/
 producoes_pde/2016/2016_pdp_edfis_ufpr_lucianamarinscardoso.pdf. Acesso em: 27 de setembro de 2022. DD/MM/AA. ISBN 978-85-8015-093-3.<br><br>
 CARVALHO, Maria Eulina Pessoa de; ANDRADE, Fernando Cézar Bezerra de; JUNQUEIRA, Rogério Diniz (org.). **Gênero e diversidade Sexual:** Um glossário. João Pessoa: Editora da UFPB, 2009. 56 p. ISBN 978-85-7745-310-8.<br><br>
 CARVALHO, Maria Eulina Pessoa de (org.). **Consciência de gênero na escola.** João Pessoa: Editora da UFPB, 2000. 85 p.<br>
 CARVALHO, Maria Eulina Pessoa de. Construção e Desconstrução de Gênero no Cotidiano da Educação Infantil: Alguns achados de pesquisa. **ANPED**, Paraíba. Disponível em: https://www.anped.org.br/biblioteca/item/construcao-e-desconstrucao-de-genero-no-cotidiano-da-educacao-infantil-alguns. Acesso em: 12 jan. 2022.<br><br>
-
-\pagebreak
-
-<br><br>
 CARVALHO, Maria Eulina Pessoa de; ANDRADE, Fernando Cézar Bezerra de; JUNQUEIRA, Rogério Diniz (org.). **Equidade de Gênero e Diversidade Sexual na Escola:** Por uma prática pedagógica inclusiva. João Pessoa: Editora da UFPB, 2009. 46 p. ISBN 978-85-7745-311-5.<br><br>
 CARVALHO, Maria Eulina Pessoa de; ANDRADE, Menezes, Cristiane Souza de (org.). **Equidade de Gênero e Diversidade Sexual na Escola:** Por uma prática pedagógica inclusiva. João Pessoa: Editora da UFPB, 2009. 46 p. ISBN 978-85-7745-311-5.<br><br>
+
+\pagebreakNum
+
+<br><br>
 CHAVES, Gislaine da Nóbrega; RABAY, Glória (org.). **Violências de Gênero:** Sujeitos e Práticas Educativas. João Pessoa: Editora da UFPB, 2018. 198 p. ISBN 978-85-237-1350-8.<br><br>
 Como fazer. COMO FAZER UMA PARÓDIA - (LETRA - GRAVAÇÃO DA MÚSICA E DO VÍDEO). 15 abr. de 2017. Vídeo na plataforma YouTube. Disponível em: https://youtu.be/o1c1HYtntTQ. Acesso em 25 de agosto de 2022.<br><br>
 Conhecimento Geral. Como Surgiu o Funk. 8 mar. de 2016. Vídeo na plataforma YouTube. Disponível em: https://youtu.be/0uZ4qMGdy9M Acessado em 12 de agosto de 2022.<br><br>
 CORACINI, Maria José (Org.). O jogo discursivo na aula de leitura: língua materna e língua estrangeira. Campinas, São Paulo: Pontes, 2002.<br><br>
 EISENSTEIN, Evelyn. Adolescência: definições, conceitos e critérios. **Adolescência & Saúde**, Rio de Janeiro, v. 2, jun. 2005. 6, 2 p. Disponível em: https://cdn.publisher.gn1.link/adolescenciaesaude.com/pdf/v2n2a02.pdf. Acesso em: 11 abr. 2022.<br><br>
-
-\pagebreak
-
-<br><br>
 ESCOLA DE ENFERMAGEM DA PAZ. Dinâmica aborda o trabalho em equipe em Noções de Administração. **Escola da Paz**. São Leopoldo - RS, 25 abr. 2013. Disponível em: https://www.escoladapaz.com.br/blog/dinamica-aborda-o-trabalho-em-equipe-em-nocoes-de-administracao/. Acesso em: 01 out. de 2022.<br><br>
 EVANGELISTA, Solange; JERÔNIMO, Isabel Cristiane. A leitura como prática social: os gêneros textuais notícia e carta do leitor em sala de aula. **Secretaria de Estado da Educação (SEED - PR)**, v. 1. 18 p, 2014. Série CADERNOS PDE: "Os Desafios da Escola Pública Paranaense na perspectiva do Professor PDE". Disponível em: http://www.diaadiaeducacao.pr.gov.br/portals/cadernospde/pdebusca/
 producoes_pde/2014/2014_uel_port_artigo_solange_evangelista.pdf. Acesso em: 7 fev. 2022.<br><br>
+
+\pagebreakNum
+
+<br><br>
 FIGUEIREDO, Lilian Rolim et al. Educação, currículo e desigualdade de gênero: um referencial teórico. In: MOURA, Jónata Ferreira de (org.). **Educação, Gênero e Sexualidade:** Perspectiva crítica e decolonial no espaço escolar e não-escolar. 1. ed. [S. l.]: Editora Científica Digital LTDA, 2021. cap. 01, p. 15-23. ISBN 978-65-89826-42-2. Disponível em: https://www.editoracientifica.org/books/isbn/978-65-89826-42-2. Acesso em: 14 mar. 2022.<br><br>
 FREIRE, Paulo. **A importância do ato de ler em três artigos que se completam.** 23 ed. Cortez Editora, 1989. 49 p. (Coleção Polêmicas do nosso tempo; 4). Disponível em: https://educacaointegral.org.br/reportagens/importancia-do-ato-de-ler/. Acesso em: 29 jan. 2022.<br><br>
 GERALDI, João Wanderley. **O texto na sala de aula.** 1. ed. São Paulo: Editora Ática, 2011. 104 p. ISBN 9788508149278.<br><br>
-
-\pagebreak
-
-<br><br>
 JUNQUEIRA, Rogério Diniz. **A invenção da “ideologia de gênero”:** a emergência de um cenário político-discursivo e a elaboração de uma retórica reacionária antigênero. Psicologia Política. Set. – dez. 2018, vol. 18. nº 43. pp. 449-502.<br><br>
 JUNQUEIRA, Rogério Diniz. **A invenção da "Ideologia de Gênero":** Um projeto reacionário de poder. Brasília: Letras Livres, 2022. 312 p. ISBN 978-65-88773-11-6.<br><br>
 LINS, Beatriz Accioly; MACHADO, Bernardo Fonseca; ESCOURA, Michele. **Diferentes, Não desiguais:** A questão de gênero na Escola. São Paulo - Brasil: Revira Volta, f. 64, 2016. 128 p.<br><br>
 LOURO, Guacira Lopes. **Gênero, sexualidade e educação:** uma perspectiva pós-estruturalista. 16 ed. Petrópolis - RJ: Editora Vozes, 2014. 184 p.<br><br>
+
+\pagebreakNum
+
+<br><br>
 MAKNAMARA, Marlécio. **Quando Artefatos Culturais Fazem-se Currículo e Produzem Sujeitos.** Reflexão E Ação, 2020. V. 28(2), 58-72. Disponível em: https://doi.org/10.17058/rea.v28i2.14189 Acessado em: 26 de outubro de 2022. <br><br>
 MASINI, Maria Lúcia Hage; MAIA, Suzana Magalhães. A Leitura Enquanto Prática Social e a Intervenção da Escola. **Série Idéias**, São Paulo, n. 5, p. 73-76, 1988. Disponível em: http://www.crmariocovas.sp.gov.br/lei_a.php?t=008. Acesso em: 21 jan. 2022.<br><br>
 MC BRUNINHO; VITINHO FERRARI. **Sou Favela.** Cidade: São Paulo, Gravadora: GR6 MUSIC, 2018 (3:54 minutos). Disponível em: https://www.youtube.com/watch?v=PvJIwSPte4E. Acesso em: 10 out. 2022.<br><br>
-
-\pagebreak
-
-<br><br>
 MC CAROL; KAROL CONKA. **100% Feminista.** Cidade: Rio de Janeiro, Gravadora: Heavy Baile Sounds, 2016 (3:19 minutos). Disponível em: https://music.youtube.com/watch?v=W05v0B59K5s. Acesso em: 12 ago. 2022.<br><br>
 MC 2JHOW; MC BIANCA. **Mulher Independente.** Cidade: Rio de Janeiro, Gravadora: Soull Music, 2020 (2:54 minutos). Disponível em: https://music.youtube.com/watch?v=K_LdZDUtAzw. Acesso em 12 ago. 2022.<br><br>
 MISOGINIA. In: Priberam, Dicionário. Priberam Informática, S.A. 2021. Disponível em: <https://dicionario.priberam.org/misoginia>. Acesso em: 14/03/2022.<br><br>
 MOITA, Filomena Ma.G. S. Cordeiro; ANDRADE, Fernando Cézar B.. O saber de mão em mão: a oficina pedagógica como dispositivo para a formação docente e a construção do conhecimento na escola pública. **ANPED**, 2006. Disponível em: https://www.anped.org.br/biblioteca/item/o-saber-de-mao-em-mao-oficina-pedagogica-como-dispositivo-para-formacao-docente-e. Acesso em: 12 jan. 2022.<br><br>
+
+\pagebreakNum
+
+<br><br>
 MORAES, Isabela; MEDEIROS, Letícia. Gênero: você entende o que significa?. **Politize.** Florianópolis, 25 mai. 2021. Disponível em: https://www.politize.com.br/vamos-falar-sobre-genero/. Acesso em: 06 fev. 2023.<br><br>
 MURARO, Rose Marie; BOFF, Leonardo. **Feminino e Masculino:** uma nova consciência para o encontro das diferenças. Rio de Janeiro: Record, 2010.<br><br>
 NOVA ESCOLA. **BNCC na prática:** tudo que você precisa saber sobre Língua Portuguesa. ALFA-GCE. 2020. 44 p. Disponível em: http://cefort.ufam.edu.br/tainacan/cat-e/bncc-na-pratica-tudo-que-voce-precisa-saber-sobre-lingua-portuguesa/. Acesso em: 12 jan. 2022.<br><br>
-
-\pagebreak
-
-<br><br>
 ONU Mulheres Brasil. Igualdade de Gênero. 16 mar. de 2016. Vídeo na plataforma YouTube. Disponível em: https://youtu.be/ZCGLC-vziRc Acesso em 10 de agosto de 2022.<br><br>
 PEDROSO, Sergio Flores. Sobre o conceito de prática social: Funcionamento e efeito e efeito nas abordagens da linguagem em movimento. **Revista Tabuleiro de Letras,** PPGEL – Salvador, v. 7, p. 64-86, 29 Dez 2013. Disponível em: https://www.revistas.uneb.br/index.php/tabuleirodeletras/article/view/591. Acesso em: 12 jan. 2022.<br><br>
 PLANO ESTADUAL DE EDUCAÇÃO DO RIO GRANDE DO NORTE - PEE-RN (RIO GRANDE DO NORTE, 2016). **Plano Estadual de Educação do Rio Grande do Norte - PEE-RN (RIO GRANDE DO NORTE, 2016) nº LEI Nº 10.049, DE 27 DE JANEIRO DE 2016., de 1 de janeiro de 2016.** Aprova o Plano Estadual de Educação do Rio Grande do Norte (2015-2025) e dá outras providências. [S. l.], 2016.<br><br>
 PORTELA, Eunice Nóbrega; SANTANA, Ismênia Pereira da Costa. A leitura como prática social e aquisição da cultura na Escola. **Revista JRG de Estudos Acadêmicos,** v. 2, n. 4, p. 25-48, jan./jun. 2019. Disponível em: https://journals.indexcopernicus.com/api/file/viewByFileId/1100517.pdf. Acesso em: 30 jan. 2022.<br><br>
-SECRETARIA DE POLÍTICAS PARA AS MULHERES. **Manual para o Uso não Sexista da Linguagem.** Rio Grande do Sul: Secretaria de Comunicação e Inclusão Digital, 2014. 112 p. Disponível em: http://portalsemear.org.br/publicacoes/manual-para-o-uso-nao-sexista-da-linguagem/. Acesso em: 20 jan. 2022.<br><br>
-SOUSA, Valquiria Alencar de; CARVALHO, Maria Eulina Pessoa de. **Por uma educação não-sexista.** João Pessoa: Editora da UFPB, 2003. 27 p.<br><br>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+SECRETARIA DE POLÍTICAS PARA AS MULHERES. **Manual para o Uso não Sexista da Linguagem.** Rio Grande do Sul: Secretaria de Comunicação e Inclusão Digital, 2014. 112 p. Disponível em: http://portalsemear.org.br/publicacoes/manual-para-o-uso-nao-sexista-da-linguagem/. Acesso em: 20 jan. 2022.<br><br>
+SOUSA, Valquiria Alencar de; CARVALHO, Maria Eulina Pessoa de. **Por uma educação não-sexista.** João Pessoa: Editora da UFPB, 2003. 27 p.<br><br>
 VALE, Maria Irene Pereira. **As questões fundamentais da didática:** enfoque político-social construtivista. São Paulo SP: Editora ao Livro Técnico, 1995. 144 p.<br><br>
 LIMA, Thaís. GÊNERO: O QUE É (E O QUE NÃO É) | Thaís Lima #05. 27 nov. 2018. Vídeo na plataforma YouTube. Disponível em: https://www.youtube.com/watch?v=x_WkMLkdl6M. Acesso em: 6 fev. 2023.<br><br>
 VASSOLÉR, Juliana Ferreira. **Consumo, logo existo:** análise discursiva crítica de representações sociais em letras de funk ostentação. Brasília - DF, 2019. 185 p Dissertação (Programa de Pós-Graduação em Linguística - PPGL) - Universidade de Brasília, Brasília - DF, 2018. Disponível em: https://repositorio.unb.br/handle/10482/34856. Acesso em: 18 jan. 2022.<br><br>
 
-\pagebreak
+\pagebreakNum
 
 <br><br>
+
+
+<div style="position: absolute; left: 0px; right: 0px; top: 35%; bottom: 0px; margin: 0px; padding: 0px;"> 
+
+<H2 style="text-align: center; font-size: 500%"> ANEXOS </H2>
+
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+
+<div style="column-count: 2; font-size: .7em; height: 100%; column-rule-style: solid; column-rule-width: 2px; column-rule-color: #c9ad6a;">
+
+###  ACADEMIA DAS MARAVILHAS (BONDE DAS MARAVILHAS, 2016).
+<br>
+Aaa aca aca academia das das maravilhas <br>
+Pra entrar nela tem que malhar todo dia <br>
+Tem que ter muita ousadia mais antes de malhar, <br>
+Tem que alongar... <br><br>
+Alonga e rebola vai vai, <br>
+alonga e rebola vai vai, <br>
+Alonga e rebola com corpinho de mola <br>
+[3x] <br><br>
+Vai vai vai vai vai vai vai vai... <br><br>
+Aaa aca aca academia das das maravilhas <br>
+Pra entrar nela tem que malhar todo dia <br>
+Tem que ter muita ousadia mais antes de malhar, <br>
+Tem que alongar... [x2] <br><br>
+[Repete do início] <br><br><br>
+
+### CACHORRINHAS (SONZA, 2022). <br><br>
+<br>
+Eu vou levar minhas cachorrinha pra curtir no pet shop <br>
+Desfilando patricinha, porque sou uma artista pop <br>
+Meu nariz empinadinho, não me rele, não me toque <br>
+Sou mimada e correria, cachorra de grande porte (rawr) <br><br>
+Temos pedigree <br>
+Coleira cara <br>
+Meu perfume caro atiça o faro dos vira-lata <br><br>
+
+<br>
+Eu e minhas cachorra, au-au <br>
+Dá a patinha, deita e rola <br>
+Hahahaha <br>
+<br>
+Eu e minhas cachorra, au-au <br>
+Dá a patinha, deita e rola, olha o meu visual <br>
+Não ligo pra tua inveja, falador passa mal <br>
+Quando nós abana o rabo, eles late tudo, uau (uau) <br><br>
+<br>
+Eu e minhas cachorra, au-au <br>
+Dá a patinha, deita e rola, olha o meu visual <br>
+Não ligo pra tua inveja, falador passa mal <br>
+Quando nós abana o rabo, eles late tudo, uau (uau) <br><br>
+<br>
+Okay, okay <br>
+Agora eu vou mostrar pra vocês as minhas meninas<br>
+Hahahaha<br><br>
+<br>
+Cadelinha número um é a famosa Gisellе<br>
+Insuportável, inadestrável, essa é minha BFF <br>
+Cadela número dois é a Britney Bitch <br>
+Ela é mandraka, nunca dá a pata<br>
+Essa é a Dudinha, a número três <br>
+Cachorra novinha, não deita pra ex <br>
+Minha gata pirata, de quatro ela vem <br>
+Essa é a Rita Lee, come quieto, come bem <br><br>
+Eu e minhas cachorra, au-au <br>
+Dá a patinha, deita e rola, olha o meu visual <br>
+Não ligo pra tua inveja, falador passa mal <br>
+Quando nós abana o rabo, eles late tudo, uau (uau) <br><br>
+Eu e minhas cachorra, au-au <br>
+Dá a patinha, deita e rola, olha o meu visual <br>
+Não ligo pra tua inveja, falador passa mal <br>
+Quando nós abana o rabo, eles late tudo, uau (uau)</p>
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+
+<div style="column-count: 2; text-indent: 0px; font-size: .7em; height: 100%; column-rule-style: solid; column-rule-width: 2px; column-rule-color: #c9ad6a;">
+
+###  BUM BUM TAM TAM (MC FIOTI, 2017).
+<br>
+É a flauta envolvente que mexe com a mente <br>
+De quem tá presente <br>
+As novinha saliente <br>
+Fica loucona e se joga pra gente <br>
+Aí eu falei assim pra ela, óh (Aí eu falei assim pra ela) <br><br>
+[Refrão]<br>
+Vai, vai com o bum bum, tam, tam  <br>
+Vem com o bum bum, tam, tam, tam  <br>
+Vai, mexe o bum bum, tam, tam  <br>
+Vem, desce o bum bum, tam, tam, tam 
+[2x]<br>
+Vai com o bum bum <br>
+Vem com o bum bum <br>
+(Com o bum bum) [2x]<br>
+Vai, treme o bum bum, tam, tam, tam, tam<br>
+(vem) Tam, tam, tam, tam, tam, tam, tam, tam <br>
+(vai) Tam, tam, tam, tam, tam, tam, tam, tam 
+[3x]<br>
+Tam, tam, tam <br><br>
+Autenticamente falando <br>
+Copia aí, pô <br>
+Nóis tá tipo como? <br>
+Tipo Vavazinho <br>
+E aê, Fioti? <br><br>
+É a flauta envolvente que mexe com a mente <br>
+De quem tá presente <br>
+As novinha saliente <br>
+Fica loucona e se joga pra gente <br>
+Aí eu falei assim pra ela, óh (Aí eu falei assim pra ela)<br><br>
+[Repete o Refrão]<br><br>
+Autenticamente falando <br>
+Copia aí, pô <br>
+Nóis tá tipo como? <br>
+Tipo Vavazinho <br>
+E aê, Fioti? <br><br>
+
+\columnbreak
+
+### Mulher Independente (MC 2Jhow; MC Bianca, 2020).
+<br>
+Ha ha ha<br>
+Mais uma do 2jhow<br>
+Bianca<br><br>
+'Tava lembrando de tu agora<br>
+Mina como tu é sinistra<br>
+Independente e recalcada se incomoda<br>
+Quando tu chega apavorando a pista<br><br>
+E te ver pagando a unha e fazendo o cabelo<br>
+Toda semana sem depender de ninguém<br>
+Te faz tão bem<br><br>
+Só em saber que você não precisa de macho<br>
+Ou de romance pra poder viver bem<br>
+Ela é patroa meu bem<br><br>
+Eu que pago minhas contas e banco meu carro<br>
+Se o homem pode a mulher pode também<br>
+Ter os seus bens<br><br>
+O meu rolê com as amigas<br>
+As noites curtidas<br>
+E as minhas bebida<br>
+Nós paga porque nós tem<br>
+Nós é patroa meu bem<br><br>
+Contra força não há resistência<br>
+E você sabe muito bem<br>
+Que a mulher quando é independente<br>
+Não quer guerra com ninguém<br> [2x]<br><br>
+Desce com a bunda neném<br>
+Sobe com a bunda neném<br>
+Desce com a bunda neném<br>
+Não quer guerra com ninguém<br> [4x]<br>
+[Repete do Início]
+
+</div>
+
+\pagebreakNum
+
+<br><br>
+
+
+<div style="column-count: 2; font-size: .7em; height: 100%; column-rule-style: solid; column-rule-width: 2px; column-rule-color: #c9ad6a;">
+
+###  100% FEMINISTA (MC CAROL; KAROL CONKÁ, 2016).
+<br>
+Presenciei tudo isso, dentro da minha família<br>
+Mulher com o olho roxo, espancada todo dia<br>
+Eu tinha uns 5 anos, mas já entendia<br>
+Que mulher apanha, se não fizer comida<br>
+Mulher oprimida, sem voz, obediente<br>
+Quando eu crescer, eu vou ser diferente<br><br>
+Eu cresci, prazer Carol bandida<br>
+Represento as mulheres, 100% feminista [2x]<br><br>
+Represento Aqualtune, represento Carolina<br>
+Represento Dandara e Xica da Silva<br>
+Sou mulher, sou negra, meu cabelo é duro<br>
+Forte, autoritária e as vezes frágil, eu assumo<br>
+Minha fragilidade não diminui minha força<br>
+Eu que mando nessa porra, eu não vou lavar a louça<br>
+Sou mulher independente não aceito opressão<br>
+Abaixa sua voz, abaixa sua mão<br><br>
+Mais respeito<br>
+Sou mulher destemida minha marra vem do gueto<br>
+Se tavam querendo peso então toma esse dueto<br>
+Desde pequenas aprendemos que silencio não soluciona<br>
+Que a revolta vem à tona pois a justiça não funciona<br>
+Me ensinaram que éramos insuficiente<br>
+Discordei, pra ser ouvida o grito tem que ser potente<br><br>
+Eu cresci, prazer Karol bandida<br>
+Represento as mulheres, 100% feminista [2x]<br><br>
+Represento Nina, Elza, Dona Celestina<br>
+Represento Zeferina, Frida, Dona Brasilina<br>
+Tentam nos confundir, distorcem tudo que eu sei<br>
+Século XXI e ainda querem nos limitar com novas leis<br>
+A falta de informação enfraquece a mente<br>
+Tô numa crescente porque eu faço diferente<br><br>
+Eu cresci, prazer Carol bandida<br>
+Represento as mulheres, 100% feminista [4x]<br><br><br><br>
+
+### SOU FAVELA (MC BRUNINHO; VITINHO FERRARI, 2022).
+<br>
+Rodo becos e viela<br>
+Mas não encontrei ninguém que tenha a beleza dela<br>
+Sou do morro, sou favela<br>
+Mas meu coração se apaixonou por essa Cinderela<br><br>
+Ela é da Zona Sul, loirinha, de olho azul<br>
+E o impasse é o pai dela<br>
+Só porque eu sou neguinho, moro num barraquinho<br>
+Mas dei a chave do meu coração pra ela<br><br>
+Hoje ela vem me ver<br>
+E eu vou bater uma real pra ela <br>[2x]<br><br>
+Fala pro teu pai que eu não quero dinheiro<br>
+Eu já tenho a riqueza que é você<br>
+Se quiser casar, eu caso<br>
+Vamos brincar de amar, somente eu e você <br>[2x]<br><br>
+[Repete do início]
+
+</div>
+
+\pagebreakNum
